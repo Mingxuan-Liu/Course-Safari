@@ -1,18 +1,4 @@
-<?php
-session_start();
-
-if (!isset($_SESSION["username"])) {
-  header("Location: login.php");
-  exit();
-}
-
-$justRegistered = false;
-if (isset($_SESSION["register_success"]) && $_SESSION["register_success"] === true) {
-  $justRegistered = true;
-  unset($_SESSION["register_success"]);
-}
-
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -27,40 +13,28 @@ if (isset($_SESSION["register_success"]) && $_SESSION["register_success"] === tr
 <body>
   <div class="container">
     <div class="main">
-      <?php if ($justRegistered): ?>
-        <div class="success-message">
-          <i class="fas fa-check-circle"></i>
-          <h1>Registration Successful!</h1>
-          <p>Do you want to go to the user page?</p>
-          <div class="btn-group">
-            <a href="user.php" class="btn">Yes</a>
-            <a href="welcome.php" class="btn">No</a>
-          </div>
-        </div>
-      <?php else: ?>
-        <h1>Welcome to Course Safari, <?php echo $_SESSION["username"]; ?></h1>
-        <p>Your dashboard for all things</p>
-        <div class="buttons">
-          <a href="update-info.php" class="btn btn-big btn-circle">
-            <i class="fas fa-user"></i>
-            <p>Update my info</p>
-          </a>
-          <a href="degree-tracker.php" class="btn btn-big btn-circle">
-            <i class="fas fa-graduation-cap"></i>
-            <p>Degree tracker</p>
-          </a>
-          <a href="course-planner.php" class="btn btn-big btn-circle">
-            <i class="fas fa-calendar-alt"></i>
-            <p>Course planner</p>
-          </a>
-        </div>
-        <div class="logout-section">
-          <a href="welcome.php" class="logout-btn">
-            <i class="fas fa-sign-out-alt"></i>
-            <p>Log out</p>
-          </a>
-        </div>
-      <?php endif; ?>
+      <h1>Welcome to Course Safari, <?php echo $_SESSION["username"]; ?></h1>
+      <p>Your dashboard for all things</p>
+      <div class="buttons">
+        <a href="update-info.php" class="btn btn-big btn-circle">
+          <i class="fas fa-user"></i>
+          <p>Update my info</p>
+        </a>
+        <a href="degree-tracker.php" class="btn btn-big btn-circle">
+          <i class="fas fa-graduation-cap"></i>
+          <p>Degree tracker</p>
+        </a>
+        <a href="course-planner.php" class="btn btn-big btn-circle">
+          <i class="fas fa-calendar-alt"></i>
+          <p>Course planner</p>
+        </a>
+      </div>
+      <div class="logout-section">
+        <a href="welcome.php" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i>
+          <p>Log out</p>
+        </a>
+      </div>
     </div>
   </div>
 </body>

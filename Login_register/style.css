@@ -46,6 +46,7 @@ body {
 }
 
 .form-group {
+  display: flex;
   margin-bottom: 20px;
 }
 
@@ -66,6 +67,7 @@ body {
   font-size: 18px;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .btn:hover {
@@ -82,7 +84,6 @@ body {
 .link:hover {
   color: #007aff;
 }
-
 
 .back-btn {
   position: absolute;
