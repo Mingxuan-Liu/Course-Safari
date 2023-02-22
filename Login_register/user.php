@@ -20,7 +20,7 @@
           <i class="fas fa-user"></i>
           <p>Update my info</p>
         </a>
-        <a href="degree-tracker.php" class="btn btn-big btn-circle">
+        <a href="../Degree_tracker/declaration.php" class="btn btn-big btn-circle">
           <i class="fas fa-graduation-cap"></i>
           <p>Degree tracker</p>
         </a>
