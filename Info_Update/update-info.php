@@ -84,7 +84,7 @@
                     <?php echo $_SESSION["username"]; ?>
                 </p>
 
-                <form action="update.php" , method="post">
+                <form action="update-info.php" , method="post">
                     <p>
                         <label for="newUsename">New Username: </label>
                         <input type="text" name="newUsername" id="newUsername" placeholder="Enter your new username"
