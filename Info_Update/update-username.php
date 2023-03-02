@@ -73,7 +73,7 @@
                 else: 
             ?>
             
-                <a href="../Login_register/user.php" class="back-btn">Back</a>
+                <a href="update-info.php" class="back-btn">Back</a>
 
                 <h1>Update Username</h1>
                 <br>
