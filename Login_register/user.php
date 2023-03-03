@@ -16,7 +16,7 @@
       <h1>Welcome to Course Safari, <?php echo $_SESSION["username"]; ?></h1>
       <p>Your dashboard for all things</p>
       <div class="buttons">
-        <a href="update-info.php" class="btn btn-big btn-circle">
+        <a href="../Info_Update/update-info.php" class="btn btn-big btn-circle">
           <i class="fas fa-user"></i>
           <p>Update my info</p>
         </a>
