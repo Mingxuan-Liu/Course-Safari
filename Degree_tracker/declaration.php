@@ -1,23 +1,20 @@
 <?php
 session_start();
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "user_db";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+if (isset($_SESSION["error"])) {
+    unset($_SESSION["error"]);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $primary_major = $_POST["primary_major"];
-    $secondary_major = $_POST["secondary_major"];
-    $minor = $_POST["minor"];
+    $_SESSION['primary_major'] = $_POST["primary_major"];
+    $_SESSION['secondary_major'] = $_POST["secondary_major"];
+    $_SESSION['minor'] = $_POST["minor"];
 
-    if ($primary_major == "None" && $secondary_major == "None") {
+    if ($_SESSION['primary_major'] == "None" && $_SESSION['secondary_major'] == "None") {
         $_SESSION["error"] = "non_declaration";
+    }
+    elseif ($_SESSION['primary_major'] == "None" && $_SESSION['secondary_major'] != "None") {
+        $_SESSION["error"] = "incorrect_format";
     }
 
     if (!isset($_SESSION["error"])) {
@@ -33,23 +30,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <link rel="stylesheet" href="../Login_register/style.css">
-  <title>Welcome to Course Safari</title>
+  <link rel="stylesheet" href="degree_tracker_style.css">
+  <title>Declare to Course Safari</title>
 </head>
 <body>
     <div class="container">
         <div class="main">
             <?php
                 if (isset($_SESSION["declare_success"])):
-            ?>
-                <div class="success-message">
-                    <i class="fas fa-check-circle"></i>
-                    <div class="declaration-text">Declaration Successful!</div>
-                    <div class="btn-group">
-                        <a href="../Login_register/user.php" class="btn">Okay</a>
-                    </div>
-                </div>
-            <?php
+                    header("Location: survey.php");
                 else:
             ?>
                 <a href="../Login_register/user.php" class="back-btn">
@@ -61,6 +50,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ?>
                     <p class="error">Declaration Failed! You must declare at least one major.</p>
                 <?php
+                    elseif ($_SESSION['error'] == "incorrect_format"):
+                ?>
+                    <p class="error">Declaration Failed! You must declare primary major first.</p>
+                <?php
                     endif;
                 ?>
                 <form action="declaration.php" method="post">
@@ -70,12 +63,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <option value="None" selected>None</option>
                             <option value="BA in Computer Science">BA in Computer Science</option>
                             <option value="BS in Computer Science">BS in Computer Science</option>
-                            <option value="Economics">Economics</option>
-                            <option value="Chemistry">Chemistry</option>
-                            <option value="Physics">Physics</option>
-                            <option value="Biology">Biology</option>
-                            <option value="Biology">Mathematics</option>
-                            <option value="History">History</option>
+                            <option value="BA in Economics">BA in Economics</option>
+                            <option value="BA in History">BA in History</option>
                         </select>
                     </div>
                     <div class="declare-name">Secondary Major</div>
@@ -84,12 +73,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <option value="None" selected>None</option>
                             <option value="BA in Computer Science">BA in Computer Science</option>
                             <option value="BS in Computer Science">BS in Computer Science</option>
-                            <option value="Economics">Economics</option>
-                            <option value="Chemistry">Chemistry</option>
-                            <option value="Physics">Physics</option>
-                            <option value="Biology">Biology</option>
-                            <option value="Biology">Mathematics</option>
-                            <option value="History">History</option>
+                            <option value="BA in Economics">BA in Economics</option>
+                            <option value="BA in History">BA in History</option>
                         </select>
                     </div>
                     <div class="declare-name">Minor</div>
@@ -97,12 +82,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <select name="minor">
                             <option value="None" selected>None</option>
                             <option value="Minor in Computer Science">Minor in Computer Science</option>
-                            <option value="Economics">Economics</option>
-                            <option value="Chemistry">Chemistry</option>
-                            <option value="Physics">Physics</option>
-                            <option value="Biology">Biology</option>
-                            <option value="Biology">Mathematics</option>
-                            <option value="History">History</option>
+                            <option value="Minor in Economics">Minor in Economics</option>
+                            <option value="Minor in History">Minor in History</option>
                         </select>
                     </div>
                     <input type="submit" value="Declare" class="btn">

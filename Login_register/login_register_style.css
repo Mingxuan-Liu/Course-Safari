@@ -4,7 +4,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
@@ -39,16 +39,15 @@ body {
   margin-bottom: 20px;
 }
 
+.main h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .main p {
   font-size: 18px;
   margin-bottom: 40px;
   color: #999;
-}
-
-.declaration-text {
-  font-size: 36px;
-  margin-top: 15px;
-  margin-bottom: 50px;
 }
 
 .declare-name {
@@ -64,6 +63,14 @@ select {
   width: 300px;
   font-size: 20px;
   height: 50px;
+}
+
+.survey-item {
+  font-size: 25px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  color: black;
+  text-align: left;
 }
 
 .form-group {
@@ -107,10 +114,10 @@ select {
 }
 
 .back-btn {
+  display: flex;
   position: absolute;
   top: 20px;
   left: 20px;
-  display: flex;
   align-items: center;
   font-size: 14px;
   color: #000;

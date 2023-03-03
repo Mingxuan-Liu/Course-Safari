@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = mysqli_fetch_assoc($result);
     if (password_verify($password, $user["password"])) {
       $_SESSION["username"] = $user["username"];
+      $_SESSION["user_id"] = $user['id'];
       header("Location: user.php");
       exit;
     } else {
@@ -43,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login_register_style.css">
   <title>Login to Course Safari</title>
 </head>
 <body>
