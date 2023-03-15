@@ -1,0 +1,23 @@
+CREATE TABLE course_scheduled (
+    PRIMARY KEY (course_id),
+    course_id INT NOT NULL,
+    course_num VARCHAR(10) NOT NULL,
+    course_name VARCHAR(255) NOT NULL,
+    subject_name VARCHAR(255) NOT NULL,
+    course_weekday VARCHAR(255) NOT NULL,
+    course_time VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE course_list (
+    PRIMARY KEY (course_id),
+    course_id INT NOT NULL AUTO_INCREMENT,
+    course_num VARCHAR(10) NOT NULL,
+    course_name VARCHAR(255) NOT NULL,
+    subject_name VARCHAR(255) NOT NULL,
+    course_weekday VARCHAR(255) NOT NULL,
+    course_time VARCHAR(255) NOT NULL
+);
+
+INSERT INTO course_list (course_num, course_name, subject_name, course_weekday, course_time) VALUES 
+  ('Math111', 'Calculus I', 'Computer Science', 'Monday', '8:00 AM'),
+  ('Math112', 'Calculus II', 'Computer Science', 'Friday', '8:00 AM');
