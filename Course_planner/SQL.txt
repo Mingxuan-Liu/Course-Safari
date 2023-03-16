@@ -1,23 +1,23 @@
-CREATE TABLE course_scheduled (
-    PRIMARY KEY (course_id),
-    course_id INT NOT NULL,
-    course_num VARCHAR(10) NOT NULL,
-    course_name VARCHAR(255) NOT NULL,
-    subject_name VARCHAR(255) NOT NULL,
-    course_weekday VARCHAR(255) NOT NULL,
-    course_time VARCHAR(255) NOT NULL
+CREATE TABLE courses (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  course_code VARCHAR(255) NOT NULL,
+  course_name VARCHAR(255) NOT NULL,
+  days VARCHAR(10) NOT NULL,
+  start_time TIME NOT NULL,
+  end_time TIME NOT NULL
 );
 
-CREATE TABLE course_list (
-    PRIMARY KEY (course_id),
-    course_id INT NOT NULL AUTO_INCREMENT,
-    course_num VARCHAR(10) NOT NULL,
-    course_name VARCHAR(255) NOT NULL,
-    subject_name VARCHAR(255) NOT NULL,
-    course_weekday VARCHAR(255) NOT NULL,
-    course_time VARCHAR(255) NOT NULL
-);
+INSERT INTO courses (course_code, course_name, days, start_time, end_time)
+VALUES ('Math111', 'Calculus I', 'MWF', '09:00:00', '09:50:00');
 
-INSERT INTO course_list (course_num, course_name, subject_name, course_weekday, course_time) VALUES 
-  ('Math111', 'Calculus I', 'Computer Science', 'Monday', '8:00 AM'),
-  ('Math112', 'Calculus II', 'Computer Science', 'Friday', '8:00 AM');
+INSERT INTO courses (course_code, course_name, days, start_time, end_time)
+VALUES ('Math112', 'Calculus II', 'TR', '10:00:00', '11:15:00');
+
+INSERT INTO courses (course_code, course_name, days, start_time, end_time)
+VALUES ('Math221', 'Linear Algebra', 'MWF', '11:00:00', '11:50:00');
+
+INSERT INTO courses (course_code, course_name, days, start_time, end_time)
+VALUES ('CS170', 'Introduction to Computer Science I', 'MWF', '14:00:00', '14:50:00');
+
+INSERT INTO courses (course_code, course_name, days, start_time, end_time)
+VALUES ('CS171', 'Introduction to Computer Science II', 'TR', '8:30:00', '15:45:00');
