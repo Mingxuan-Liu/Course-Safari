@@ -53,6 +53,13 @@ body {
     text-align: center;
 }
 
+.main h4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+}
+
 .main p {
     font-size: 18px;
     margin-bottom: 40px;

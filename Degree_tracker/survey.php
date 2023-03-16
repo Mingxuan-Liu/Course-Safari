@@ -30,40 +30,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($result) > 0) {
         $sql = "DELETE FROM courses_taken WHERE user_id = '$user_id'";
         mysqli_query($conn, $sql);
-        $sql = "DELETE FROM courses_totake WHERE user_id = '$user_id'";
-        mysqli_query($conn, $sql);
     }
 
-    if ($_SESSION['secondary_major'] != "None" && $_SESSION['minor'] == "None") {
-        $array_all = array_unique(array_merge($_POST['primary_major'], $_POST['secondary_major']));
-    }
-    elseif ($_SESSION['secondary_major'] != "None" && $_SESSION['minor'] != "None") {
-        $array_all = array_unique(array_merge($_POST['primary_major'], $_POST['secondary_major'], $_POST['minor']));
-    }
-    elseif ($_SESSION['primary_major'] != "None" && $_SESSION['minor'] != "None") {
-        $array_all = array_unique(array_merge($_POST['primary_major'], $_POST['minor']));
-    }
-    else {
-        $array_all = $_POST['primary_major'];
-    }
-
-    foreach ($array_all as $item) {
-        $sql = "INSERT INTO courses_taken (user_id, course_num, course_name) 
-                    SELECT '$user_id', '$item', course_name 
+    if ($_SESSION['primary_major'] != "None") {
+        $major_name =  $_SESSION['primary_major'];
+        foreach ($_POST['primary_major'] as $item) {
+            $course_prefix = explode(" ", $item)[0];
+            $course_num = explode(" ", $item)[1];
+            $sql = "INSERT INTO courses_taken (user_id, major_name, course_prefix, course_num, course_name, required) 
+                    SELECT '$user_id', '$major_name', course_prefix, course_num, course_name, required 
                     FROM major_minor 
-                    WHERE course_num = '$item' 
-                    LIMIT 1";
-        mysqli_query($conn, $sql);
+                    WHERE subject_name = '$primary_subject_name' AND degree = '$primary_degree_name' AND 
+                        course_prefix = '$course_prefix' AND course_num = $course_num";
+            mysqli_query($conn, $sql);
+        }
     }
-    
-    $sql = "INSERT INTO courses_totake (user_id, course_num, course_name) 
-                SELECT DISTINCT '$user_id', course_num, course_name 
-                FROM major_minor 
-                WHERE ((degree = '$primary_degree_name' AND subject_name = '$primary_subject_name') OR 
-                    (degree = '$secondary_degree_name' AND subject_name = '$secondary_subject_name') OR 
-                    (degree IS NULL AND subject_name = '$minor_subject_name')) AND 
-                    (course_num NOT IN (SELECT course_num FROM courses_taken))";
-    mysqli_query($conn, $sql);
+
+    if ($_SESSION['secondary_major'] != "None") {
+        $major_name =  $_SESSION['secondary_major'];
+        foreach ($_POST['secondary_major'] as $item) {
+            $course_prefix = explode(" ", $item)[0];
+            $course_num = explode(" ", $item)[1];
+            $sql = "INSERT INTO courses_taken (user_id, major_name, course_prefix, course_num, course_name, required) 
+                    SELECT '$user_id', '$major_name', course_prefix, course_num, course_name, required 
+                    FROM major_minor 
+                    WHERE subject_name = '$secondary_subject_name' AND degree = '$secondary_degree_name' AND 
+                        course_prefix = '$course_prefix' AND course_num = $course_num";
+            mysqli_query($conn, $sql);
+        }
+    }
+
+    if ($_SESSION['minor'] != "None") {
+        $major_name =  $_SESSION['minor'];
+        foreach ($_POST['minor'] as $item) {
+            $course_prefix = explode(" ", $item)[0];
+            $course_num = explode(" ", $item)[1];
+            $sql = "INSERT INTO courses_taken (user_id, major_name, course_prefix, course_num, course_name, required) 
+                    SELECT '$user_id', '$major_name', course_prefix, course_num, course_name, required 
+                    FROM major_minor 
+                    WHERE subject_name = '$minor_subject_name' AND degree IS NULL AND 
+                        course_prefix = '$course_prefix' AND course_num = $course_num";
+            mysqli_query($conn, $sql);
+        }
+    }
 
     $_SESSION["submit_success"] = true;
 }
@@ -88,25 +97,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="success-message">
                     <i class="fas fa-check-circle"></i>
                     <h1>Submission Successful!</h1>
-                    <a href="../Login_register/user.php" class="btn">Go Back to the User Page</a>
+                    <a href="../Info_Update/update-info.php" class="btn">Go to User Home Page</a>
                 </div>
             <?php
                 else:
             ?>
-                <h2>Please click on the courses you have taken already from below.</h2>
+                <h2>Please click on the courses you have already taken from below.</h2>
                 <form action="survey.php" method="post">
                     <?php
                         if ($_SESSION['primary_major'] != "None"):
                             echo "<h3>" . "Primary Major: " . $_SESSION['primary_major'] . "</h3>";
-                            $sql = "SELECT course_num, course_name FROM major_minor 
-                                        WHERE subject_name = '$primary_subject_name' AND degree = '$primary_degree_name' AND major IS TRUE";
+
+                            $sql = "SELECT course_prefix, course_num, course_name FROM major_minor 
+                                        WHERE subject_name = '$primary_subject_name' AND degree = '$primary_degree_name' AND major IS TRUE AND required IS TRUE 
+                                        ORDER BY course_num";
                             $result = mysqli_query($conn, $sql);
+                            if (mysqli_num_rows($result) > 0):
+                                echo "<h4>". "These are the courses required by your primary major.". "</h4>";
+                            else:
+                                echo "<h4>". "You do not have courses required by your primary major.". "</h4>";
+                            endif;
                     ?>
                             <?php while ($obj = mysqli_fetch_assoc($result)) { ?>
                                 <label class="survey-item">
-                                    <input type="checkbox" name="primary_major[]" value="<?php echo $obj['course_num'];?>">
+                                    <input type="checkbox" name="primary_major[]" value="<?php echo $obj['course_prefix']." ".$obj['course_num'];?>">
                                     <span class="checkmark"></span>
-                                    <?php echo $obj["course_num"].": ".$obj["course_name"]; ?>
+                                    <?php echo $obj['course_prefix']." ".$obj['course_num'].": ".$obj["course_name"]; ?>
+                                </label>
+                            <?php } ?>
+                            
+                        <?php
+                            $sql = "SELECT course_prefix, course_num, course_name FROM major_minor 
+                            WHERE subject_name = '$primary_subject_name' AND degree = '$primary_degree_name' AND major IS TRUE AND required IS FALSE 
+                            ORDER BY course_num";
+                            $result = mysqli_query($conn, $sql);
+                            if (mysqli_num_rows($result) > 0):
+                                echo "<h4>". "These are the elective courses in your primary major.". "</h4>";
+                            else:
+                                echo "<h4>". "You do not have elective courses in your primary major.". "</h4>";
+                            endif;
+                        ?>
+                            <?php while ($obj = mysqli_fetch_assoc($result)) { ?>
+                                <label class="survey-item">
+                                    <input type="checkbox" name="primary_major[]" value="<?php echo $obj['course_prefix']." ".$obj['course_num'];?>">
+                                    <span class="checkmark"></span>
+                                    <?php echo $obj['course_prefix']." ".$obj['course_num'].": ".$obj["course_name"]; ?>
                                 </label>
                             <?php } ?>
                     <?php 
@@ -115,15 +150,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php
                         if ($_SESSION['secondary_major'] != "None"):
                             echo "<h3>" . "Secondary Major: " . $_SESSION['secondary_major'] . "</h3>";
-                            $sql = "SELECT course_num, course_name FROM major_minor 
-                                        WHERE subject_name = '$secondary_subject_name' AND degree = '$secondary_degree_name' AND major IS TRUE";
+
+                            $sql = "SELECT course_prefix, course_num, course_name FROM major_minor 
+                                        WHERE subject_name = '$secondary_subject_name' AND degree = '$secondary_degree_name' AND major IS TRUE AND required IS TRUE 
+                                        ORDER BY course_num";
                             $result = mysqli_query($conn, $sql);
+                            if (mysqli_num_rows($result) > 0):
+                                echo "<h4>". "These are the courses required by your secondary major.". "</h4>";
+                            else:
+                                echo "<h4>". "You do not have courses required by your secondary major.". "</h4>";
+                            endif;
                     ?>
                             <?php while ($obj = mysqli_fetch_assoc($result)) { ?>
                                 <label class="survey-item">
-                                    <input type="checkbox" name="secondary_major[]" value="<?php echo $obj['course_num'];?>">
+                                    <input type="checkbox" name="secondary_major[]" value="<?php echo $obj['course_prefix']." ".$obj['course_num'];?>">
                                     <span class="checkmark"></span>
-                                    <?php echo $obj["course_num"].": ".$obj["course_name"]; ?>
+                                    <?php echo $obj['course_prefix']." ".$obj['course_num'].": ".$obj["course_name"]; ?>
+                                </label>
+                            <?php } ?>
+
+                        <?php
+                            $sql = "SELECT course_prefix, course_num, course_name FROM major_minor 
+                            WHERE subject_name = '$secondary_subject_name' AND degree = '$secondary_degree_name' AND major IS TRUE AND required IS FALSE 
+                            ORDER BY course_num";
+                            $result = mysqli_query($conn, $sql);
+                            if (mysqli_num_rows($result) > 0):
+                                echo "<h4>". "These are the elective courses in your secondary major.". "</h4>";
+                            else:
+                                echo "<h4>". "You do not have elective courses in your secondary major.". "</h4>";
+                            endif;
+                        ?>
+                            <?php while ($obj = mysqli_fetch_assoc($result)) { ?>
+                                <label class="survey-item">
+                                    <input type="checkbox" name="secondary_major[]" value="<?php echo $obj['course_prefix']." ".$obj['course_num'];?>">
+                                    <span class="checkmark"></span>
+                                    <?php echo $obj['course_prefix']." ".$obj['course_num'].": ".$obj["course_name"]; ?>
                                 </label>
                             <?php } ?>
                     <?php 
@@ -132,15 +193,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php
                         if ($_SESSION['minor'] != "None"):
                             echo "<h3>" . "Minor: " . $subject_name . "</h3>";
-                            $sql = "SELECT course_num, course_name FROM major_minor 
-                                        WHERE subject_name = '$minor_subject_name' AND degree IS NULL AND major IS FALSE";
+
+                            $sql = "SELECT course_prefix, course_num, course_name FROM major_minor 
+                                        WHERE subject_name = '$minor_subject_name' AND degree IS NULL AND major IS FALSE AND required is TRUE 
+                                        ORDER BY course_num";
                             $result = mysqli_query($conn, $sql);
+                            if (mysqli_num_rows($result) > 0):
+                                echo "<h4>". "These are the courses required by your minor.". "</h4>";
+                            else:
+                                echo "<h4>". "You do not have courses required by your minor.". "</h4>";
+                            endif;
                     ?>
                             <?php while ($obj = mysqli_fetch_assoc($result)) { ?>
                                 <label class="survey-item">
-                                    <input type="checkbox" name="minor[]" value="<?php echo $obj['course_num'];?>">
+                                    <input type="checkbox" name="minor[]" value="<?php echo $obj['course_prefix']." ".$obj['course_num'];?>">
                                     <span class="checkmark"></span>
-                                    <?php echo $obj["course_num"].": ".$obj["course_name"]; ?>
+                                    <?php echo $obj['course_prefix']." ".$obj['course_num'].": ".$obj["course_name"]; ?>
+                                </label>
+                            <?php } ?>
+
+                        <?php
+                            $sql = "SELECT course_prefix, course_num, course_name FROM major_minor 
+                            WHERE subject_name = '$minor_subject_name' AND degree IS NULL AND major IS FALSE AND required is FALSE 
+                            ORDER BY course_num";
+                            $result = mysqli_query($conn, $sql);
+                            if (mysqli_num_rows($result) > 0):
+                                echo "<h4>". "These are the elective courses in your minor.". "</h4>";
+                            else:
+                                echo "<h4>". "You do not have elective courses in your minor.". "</h4>";
+                            endif;
+                        ?>
+                            <?php while ($obj = mysqli_fetch_assoc($result)) { ?>
+                                <label class="survey-item">
+                                    <input type="checkbox" name="minor[]" value="<?php echo $obj['course_prefix']." ".$obj['course_num'];?>">
+                                    <span class="checkmark"></span>
+                                    <?php echo $obj['course_prefix']." ".$obj['course_num'].": ".$obj["course_name"]; ?>
                                 </label>
                             <?php } ?>
                     <?php 

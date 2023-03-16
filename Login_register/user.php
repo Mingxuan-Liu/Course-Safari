@@ -18,7 +18,7 @@
       <div class="buttons">
         <a href="../Info_Update/update-info.php" class="btn btn-big btn-circle">
           <i class="fas fa-user"></i>
-          <p>Update my info</p>
+          <p>User info</p>
         </a>
         <a href="../Degree_tracker/declaration.php" class="btn btn-big btn-circle">
           <i class="fas fa-graduation-cap"></i>
