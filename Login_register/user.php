@@ -24,7 +24,7 @@
           <i class="fas fa-graduation-cap"></i>
           <p>Degree tracker</p>
         </a>
-        <a href="course-planner.php" class="btn btn-big btn-circle">
+        <a href="../Course_planner/course-planner.php" class="btn btn-big btn-circle">
           <i class="fas fa-calendar-alt"></i>
           <p>Course planner</p>
         </a>
