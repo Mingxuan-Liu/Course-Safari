@@ -28,6 +28,7 @@ h2 {
   width: 100%;
   max-width: 500px;
   gap: 10px;
+  margin-left: -20px;
 }
 
 .schedule-container {
@@ -104,4 +105,3 @@ h2 {
 .course-block span:hover {
   background-color: #0a58ca;
 }
-
