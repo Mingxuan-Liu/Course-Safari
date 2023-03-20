@@ -145,8 +145,9 @@ body {
 
 .taken-block {
   position: relative;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  color: #ddd9d9;
+  background-color: #fcfcfc;
+  border: 1px solid #fcfcfc;
   border-radius: 5px;
   padding: 10px;
   margin: 5px;
@@ -157,9 +158,9 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: rgb(250, 127, 127);
+  background-color: rgb(250, 127, 127, 0.6);
   color: white;
-  border: 1px solid rgb(250, 127, 127);
+  border: 1px solid rgb(250, 127, 127, 0.6);
   border-radius: 5px;
   padding: 2px 5px;
   font-size: 14px;
@@ -170,9 +171,22 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: rgb(97, 249, 161);
+  background-color: rgba(97, 203, 249, 0.6);
   color: white;
-  border: 1px solid rgb(97, 249, 161);
+  border: 1px solid rgba(97, 203, 249, 0.6);
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.complete-tag {
+  position: absolute;
+  left: 75px;
+  bottom: 0;
+  background-color: rgba(97, 249, 160, 0.6);
+  color: white;
+  border: 1px solid rgba(97, 249, 160, 0.6);
   border-radius: 5px;
   padding: 2px 5px;
   font-size: 14px;

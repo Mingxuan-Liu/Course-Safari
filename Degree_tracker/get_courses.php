@@ -35,6 +35,7 @@ if (isset($_GET["major"])) {
             $course_tag = "Elective";
             echo "<span class='elective-tag'>" . $course_tag . "</span>";
         }
+        echo "<span class='complete-tag'>" . "Complete" . "</span>";
         echo "</div>";
     }
     echo "</div>"; // Close the courses container
