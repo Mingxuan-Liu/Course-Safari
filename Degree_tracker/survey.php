@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="success-message">
                     <i class="fas fa-check-circle"></i>
                     <h1>Submission Successful!</h1>
-                    <a href="../Info_Update/update-info.php" class="btn">Go to User Home Page</a>
+                    <a href="course_progress.php" class="btn">Check Your Academic Progress</a>
                 </div>
             <?php
                 else:
