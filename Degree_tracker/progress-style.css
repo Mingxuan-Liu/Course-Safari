@@ -16,24 +16,6 @@ body {
   width: 1600px;
 }
 
-.buttons-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.buttons-container a {
-  margin: 1.5rem;
-}
-
-.header {
-  margin-bottom: 40px;
-}
-
-.header img {
-  width: 100px;
-}
-
 .main h1 {
   font-size: 36px;
   margin-bottom: 20px;
@@ -63,26 +45,6 @@ body {
   font-size: 18px;
   margin-bottom: 40px;
   color: #f3f0f0;
-}
-
-select {
-  width: 300px;
-  font-size: 20px;
-  height: 50px;
-}
-
-.form-group {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.form-control {
-  background-color: #f2f2f2;
-  border: none;
-  border-radius: 25px;
-  font-size: 18px;
-  padding: 10px 20px;
-  width: 100%;
 }
 
 .btn {
@@ -173,13 +135,13 @@ select {
 
 .course-status-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 20px;
 }
 
 .course-status-buttons button {
-  background-color: #007bff;
-  color: white;
+  background-color: #e5e3e3;
+  color: rgb(93, 92, 92);
   border: none;
   cursor: pointer;
   font-size: 14px;
@@ -190,5 +152,10 @@ select {
 }
 
 .course-status-buttons button:hover {
-  background-color: #0056b3;
+  background-color: #2071c8;
+  color: rgb(226, 220, 220);
+}
+
+.course-status-buttons button.active {
+  background-color: #007bff;
 }
