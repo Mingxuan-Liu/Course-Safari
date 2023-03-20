@@ -118,6 +118,11 @@ if (!$conn) {
                         }
                     ?>
                 <hr>
+                <div class="course-status-buttons">
+                    <button id="all">All</button>
+                    <button id="still-needed">Still Needed</button>
+                    <button id="complete">Complete</button>
+                </div>
                 <div id="clicked-item-output"> 
                     <!-- The content of this section is automatically updated by javascripts whenever a different list item is clicked-->
                 </div>

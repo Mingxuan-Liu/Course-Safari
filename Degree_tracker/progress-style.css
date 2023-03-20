@@ -65,21 +65,6 @@ body {
   color: #f3f0f0;
 }
 
-.declaration-text {
-  font-size: 36px;
-  margin-top: 15px;
-  margin-bottom: 50px;
-}
-
-.declare-name {
-  font-size: 30px;
-  margin-bottom: 5px;
-}
-
-.drop-down {
-  margin-bottom: 20px;
-}
-
 select {
   width: 300px;
   font-size: 20px;
@@ -184,4 +169,26 @@ select {
 
 .toggled-list input[type="checkbox"]:checked ~ .toggled-list-label::before {
   content: "▼";
+}
+
+.course-status-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.course-status-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.course-status-buttons button:hover {
+  background-color: #0056b3;
 }
