@@ -13,7 +13,7 @@ body {
   box-shadow: 0 0 10px #ddd;
   padding: 40px;
   text-align: center;
-  width: 1600px;
+  width: 1700px;
 }
 
 .main h1 {
@@ -133,29 +133,55 @@ body {
   content: "▼";
 }
 
-.course-status-buttons {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 20px;
+.not-taken-block {
+  position: relative;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  width: 300px;
 }
 
-.course-status-buttons button {
-  background-color: #e5e3e3;
-  color: rgb(93, 92, 92);
-  border: none;
-  cursor: pointer;
+.taken-block {
+  position: relative;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  width: 300px;
+}
+
+.require-tag {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(250, 127, 127);
+  color: white;
+  border: 1px solid rgb(250, 127, 127);
+  border-radius: 5px;
+  padding: 2px 5px;
   font-size: 14px;
-  padding: 10px 20px;
-  margin: 0 5px;
-  border-radius: 4px;
-  transition: background-color 0.2s;
+  margin: 5px;
 }
 
-.course-status-buttons button:hover {
-  background-color: #2071c8;
-  color: rgb(226, 220, 220);
+.elective-tag {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(97, 249, 161);
+  color: white;
+  border: 1px solid rgb(97, 249, 161);
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 14px;
+  margin: 5px;
 }
 
-.course-status-buttons button.active {
-  background-color: #007bff;
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
 }
