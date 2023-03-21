@@ -16,11 +16,29 @@ if (isset($_GET["major"])) {
 
     echo "<div class='courses-container'>"; // Start the courses container
     // Retrieve major courses that have not been taken yet
+    $not_taken_sql = "SELECT * FROM major_minor
+                      WHERE course_prefix = 'CS'";
+    $not_taken = mysqli_query($conn, $not_taken_sql);
+    while ($not_taken_obj = mysqli_fetch_assoc($not_taken)) {
+        $not_taken_str = $not_taken_obj['course_prefix'] . " " . $not_taken_obj['course_num'] . ": " . $not_taken_obj['course_name'];
+        echo "<div class='not-taken-block'>";
+        echo "<h4>" . $not_taken_str . "</h4>";
+        $course_tag = "";
+        if ($not_taken_obj['required'] == 1) {
+            $course_tag = "Required";
+            echo "<span class='require-tag'>" . $course_tag . "</span>";
+        } else {
+            $course_tag = "Elective";
+            echo "<span class='elective-tag'>" . $course_tag . "</span>";
+        }
+        echo "<span class='need-tag'>" . "Still Needed" . "</span>";
+        echo "</div>";
+    }
 
     // Retrieve course information based on the clicked major
     $sql = "SELECT * FROM courses_taken
-    WHERE user_id = '$user_id' AND major_name = '$clickedName'
-    ORDER BY course_num";
+            WHERE user_id = '$user_id' AND major_name = '$clickedName'
+            ORDER BY course_num";
     $taken = mysqli_query($conn, $sql);
     
     while ($obj = mysqli_fetch_assoc($taken)) {

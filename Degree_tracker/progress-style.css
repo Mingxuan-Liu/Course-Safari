@@ -135,8 +135,9 @@ body {
 
 .not-taken-block {
   position: relative;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  color: #434242;
+  background-color: #f5f2f2fe;
+  border: 1px solid #f5f2f2fe;
   border-radius: 5px;
   padding: 10px;
   margin: 5px;
@@ -187,6 +188,19 @@ body {
   background-color: rgba(97, 249, 160, 0.6);
   color: white;
   border: 1px solid rgba(97, 249, 160, 0.6);
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.need-tag {
+  position: absolute;
+  left: 75px;
+  bottom: 0;
+  background-color: rgba(212, 218, 47, 0.6);
+  color: white;
+  border: 1px solid rgba(212, 218, 47, 0.6);
   border-radius: 5px;
   padding: 2px 5px;
   font-size: 14px;
