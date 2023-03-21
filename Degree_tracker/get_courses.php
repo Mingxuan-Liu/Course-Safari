@@ -13,8 +13,29 @@ $user_id = $_SESSION["user_id"];
 
 if (isset($_GET["major"])) {
     $clickedName = $_GET["major"];
+    echo "<h2>" . "Course Requirements" . "</h2>";
+    // Calculate the total number of courses and the number of completed courses
+    $total_courses_sql = "SELECT COUNT(*) FROM major_minor WHERE major_name = '$clickedName'";
+    $completed_courses_sql = "SELECT COUNT(*) FROM courses_taken WHERE user_id = '$user_id' AND major_name = '$clickedName'";
 
-    echo "<div class='courses-container'>"; // Start the courses container
+    $total_courses_result = mysqli_query($conn, $total_courses_sql);
+    $completed_courses_result = mysqli_query($conn, $completed_courses_sql);
+
+    $total_courses = mysqli_fetch_array($total_courses_result)[0];
+    $completed_courses = mysqli_fetch_array($completed_courses_result)[0];
+    // Calculate the completion percentage
+    $completion_percentage = 0;
+    if ($total_courses > 0) {
+        $completion_percentage = ($completed_courses / $total_courses) * 100;
+    }
+    // Display the progress bar
+    echo "<div class='progress-container'>";
+    echo "<div class='completed' style='width: " . $completion_percentage . "%;'></div>";
+    echo "<span class='progress-percentage'>" . round($completion_percentage, 2) . "%</span>";
+    echo "</div>";
+
+    // Start the courses container
+    echo "<div class='courses-container'>";
     // Retrieve major courses that have not been taken yet
     $not_taken_sql = "SELECT major_minor.*
                       FROM major_minor
@@ -55,7 +76,7 @@ if (isset($_GET["major"])) {
             $course_tag = "Elective";
             echo "<span class='elective-tag'>" . $course_tag . "</span>";
         }
-        echo "<span class='complete-tag'>" . "Complete" . "</span>";
+        echo "<span class='complete-tag'>" . "Completed" . "</span>";
         echo "</div>";
     }
     echo "</div>"; // Close the courses container

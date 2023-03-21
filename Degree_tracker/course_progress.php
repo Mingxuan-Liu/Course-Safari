@@ -30,7 +30,7 @@ if (!$conn) {
     <body>
         <div class="container">
             <div class="main">
-                <a href="../Login_register/user.php" class="back-btn">Back</a>
+                <a href="../Login_register/user.php" class="back-btn">Home</a>
                 <h1>Degree Completion</h1>
                 <hr>
                     <?php $user_id = $_SESSION["user_id"]; // obtain the user id from database?>
