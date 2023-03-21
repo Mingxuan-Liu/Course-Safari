@@ -16,8 +16,10 @@ if (isset($_GET["major"])) {
 
     echo "<div class='courses-container'>"; // Start the courses container
     // Retrieve major courses that have not been taken yet
-    $not_taken_sql = "SELECT * FROM major_minor
-                      WHERE course_prefix = 'CS'";
+    $not_taken_sql = "SELECT major_minor.*
+                      FROM major_minor
+                      LEFT JOIN courses_taken ON major_minor.course_name = courses_taken.course_name
+                      WHERE major_minor.major_name = '$clickedName' AND courses_taken.course_name IS NULL";
     $not_taken = mysqli_query($conn, $not_taken_sql);
     while ($not_taken_obj = mysqli_fetch_assoc($not_taken)) {
         $not_taken_str = $not_taken_obj['course_prefix'] . " " . $not_taken_obj['course_num'] . ": " . $not_taken_obj['course_name'];
