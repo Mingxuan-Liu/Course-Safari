@@ -46,11 +46,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </a>
                 <h1>Major/Minor(s) Declaration</h1>
                 <?php
-                    if ($_SESSION['error'] == "non_declaration"):
+                    if (isset($_SESSION['error']) && $_SESSION['error'] == "non_declaration"):
                 ?>
                     <p class="error">Declaration Failed! You must declare at least one major.</p>
                 <?php
-                    elseif ($_SESSION['error'] == "incorrect_format"):
+                    elseif (isset($_SESSION['error']) && $_SESSION['error'] == "incorrect_format"):
                 ?>
                     <p class="error">Declaration Failed! You must declare primary major first.</p>
                 <?php
