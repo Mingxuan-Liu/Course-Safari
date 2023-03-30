@@ -67,6 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="submit" value="Login" class="btn">
       </form>
       <a href="register.php" class="link">Don't have an account? Register here</a>
+      <br>
+      <a href = "../Reset_Password/email.html" class = "link">Forgot your password? Reset here</a>
     </div>
   </div>
 </body>

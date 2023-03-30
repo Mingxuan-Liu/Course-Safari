@@ -90,7 +90,7 @@
     <meta name="author" content="Tianjun Zhong">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This page allows users to update their Course Safari usernames.">
-    <title>Update Username</title>
+    <title>Reset Password</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 

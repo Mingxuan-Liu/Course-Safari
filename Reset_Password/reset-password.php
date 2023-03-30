@@ -19,6 +19,15 @@
     if ($_GET["key"] && $_GET["reset"]) {
         $_SESSION["email"] = $_GET["key"];
         $_SESSION["password"] = $_GET["reset"];
+        $email = $_SESSION["email"];
+        $oldPassword = $_SESSION["password"];
+
+        $check_sql = "SELECT * FROM users WHERE email = '$email' AND password = '$oldPassword'";
+        $check_result = mysqli_query($conn, $check_sql);
+
+        if (mysqli_num_rows($check_result) < 1) {
+            $_SESSION["error"] = "link_expire";
+        }
     }
     elseif (!isset($_SESSION["email"]) || !isset($_SESSION["password"])) {
         $_SESSION["error"] = "key_not_passed";
@@ -29,14 +38,14 @@
         $email = $_SESSION["email"];
         $oldPassword = $_SESSION["password"];
 
-        $check_sql = "SELECT * FROM users WHERE email = '$email' AND password = '$oldPassword'";
-        $check_result = mysqli_query($conn, $check_sql);
-        $user = mysqli_fetch_assoc($check_result);
+        // $check_sql = "SELECT * FROM users WHERE email = '$email' AND password = '$oldPassword'";
+        // $check_result = mysqli_query($conn, $check_sql);
+        // $user = mysqli_fetch_assoc($check_result);
 
-        if (mysqli_num_rows($check_result) < 1) {
-            $_SESSION["error"] = "link_expire";
-        }
-        elseif (password_verify($newPassword, $oldPassword)) {
+        // if (mysqli_num_rows($check_result) < 1) {
+        //     $_SESSION["error"] = "link_expire";
+        // }
+        if (password_verify($newPassword, $oldPassword)) {
             $_SESSION["error"] = "same_password";
         }
         elseif ($newPassword != $confirmPassword) {
@@ -65,7 +74,7 @@
     <meta name="author" content="Tianjun Zhong">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This page allows users to update their Course Safari usernames.">
-    <title>Update Username</title>
+    <title>Reset Password</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
