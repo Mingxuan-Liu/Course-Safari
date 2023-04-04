@@ -53,6 +53,7 @@
 </head>
 
 <body>
+<img src="img/toolkit.jpg" alt="Toolkit" width="300" height="300">
     <div class = "container">
         <div class="main">
 
@@ -73,9 +74,9 @@
                 else: 
             ?>
             
-                <a href="update-info.php" class="back-btn">Back</a>
+            <a href="update-info.php" class="back-btn-upuser">&laquo; Back</a>
 
-                <h1>Update Username</h1>
+            <h1upuser>Update Username</h1upuser>
                 <br>
 
                 <section>
@@ -85,14 +86,16 @@
                     </p>
 
                     <form action="update-username.php" , method="post">
-                        <p>
+                        <n>
                             <label for="newUsename">New Username: </label>
-                            <input type="text" name="newUsername" id="newUsername" placeholder="Enter your new username"
+                            <div class="form-group">
+                            <input type="text" class="form-control" name="newUsername" id="newUsername" placeholder="Enter your new username"
                                 required>
-                        </p>
+                                <div>
+                </n>
                         <br>
-                        <button type="submit">Update</button>
-                        <button type="reset">Clear</button>
+                        <button type="submit" class="form2">Update</button>
+                        <button type="reset" class="form3">Clear</button>
                     </form>
 
                 </section>
