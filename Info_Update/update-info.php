@@ -39,49 +39,12 @@ if (!$conn) {
                         <i class="fas fa-graduation-cap"></i>
                         <p>Reset My Password</p>
                     </a>
+
+                    <a href="course_progress.php" class="btn btn-big btn-circle">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>Degree Tracker</p>
+                    </a>
                 </div>
-
-                <?php $user_id = $_SESSION["user_id"]; ?>
-                <?php
-                    $sql = "SELECT * FROM courses_taken WHERE user_id = '$user_id'";
-                    $result = mysqli_query($conn, $sql);
-                    if (mysqli_num_rows($result) == 0):
-                ?>
-                        <h2>You have not declared your major. Please declare it <a href="../Degree_tracker/declaration.php">here</a>.</h2>
-                <?php
-                    else:
-                        echo nl2br("<h2>"."You can see all major courses"."\n"."you have already taken from below."."</h2>");
-                    endif;
-                ?>
-
-                <?php
-                    $sql = "SELECT DISTINCT major_name FROM courses_taken WHERE user_id = '$user_id'";
-                    $result = mysqli_query($conn, $sql);
-                    $major_names = array();
-                    while ($obj = mysqli_fetch_assoc($result)) {
-                        $major_names[] = $obj['major_name'];
-                    }
-
-                    for ($x=0; $x<count($major_names); $x++) {
-                        $temp_major = $major_names[$x];
-                        echo "<h3>"."$temp_major"."</h3>";
-
-                        $sql = "SELECT * FROM courses_taken 
-                        WHERE user_id = '$user_id' AND major_name = '$temp_major' 
-                        ORDER BY course_num";
-                        $result = mysqli_query($conn, $sql);
-
-                        while ($obj = mysqli_fetch_assoc($result)) {
-                            $temp_str = $obj['course_prefix']." ".$obj['course_num'].": ".$obj['course_name'];
-                            if ($obj['required'] == 1):
-                                $temp_str = $temp_str." (required)";
-                            else:
-                                $temp_str = $temp_str." (elective)";
-                            endif;
-                            echo "<h4>".$temp_str."</h4>";
-                        }
-                    }
-                ?>
             </div>
     </body>
 </html>

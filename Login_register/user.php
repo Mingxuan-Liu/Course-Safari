@@ -22,7 +22,7 @@
         </a>
         <a href="../Degree_tracker/declaration.php" class="btn btn-big btn-circle">
           <i class="fas fa-graduation-cap"></i>
-          <p>Degree tracker</p>
+          <p>Major & Minor Declaration</p>
         </a>
         <a href="../Course_planner/course-planner.php" class="btn btn-big btn-circle">
           <i class="fas fa-calendar-alt"></i>

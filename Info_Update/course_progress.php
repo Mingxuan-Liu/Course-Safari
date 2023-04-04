@@ -33,7 +33,7 @@ if (!$conn) {
                 <a href="../Login_register/user.php" class="back-btn">Home</a>
                 <h1>Degree Completion</h1>
                 <hr>
-                    <?php $user_id = $_SESSION["user_id"]; // obtain the user id from database?>
+                    <?php $user_id = $_SESSION["user_id"]; ?>
                     <?php
                         // select all majors of this user has declared from table courses-taken
                         $sql = "SELECT * FROM courses_taken WHERE user_id = '$user_id'";
@@ -51,22 +51,22 @@ if (!$conn) {
                             while ($obj = mysqli_fetch_assoc($result)) {
                                 $major_names[] = $obj['major_name'];
                             }
-                        endif;
                     ?>
-                    <!-- Create a toggle list that allows the users to click on list items -->
-                    <div class="toggled-list">
-                        <input type="checkbox" id="toggle-list">
-                        <label class="toggled-list-label" for="toggle-list">Select Degree</label>
-                        <ul class="toggled-list-content" id="toggled-list-items">
-                            <?php
-                            for ($x = 0; $x < count($major_names); $x++) {
-                                // add major name into the toggle list
-                                $temp_major = $major_names[$x];
-                                echo "<li>" . $temp_major . "</li>";
-                            }
-                            ?>
-                        </ul>
-                    </div>
+                        <!-- Create a toggle list that allows the users to click on list items -->
+                        <div class="toggled-list">
+                            <input type="checkbox" id="toggle-list">
+                            <label class="toggled-list-label" for="toggle-list">Select Degree</label>
+                            <ul class="toggled-list-content" id="toggled-list-items">
+                                <?php
+                                    for ($x = 0; $x < count($major_names); $x++) {
+                                        // add major name into the toggle list
+                                        $temp_major = $major_names[$x];
+                                        echo "<li>" . $temp_major . "</li>";
+                                    }
+                                ?>
+                            </ul>
+                        </div>
+                    <?php endif;?>
                     <script>
                         // Create a variable to store the clicked item's text
                         let clicked = "";

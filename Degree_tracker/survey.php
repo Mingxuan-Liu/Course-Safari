@@ -76,39 +76,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $_SESSION["submit_success"] = true;
 }
-
-// add a major_name column into the database
-// Check if the major_name column already exists
-$check_column_sql = "SELECT COUNT(*)
-                     FROM INFORMATION_SCHEMA.COLUMNS
-                     WHERE table_schema = '$dbname'
-                     AND table_name = 'major_minor'
-                     AND column_name = 'major_name'";
-$column_exists_result = mysqli_query($conn, $check_column_sql);
-$column_exists = mysqli_fetch_array($column_exists_result)[0];
-
-// If the major_name column doesn't exist, add it
-if (!$column_exists) {
-    $add_major_name_sql = "ALTER TABLE major_minor ADD major_name VARCHAR(255)";
-    // handle the error when adding a new column into the table
-    if (!mysqli_query($conn, $add_major_name_sql)) {
-        echo "Error adding major_name column: " . mysqli_error($conn);
-    }
-}
-
-// Update the major_name column based on the major attribute
-$update_major_name_sql = "
-    UPDATE major_minor
-    SET major_name = CASE
-        WHEN major = 1 THEN CONCAT(degree, ' in ', subject_name)
-        ELSE CONCAT('Minor in ', subject_name)
-    END;
-";
-// handle the error when updating the table
-if (!mysqli_query($conn, $update_major_name_sql)) {
-    echo "Error updating major_name column: " . mysqli_error($conn);
-}
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -128,7 +98,7 @@ if (!mysqli_query($conn, $update_major_name_sql)) {
                 <div class="success-message">
                     <i class="fas fa-check-circle"></i>
                     <h1>Submission Successful!</h1>
-                    <a href="course_progress.php" class="btn">Check Your Academic Progress</a>
+                    <a href="../Info_Update/course_progress.php" class="btn">Check Your Academic Progress</a>
                 </div>
             <?php
                 else:

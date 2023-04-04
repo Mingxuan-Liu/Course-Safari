@@ -155,32 +155,6 @@ body {
   width: 300px;
 }
 
-.require-tag {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: rgb(250, 127, 127, 0.6);
-  color: white;
-  border: 1px solid rgb(250, 127, 127, 0.6);
-  border-radius: 5px;
-  padding: 2px 5px;
-  font-size: 14px;
-  margin: 5px;
-}
-
-.elective-tag {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(97, 203, 249, 0.6);
-  color: white;
-  border: 1px solid rgba(97, 203, 249, 0.6);
-  border-radius: 5px;
-  padding: 2px 5px;
-  font-size: 14px;
-  margin: 5px;
-}
-
 .complete-tag {
   position: absolute;
   left: 75px;

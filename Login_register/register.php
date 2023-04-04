@@ -36,6 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (mysqli_query($conn, $sql)) {
         $_SESSION["register_success"] = true;
         $_SESSION["username"] = $username;
+
+        $sql = "SELECT * FROM users WHERE username = '$username' OR email = '$email'";
+        $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_assoc($result);
+        $_SESSION["user_id"] = $user["id"];
       } else {
         $_SESSION["error"] = "failed";
       }
