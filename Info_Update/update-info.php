@@ -25,9 +25,8 @@ if (!$conn) {
     </head>
 
     <body>
-        <div class="container">
             <div class="main">
-                <a href="../Login_register/user.php" class="back-btn">Back</a>
+            <a href="../Login_register/user.php" class="back-btn">&laquo; Back</a>
                 <h1>User Home Page</h1>
 
                 <div class="buttons">
@@ -84,6 +83,5 @@ if (!$conn) {
                     }
                 ?>
             </div>
-        </div>
     </body>
 </html>
