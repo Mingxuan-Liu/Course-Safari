@@ -118,7 +118,7 @@
                     <p>Password Reset Successful!</p>
                     <p>Please use the new password to lgoin.<p>
 
-                    <a href = "../Login_Register/welcome.php" class = "buttons">Login</a>
+                    <a href = "../Login_register/welcome.php" class = "buttons">Login</a>
                 </section>
 
             <?php 

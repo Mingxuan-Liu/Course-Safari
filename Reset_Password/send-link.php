@@ -28,7 +28,7 @@
 
         else {
             $password = $user["password"];
-            $link = "localhost/Course-Safari/Reset_Password/reset-password.php?key=".$email."&reset=".$password;
+            $link = "www.dooleyplanner.com/Reset_Password/reset-password.php?key=".$email."&reset=".$password;
             $username = $user["username"];
             $body = "
             <p>Hi $username,</p>
@@ -117,7 +117,7 @@
                     <p>The reset link was sent to your through email successfully!</p>
                     <p>Please use the link to reset your password.<p>
 
-                    <a href = "../Login_Register/welcome.php" class = "buttons">Login</a>
+                    <a href = "../Login_register/welcome.php" class = "buttons">Login</a>
                 </section>
 
             <?php 
