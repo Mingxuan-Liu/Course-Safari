@@ -17,12 +17,27 @@ if ($conn->connect_error) {
 }
 
 $keyword = isset($_GET['keyword']) && strlen($_GET['keyword']) >= 3 ? $_GET['keyword'] : '';
+$tags = isset($_GET['tags']) ? explode(',', $_GET['tags']) : [];
 
 $sql = "SELECT course_code, course_name, days, start_time, end_time FROM courses";
 
+$where_conditions = [];
+
 if ($keyword !== '') {
     $keyword = $conn->real_escape_string($keyword);
-    $sql .= " WHERE course_code LIKE '%$keyword%' OR course_name LIKE '%$keyword%'";
+    $where_conditions[] = "course_code LIKE '%$keyword%' OR course_name LIKE '%$keyword%'";
+}
+
+if (in_array('math', $tags)) {
+    $where_conditions[] = "course_code LIKE 'MATH%'";
+}
+
+if (in_array('morning', $tags)) {
+    $where_conditions[] = "TIME(start_time) < '12:00:00'";
+}
+
+if (count($where_conditions) > 0) {
+    $sql .= " WHERE " . implode(" AND ", $where_conditions);
 }
 
 $result = $conn->query($sql);
