@@ -5,16 +5,37 @@ if (isset($_SESSION["error"])) {
     unset($_SESSION["error"]);
 }
 
+function array_has_dupes($array) {
+    return count($array) !== count(array_unique($array));
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['primary_major'] = $_POST["primary_major"];
     $_SESSION['secondary_major'] = $_POST["secondary_major"];
     $_SESSION['minor'] = $_POST["minor"];
+
+    $primary_subject_name = substr($_SESSION['primary_major'], 6, 100);
+    $secondary_subject_name = substr($_SESSION['secondary_major'], 6, 100);
+    $minor_subject_name = substr($_SESSION['minor'], 9, 100);
+    $declare_names = [];
+    if (strlen($primary_subject_name) > 2) {
+        array_push($declare_names, $primary_subject_name);
+    }
+    if (strlen($secondary_subject_name) > 2) {
+        array_push($declare_names, $secondary_subject_name);
+    }
+    if (strlen($minor_subject_name) > 2) {
+        array_push($declare_names, $minor_subject_name);
+    }
 
     if ($_SESSION['primary_major'] == "None" && $_SESSION['secondary_major'] == "None") {
         $_SESSION["error"] = "non_declaration";
     }
     elseif ($_SESSION['primary_major'] == "None" && $_SESSION['secondary_major'] != "None") {
         $_SESSION["error"] = "incorrect_format";
+    }
+    elseif (array_has_dupes($declare_names)) {
+        $_SESSION['error'] = "duplicated_declaration";
     }
 
     if (!isset($_SESSION["error"])) {
@@ -53,6 +74,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     elseif (isset($_SESSION['error']) && $_SESSION['error'] == "incorrect_format"):
                 ?>
                     <p class="error">Declaration Failed! You must declare primary major first.</p>
+                <?php
+                    elseif (isset($_SESSION['error']) && $_SESSION['error'] == "duplicated_declaration"):
+                ?>
+                    <p class="error">Declaration Failed! You must declare different majors.</p>
                 <?php
                     endif;
                 ?>

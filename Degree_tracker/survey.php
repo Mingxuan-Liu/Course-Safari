@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_secondary_major = $_POST['secondary_major'];
     $user_minor = $_POST['minor'];
 
-    if ($_SESSION['primary_major'] != "None" && $user_primary_major == NULL) {
+    if ($_SESSION['primary_major'] != "None" && $user_primary_major != NULL) {
         $major_name =  $_SESSION['primary_major'];
         foreach ($_POST['primary_major'] as $item) {
             $course_prefix = explode(" ", $item)[0];
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if ($_SESSION['secondary_major'] != "None" && !is_null($user_secondary_major)) {
+    if ($_SESSION['secondary_major'] != "None" && $user_secondary_major != NULL) {
         $major_name =  $_SESSION['secondary_major'];
         foreach ($_POST['secondary_major'] as $item) {
             $course_prefix = explode(" ", $item)[0];
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if ($_SESSION['minor'] != "None" && !is_null($user_minor)) {
+    if ($_SESSION['minor'] != "None" && $user_minor != NULL) {
         $major_name =  $_SESSION['minor'];
         foreach ($_POST['minor'] as $item) {
             $course_prefix = explode(" ", $item)[0];
