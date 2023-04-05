@@ -7,10 +7,10 @@ CREATE TABLE courses (
   end_time TIME NOT NULL
 );
 
-CREATE TABLE courses (
+CREATE TABLE schedule_courses (
   id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   user_id INT(11) NOT NULL,
-  course_code VARCHAR(20) NOT NULL,
+  course_code VARCHAR(20) NOT NULL UNIQUE,
   course_name VARCHAR(255) NOT NULL,
   start_time TIME NOT NULL,
   end_time TIME NOT NULL,
