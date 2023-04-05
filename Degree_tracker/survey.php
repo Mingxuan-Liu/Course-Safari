@@ -28,11 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_query($conn, $sql);
     }
 
-    $user_primary_major = $_POST['primary_major'];
-    $user_secondary_major = $_POST['secondary_major'];
-    $user_minor = $_POST['minor'];
+    $sql = "SELECT * FROM electives_taken WHERE user_id = '$user_id'";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        $sql = "DELETE FROM electives_taken WHERE user_id = '$user_id'";
+        mysqli_query($conn, $sql);
+    }
 
     if ($_SESSION['primary_major'] != "None") {
+        $user_primary_major = $_POST['primary_major'];
         if ($user_primary_major != NULL) {
             $major_name =  $_SESSION['primary_major'];
             foreach ($_POST['primary_major'] as $item) {
@@ -45,10 +49,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             course_prefix = '$course_prefix' AND course_num = $course_num";
                 mysqli_query($conn, $sql);
             }
+
+            $sql = "SELECT num_electives FROM electives WHERE major_name = '$major_name'";
+            $result = mysqli_query($conn, $sql);
+            $total_electives = mysqli_fetch_array($result)[0];
+            $sql = "SELECT COUNT(*) FROM courses_taken 
+                    WHERE user_id = '$user_id' AND major_name = '$major_name' AND required IS FALSE";
+            $result = mysqli_query($conn, $sql);
+            $electives_taken = mysqli_fetch_array($result)[0];
+            $ready_for_insert = $total_electives - $electives_taken;
+            $sql = "INSERT INTO electives_taken (user_id, major_name, electives_left)
+                    VALUES ('$user_id', '$major_name', '$ready_for_insert')";
+            mysqli_query($conn, $sql);
         }
     }
 
     if ($_SESSION['secondary_major'] != "None") {
+        $user_secondary_major = $_POST['secondary_major'];
         if ($user_secondary_major != NULL) {
             $major_name =  $_SESSION['secondary_major'];
             foreach ($_POST['secondary_major'] as $item) {
@@ -61,10 +78,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             course_prefix = '$course_prefix' AND course_num = $course_num";
                 mysqli_query($conn, $sql);
             }
+
+            $sql = "SELECT num_electives FROM electives WHERE major_name = '$major_name'";
+            $result = mysqli_query($conn, $sql);
+            $total_electives = mysqli_fetch_array($result)[0];
+            $sql = "SELECT COUNT(*) FROM courses_taken 
+                    WHERE user_id = '$user_id' AND major_name = '$major_name' AND required IS FALSE";
+            $result = mysqli_query($conn, $sql);
+            $electives_taken = mysqli_fetch_array($result)[0];
+            $ready_for_insert = $total_electives - $electives_taken;
+            $sql = "INSERT INTO electives_taken (user_id, major_name, electives_left)
+                    VALUES ('$user_id', '$major_name', '$ready_for_insert')";
+            mysqli_query($conn, $sql);
         }
     }
 
     if ($_SESSION['minor'] != "None") {
+        $user_minor = $_POST['minor'];
         if ($user_minor != NULL) {
             $major_name =  $_SESSION['minor'];
             foreach ($_POST['minor'] as $item) {
@@ -77,8 +107,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             course_prefix = '$course_prefix' AND course_num = $course_num";
                 mysqli_query($conn, $sql);
             }
+
+            $sql = "SELECT num_electives FROM electives WHERE major_name = '$major_name'";
+            $result = mysqli_query($conn, $sql);
+            $total_electives = mysqli_fetch_array($result)[0];
+            $sql = "SELECT COUNT(*) FROM courses_taken 
+                    WHERE user_id = '$user_id' AND major_name = '$major_name' AND required IS FALSE";
+            $result = mysqli_query($conn, $sql);
+            $electives_taken = mysqli_fetch_array($result)[0];
+            $ready_for_insert = $total_electives - $electives_taken;
+            $sql = "INSERT INTO electives_taken (user_id, major_name, electives_left)
+                    VALUES ('$user_id', '$major_name', '$ready_for_insert')";
+            mysqli_query($conn, $sql);
         }
     }
+
+
 
     $_SESSION["submit_success"] = true;
 }

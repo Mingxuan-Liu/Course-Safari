@@ -4,6 +4,7 @@
 session_start();
 
 require_once '../db_connection.php';
+
 ?>
 
 
@@ -104,8 +105,6 @@ require_once '../db_connection.php';
                         if (isset($_SESSION['clickedName'])) {
                             $clickedName = $_SESSION['clickedName'];
                             // Perform your desired actions with the clicked item's text
-                        } else {
-                            echo "No clicked item found in session";
                         }
                     ?>
                 <hr>

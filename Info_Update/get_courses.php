@@ -1,26 +1,28 @@
 <?php
 session_start();
+
 require_once '../db_connection.php';
+
 $user_id = $_SESSION["user_id"];
 
 if (isset($_GET["major"])) {
     $clickedName = $_GET["major"];
     echo "<h2>" . "Course Requirements" . "</h2>";
-    // Calculate the total number of required courses and the number of completed courses
-    $total_courses_sql = "SELECT COUNT(*) FROM major_minor WHERE major_name = '$clickedName' AND required IS TRUE";
+    // Calculate the total number of required & elective courses and the number of completed courses
+    $total_required_courses_sql = "SELECT COUNT(*) FROM major_minor WHERE major_name = '$clickedName' AND required IS TRUE";
+    $total_elective_courses_sql = "SELECT num_electives FROM electives WHERE major_name = '$clickedName'";
     $completed_courses_sql = "SELECT COUNT(*) FROM courses_taken WHERE user_id = '$user_id' AND major_name = '$clickedName'";
 
-    $total_courses_result = mysqli_query($conn, $total_courses_sql);
+    $total_required_courses_result = mysqli_query($conn, $total_required_courses_sql);
+    $total_elective_courses_result = mysqli_query($conn, $total_elective_courses_sql);
     $completed_courses_result = mysqli_query($conn, $completed_courses_sql);
 
-    $total_courses = mysqli_fetch_array($total_courses_result)[0];
+    $total_required_courses = mysqli_fetch_array($total_required_courses_result)[0];
+    $total_elective_courses = mysqli_fetch_array($total_elective_courses_result)[0];
     $completed_courses = mysqli_fetch_array($completed_courses_result)[0];
     
     // Calculate the completion percentage
-    $completion_percentage = 0;
-    if ($total_courses > 0) {
-        $completion_percentage = ($completed_courses / $total_courses) * 100;
-    }
+    $completion_percentage = ($completed_courses / ($total_required_courses + $total_elective_courses)) * 100;
 
     // Display the progress bar
     echo "<div class='progress-container'>";
@@ -66,5 +68,15 @@ if (isset($_GET["major"])) {
         echo "</div>";
     }
     echo "</div>"; // Close the courses container
+
+    if ($completion_percentage >= 100) {
+        echo "Congratulations! You have completed this major!";
+    }
+    else {
+        $sql = "SELECT electives_left FROM electives_taken WHERE user_id = '$user_id' AND major_name = '$clickedName'";
+        $result = mysqli_query($conn, $sql);
+        $ready_for_print = mysqli_fetch_array($result)[0];
+        echo "You have "."$ready_for_print"." electives left to take.";
+    }
 }
 ?>
