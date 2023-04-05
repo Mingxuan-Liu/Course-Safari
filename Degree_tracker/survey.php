@@ -40,45 +40,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_secondary_major = $_POST['secondary_major'];
     $user_minor = $_POST['minor'];
 
-    if ($_SESSION['primary_major'] != "None" && $user_primary_major != NULL) {
-        $major_name =  $_SESSION['primary_major'];
-        foreach ($_POST['primary_major'] as $item) {
-            $course_prefix = explode(" ", $item)[0];
-            $course_num = explode(" ", $item)[1];
-            $sql = "INSERT INTO courses_taken (user_id, major_name, course_prefix, course_num, course_name, required) 
-                    SELECT '$user_id', '$major_name', course_prefix, course_num, course_name, required 
-                    FROM major_minor 
-                    WHERE subject_name = '$primary_subject_name' AND degree = '$primary_degree_name' AND 
-                        course_prefix = '$course_prefix' AND course_num = $course_num";
-            mysqli_query($conn, $sql);
+    if ($_SESSION['primary_major'] != "None") {
+        if ($user_primary_major != NULL) {
+            $major_name =  $_SESSION['primary_major'];
+            foreach ($_POST['primary_major'] as $item) {
+                $course_prefix = explode(" ", $item)[0];
+                $course_num = explode(" ", $item)[1];
+                $sql = "INSERT INTO courses_taken (user_id, major_name, course_prefix, course_num, course_name, required) 
+                        SELECT '$user_id', '$major_name', course_prefix, course_num, course_name, required 
+                        FROM major_minor 
+                        WHERE subject_name = '$primary_subject_name' AND degree = '$primary_degree_name' AND 
+                            course_prefix = '$course_prefix' AND course_num = $course_num";
+                mysqli_query($conn, $sql);
+            }
         }
     }
 
-    if ($_SESSION['secondary_major'] != "None" && $user_secondary_major != NULL) {
-        $major_name =  $_SESSION['secondary_major'];
-        foreach ($_POST['secondary_major'] as $item) {
-            $course_prefix = explode(" ", $item)[0];
-            $course_num = explode(" ", $item)[1];
-            $sql = "INSERT INTO courses_taken (user_id, major_name, course_prefix, course_num, course_name, required) 
-                    SELECT '$user_id', '$major_name', course_prefix, course_num, course_name, required 
-                    FROM major_minor 
-                    WHERE subject_name = '$secondary_subject_name' AND degree = '$secondary_degree_name' AND 
-                        course_prefix = '$course_prefix' AND course_num = $course_num";
-            mysqli_query($conn, $sql);
+    if ($_SESSION['secondary_major'] != "None") {
+        if ($user_secondary_major != NULL) {
+            $major_name =  $_SESSION['secondary_major'];
+            foreach ($_POST['secondary_major'] as $item) {
+                $course_prefix = explode(" ", $item)[0];
+                $course_num = explode(" ", $item)[1];
+                $sql = "INSERT INTO courses_taken (user_id, major_name, course_prefix, course_num, course_name, required) 
+                        SELECT '$user_id', '$major_name', course_prefix, course_num, course_name, required 
+                        FROM major_minor 
+                        WHERE subject_name = '$secondary_subject_name' AND degree = '$secondary_degree_name' AND 
+                            course_prefix = '$course_prefix' AND course_num = $course_num";
+                mysqli_query($conn, $sql);
+            }
         }
     }
 
-    if ($_SESSION['minor'] != "None" && $user_minor != NULL) {
-        $major_name =  $_SESSION['minor'];
-        foreach ($_POST['minor'] as $item) {
-            $course_prefix = explode(" ", $item)[0];
-            $course_num = explode(" ", $item)[1];
-            $sql = "INSERT INTO courses_taken (user_id, major_name, course_prefix, course_num, course_name, required) 
-                    SELECT '$user_id', '$major_name', course_prefix, course_num, course_name, required 
-                    FROM major_minor 
-                    WHERE subject_name = '$minor_subject_name' AND degree IS NULL AND 
-                        course_prefix = '$course_prefix' AND course_num = $course_num";
-            mysqli_query($conn, $sql);
+    if ($_SESSION['minor'] != "None") {
+        if ($user_minor != NULL) {
+            $major_name =  $_SESSION['minor'];
+            foreach ($_POST['minor'] as $item) {
+                $course_prefix = explode(" ", $item)[0];
+                $course_num = explode(" ", $item)[1];
+                $sql = "INSERT INTO courses_taken (user_id, major_name, course_prefix, course_num, course_name, required) 
+                        SELECT '$user_id', '$major_name', course_prefix, course_num, course_name, required 
+                        FROM major_minor 
+                        WHERE subject_name = '$minor_subject_name' AND degree IS NULL AND 
+                            course_prefix = '$course_prefix' AND course_num = $course_num";
+                mysqli_query($conn, $sql);
+            }
         }
     }
 
