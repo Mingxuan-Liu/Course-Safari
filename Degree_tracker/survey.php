@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_query($conn, $sql);
     }
 
-    if ($_SESSION['primary_major'] != "None") {
+    if ($_SESSION['primary_major'] != "None" && !is_null($_POST['primary_major'])) {
         $major_name =  $_SESSION['primary_major'];
         foreach ($_POST['primary_major'] as $item) {
             $course_prefix = explode(" ", $item)[0];
@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if ($_SESSION['secondary_major'] != "None") {
+    if ($_SESSION['secondary_major'] != "None" && !is_null($_POST['secondary_major'])) {
         $major_name =  $_SESSION['secondary_major'];
         foreach ($_POST['secondary_major'] as $item) {
             $course_prefix = explode(" ", $item)[0];
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if ($_SESSION['minor'] != "None") {
+    if ($_SESSION['minor'] != "None" && !is_null($_POST['minor'])) {
         $major_name =  $_SESSION['minor'];
         foreach ($_POST['minor'] as $item) {
             $course_prefix = explode(" ", $item)[0];
