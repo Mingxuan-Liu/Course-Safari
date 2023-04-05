@@ -21,6 +21,10 @@ $secondary_subject_name = substr($_SESSION['secondary_major'], 6, 100);
 $secondary_degree_name = substr($_SESSION['secondary_major'], 0, 2);
 $minor_subject_name = substr($_SESSION['minor'], 9, 100);
 
+function array_has_dupes($array) {
+    return count($array) !== count(array_unique($array));
+ }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $user_id = $_SESSION["user_id"];
@@ -32,7 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_query($conn, $sql);
     }
 
-    if ($_SESSION['primary_major'] != "None" && !is_null($_POST['primary_major'])) {
+    $user_primary_major = $_POST['primary_major'];
+    $user_secondary_major = $_POST['secondary_major'];
+    $user_minor = $_POST['minor'];
+
+    if ($_SESSION['primary_major'] != "None" && $user_primary_major == NULL) {
         $major_name =  $_SESSION['primary_major'];
         foreach ($_POST['primary_major'] as $item) {
             $course_prefix = explode(" ", $item)[0];
@@ -46,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if ($_SESSION['secondary_major'] != "None" && !is_null($_POST['secondary_major'])) {
+    if ($_SESSION['secondary_major'] != "None" && !is_null($user_secondary_major)) {
         $major_name =  $_SESSION['secondary_major'];
         foreach ($_POST['secondary_major'] as $item) {
             $course_prefix = explode(" ", $item)[0];
@@ -60,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if ($_SESSION['minor'] != "None" && !is_null($_POST['minor'])) {
+    if ($_SESSION['minor'] != "None" && !is_null($user_minor)) {
         $major_name =  $_SESSION['minor'];
         foreach ($_POST['minor'] as $item) {
             $course_prefix = explode(" ", $item)[0];
