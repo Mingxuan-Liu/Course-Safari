@@ -5,15 +5,7 @@ if (isset($_SESSION["error"])) {
   unset($_SESSION["error"]);
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "user_db";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
+require_once '../db_connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = $_POST["username"];

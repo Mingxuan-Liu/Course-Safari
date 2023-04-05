@@ -5,16 +5,7 @@
         unset($_SESSION["error"]);
     }
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "user_db";
-
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-    if (!$conn) {
-        echo 'Connection error: ' . mysqli_connect_error();
-    }
+    require_once '../db_connection.php';
 
     if ($_GET["key"] && $_GET["reset"]) {
         $_SESSION["email"] = $_GET["key"];
