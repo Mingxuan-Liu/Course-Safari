@@ -7,7 +7,7 @@
 
     require_once '../db_connection.php';
 
-    if ($_GET["key"] && $_GET["reset"]) {
+    if (isset($_GET["key"]) && isset($_GET["reset"])) {
         $_SESSION["email"] = $_GET["key"];
         $_SESSION["password"] = $_GET["reset"];
         $email = $_SESSION["email"];
@@ -49,6 +49,8 @@
 
             if (mysqli_query($conn, $sql)) {
                 $_SESSION["reset_success"] = true;
+                unset($_SESSION["email"]);
+                unset($_SESSION["password"]);
             } else {
                 $_SESSION["error"] = "failed";
             }
