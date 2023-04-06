@@ -167,3 +167,33 @@ CREATE TABLE courses_taken (
   course_name VARCHAR(100) NOT NULL,
   required BOOLEAN NOT NULL
 );
+
+CREATE TABLE courses_taken (
+  user_id INT(11) NOT NULL,
+  major_name VARCHAR(100) NOT NULL,
+  course_prefix VARCHAR(50) NOT NULL,
+  course_num INT(11) NOT NULL,
+  course_name VARCHAR(100) NOT NULL,
+  required BOOLEAN NOT NULL
+);
+
+CREATE TABLE electives (
+  major_name VARCHAR(100) NOT NULL,
+  num_electives INT(11) NOT NULL
+);
+
+CREATE TABLE electives_taken (
+  user_id INT(11) NOT NULL,
+  major_name VARCHAR(100) NOT NULL,
+  electives_left INT(11) NOT NULL
+);
+
+INSERT INTO electives (major_name, num_electives)
+VALUES
+  ("BS in Computer Science", 10),
+  ("BA in Computer Science", 5),
+  ("Minor in Computer Science", 3),
+  ("BA in Economics", 10),
+  ("Minor in Economics", 5),
+  ("BA in History", 15),
+  ("Minor in History", 8);
