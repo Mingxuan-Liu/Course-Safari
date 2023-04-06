@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="main">
             <?php
                 if (isset($_SESSION["declare_success"])):
-                    header("Location: survey.php");
+                    header("Location: options.html");
                 else:
             ?>
                 <a href="../Login_register/user.php" class="back-btn">
