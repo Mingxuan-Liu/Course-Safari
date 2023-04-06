@@ -1,5 +1,18 @@
 <?php
-require_once '../db_connection.php';
+session_start();
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "user_db";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 $user_id = $_SESSION['user_id'];
 $sql = "SELECT * FROM schedule_courses WHERE user_id = ?";

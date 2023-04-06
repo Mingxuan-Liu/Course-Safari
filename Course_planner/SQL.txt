@@ -31,4 +31,4 @@ INSERT INTO courses (course_code, course_name, days, start_time, end_time)
 VALUES ('CS170', 'Introduction to Computer Science I', 'MWF', '14:00:00', '14:50:00');
 
 INSERT INTO courses (course_code, course_name, days, start_time, end_time)
-VALUES ('CS171', 'Introduction to Computer Science II', 'TR', '8:30:00', '15:45:00');
+VALUES ('CS171', 'Introduction to Computer Science II', 'TR', '8:30:00', '09:45:00');
