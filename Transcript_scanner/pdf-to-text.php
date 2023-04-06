@@ -129,7 +129,7 @@
 
         <div class = "printOutArea">
             <h1>Print Out Area</h1>
-            <?php if (sizeof($courseArray) > 0) { ?>
+            <?php if (isset($courseArray)) { ?>
                 <p><?php 
                     // print the 2D course array
                     print_r($courseArray); 
