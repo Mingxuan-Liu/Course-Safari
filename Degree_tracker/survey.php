@@ -36,8 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($_SESSION['primary_major'] != "None") {
-        $user_primary_major = $_POST['primary_major'];
-        if (!is_null($user_primary_major)) {
+        if (is_null($_POST['primary_major']) != 1) {
             $major_name =  $_SESSION['primary_major'];
             foreach ($_POST['primary_major'] as $item) {
                 $course_prefix = explode(" ", $item)[0];
@@ -65,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($_SESSION['secondary_major'] != "None") {
-        if ($_POST['secondary_major'] != NULL) {
+        if (is_null($_POST['secondary_major']) != 1) {
             $major_name =  $_SESSION['secondary_major'];
             foreach ($_POST['secondary_major'] as $item) {
                 $course_prefix = explode(" ", $item)[0];
@@ -93,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($_SESSION['minor'] != "None") {
-        if ($_POST['minor'] != NULL) {
+        if (is_null($_POST['minor']) != 1) {
             $major_name =  $_SESSION['minor'];
             foreach ($_POST['minor'] as $item) {
                 $course_prefix = explode(" ", $item)[0];
@@ -145,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ?>
                 <div class="success-message">
                     <i class="fas fa-check-circle"></i>
-                    <h1>Submission Successful! bla...</h1>
+                    <h1>Submission Successful! oki</h1>
                     <a href="../Info_Update/course_progress.php" class="btn">Check Your Academic Progress</a>
                 </div>
             <?php
