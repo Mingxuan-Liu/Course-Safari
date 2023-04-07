@@ -24,6 +24,10 @@
           <i class="fas fa-graduation-cap"></i>
           <p>Major & Minor Declaration</p>
         </a>
+        <a href="../add_drop/add_drop_courses.php" class="btn btn-big btn-circle">
+          <i class="fas fa-graduation-cap"></i>
+          <p>Courses add/drop</p>
+        </a>
         <a href="../Course_planner/course-planner.php" class="btn btn-big btn-circle">
           <i class="fas fa-calendar-alt"></i>
           <p>Course planner</p>
