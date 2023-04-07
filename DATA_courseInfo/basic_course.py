@@ -1,3 +1,6 @@
+# Latifa Tan | CS370
+# 4/6/2023
+# use selenium to extract basic information about courses in selected semesters
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
