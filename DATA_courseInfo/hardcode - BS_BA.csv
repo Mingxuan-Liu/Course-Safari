@@ -1,0 +1,260 @@
+subject_name,major,degree,course_prefix,course_num,course_name,required,major_name
+Applied Mathematics & Statistics,1,BS,MATH,111,Calculus I,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,112,Calculus II,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,211,Multivariable Calculus,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,212,Differential Equations,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,221,Linear Algebra,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,250,Foundations of Mathematics,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,315,Numerical Analysis,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,361,Mathematical Statistics I,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,362,Mathematical Statistics II,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,110,Introduction to Scientific Methods,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,150,Intro to Statistical Computing I,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,151,Intro to Statistical Computing II,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,220,Regression Analysis,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,CS,170,Intro to Computer Science I,1,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,318,Complex Variables,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,321,Abstract Vector Spaces,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,328,Number Theory,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,330,Intro to Combinatorics,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,344,Differential Geometry,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,345,Mathematical Modeling,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,346,Linear Optimization,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,347,Non-Linear Optimization,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,351,Partial Differential Equations,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,411,Real Analysis I,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,412,Real Analysis II,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,421,Abstract Algebra I,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,422,Abstract Algebra II,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,MATH,425,Mathematical Economics,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,302,Technical Writing,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,315,Game Theory I,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,329,Computational Linguistics,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,345,Advanced Statistics,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,350,Data Science Computing,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,355,Introduction to Time Series Analysis,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,360,Generalized Linear Models,0,BS in Applied Mathematics & Statistics
+Applied Mathematics & Statistics,1,BS,QTM,446,BigSmall Data and Visualization,0,BS in Applied Mathematics & Statistics
+Mathematics,1,BS,MATH,111,Calculus I,1,BS in Mathematics
+Mathematics,1,BS,MATH,112,Calculus II,1,BS in Mathematics
+Mathematics,1,BS,MATH,211,Multivariable Calculus,1,BS in Mathematics
+Mathematics,1,BS,MATH,250,Foundations of Mathematics,1,BS in Mathematics
+Mathematics,1,BS,MATH,318,Complex Variables,1,BS in Mathematics
+Mathematics,1,BS,MATH,321,Vector Spaces,1,BS in Mathematics
+Mathematics,1,BS,MATH,411,Real Analysis I,1,BS in Mathematics
+Mathematics,1,BS,MATH,412,Real Analysis II,1,BS in Mathematics
+Mathematics,1,BS,MATH,421,Abstract Algebra I,1,BS in Mathematics
+Mathematics,1,BS,MATH,422,Abstract Algebra II,1,BS in Mathematics
+Mathematics,1,BS,CS,170,Introduction to Computer Science I,1,BS in Mathematics
+Mathematics,1,BS,PHYS,151,Physics for Scientists and Engineers I,1,BS in Mathematics
+Mathematics,1,BS,PHYS,152,Physics for Scientists and Engineers II,1,BS in Mathematics
+Mathematics,1,BS,MATH,328,Number Theory,0,BS in Mathematics
+Mathematics,1,BS,MATH,330,Intro to Combinatorics,0,BS in Mathematics
+Mathematics,1,BS,MATH,344,Differential Geometry,0,BS in Mathematics
+Mathematics,1,BS,MATH,345,Mathematical Modeling,0,BS in Mathematics
+Mathematics,1,BS,MATH,346,Linear Optimization,0,BS in Mathematics
+Mathematics,1,BS,MATH,347,Non-Linear Optimization,0,BS in Mathematics
+Mathematics,1,BS,MATH,351,Partial Differential Equations,0,BS in Mathematics
+Mathematics,1,BS,MATH,425,Mathematical Economics,0,BS in Mathematics
+Mathematics,1,BS,MATH,315,Numerical Analysis,0,BS in Mathematics
+Mathematics,1,BS,MATH,361,Mathematical Statistics I,0,BS in Mathematics
+Mathematics,1,BS,MATH,362,Mathematical Statistics II,0,BS in Mathematics
+Mathematics,1,BA,MATH,111,Calculus I,1,BA in Mathematics
+Mathematics,1,BA,MATH,112,Calculus II,1,BA in Mathematics
+Mathematics,1,BA,MATH,211,Multivariable Calculus,1,BA in Mathematics
+Mathematics,1,BA,MATH,221,Linear Algebra,1,BA in Mathematics
+Mathematics,1,BA,MATH,250,Foundations of Mathematics,1,BA in Mathematics
+Mathematics,1,BA,CS,170,Introduction to Computer Science I,1,BA in Mathematics
+Mathematics,1,BA,MATH,315,Numerical Analysis,0,BA in Mathematics
+Mathematics,1,BA,MATH,361,Mathematical Statistics I,0,BA in Mathematics
+Mathematics,1,BA,MATH,362,Mathematical Statistics II,0,BA in Mathematics
+Mathematics,1,BA,MATH,318,Complex Variables,0,BA in Mathematics
+Mathematics,1,BA,MATH,321,Abstract Vector Spaces,0,BA in Mathematics
+Mathematics,1,BA,MATH,328,Number Theory,0,BA in Mathematics
+Mathematics,1,BA,MATH,330,Intro to Combinatorics,0,BA in Mathematics
+Mathematics,1,BA,MATH,344,Differential Geometry,0,BA in Mathematics
+Mathematics,1,BA,MATH,345,Mathematical Modeling,0,BA in Mathematics
+Mathematics,1,BA,MATH,346,Linear Optimization,0,BA in Mathematics
+Mathematics,1,BA,MATH,347,Non-Linear Optimization,0,BA in Mathematics
+Mathematics,1,BA,MATH,351,Partial Differential Equations,0,BA in Mathematics
+Mathematics,1,BA,MATH,411,Real Analysis I,0,BA in Mathematics
+Mathematics,1,BA,MATH,412,Real Analysis II,0,BA in Mathematics
+Mathematics,1,BA,MATH,421,Abstract Algebra I,0,BA in Mathematics
+Mathematics,1,BA,MATH,422,Abstract Algebra II,0,BA in Mathematics
+Mathematics,1,BA,MATH,425,Mathematical Economics,0,BA in Mathematics
+Political Science,1,BA,POLS,111,Principles of Political Science,1,BA in Political Science
+Political Science,1,BA,QTM,100,Introduction to Statistical Inference,1,BA in Political Science
+Political Science,1,BA,POLS,208,Political Science Methods,1,BA in Political Science
+Political Science,1,BA,POLS,201,Classical Political Thought,0,BA in Political Science
+Political Science,1,BA,POLS,202,Modern Political Thought,0,BA in Political Science
+Political Science,1,BA,POLS,210,Intermediate International Politics,0,BA in Political Science
+Political Science,1,BA,POLS,220,Intermediate Comparative Politics,0,BA in Political Science
+Political Science,1,BA,POLS,227,Environmental Policy,0,BA in Political Science
+Political Science,1,BA,POLS,312,International Law,0,BA in Political Science
+Political Science,1,BA,POLS,317,Global Human Rights,0,BA in Political Science
+Political Science,1,BA,POLS,321,Comparative Political Economy,0,BA in Political Science
+Political Science,1,BA,POLS,325,Eastern European Politics,0,BA in Political Science
+Political Science,1,BA,POLS,326,Western European Politics,0,BA in Political Science
+Political Science,1,BA,POLS,334,Contemporary African Politics,0,BA in Political Science
+Political Science,1,BA,POLS,337,Islam and Politics,0,BA in Political Science
+Political Science,1,BA,POLS,346,African American Politics,0,BA in Political Science
+Political Science,1,BA,POLS,352,Constitutional Law,0,BA in Political Science
+Political Science,1,BA,POLS,353,Civil Liberties,0,BA in Political Science
+Political Science,1,BA,POLS,354,Criminal Justice,0,BA in Political Science
+Political Science,1,BA,POLS,358,Women and the Law,0,BA in Political Science
+Political Science,1,BA,POLS,360,Public Policy,0,BA in Political Science
+Political Science,1,BA,POLS,366,Poverty in America,0,BA in Political Science
+Political Science,1,BA,POLS,368,Urban Public Policy,0,BA in Political Science
+Political Science,1,BA,POLS,369,Public Policy Analysis,0,BA in Political Science
+Computer Science,1,BS,MATH,111,Calculus I,1,BS in Computer Science
+Computer Science,1,BS,MATH,112,Calculus II,1,BS in Computer Science
+Computer Science,1,BS,MATH,221,Linear Algebra,1,BS in Computer Science
+Computer Science,1,BS,CS,170,Intro to Computer Science I,1,BS in Computer Science
+Computer Science,1,BS,CS,171,Intro to Computer Science II,1,BS in Computer Science
+Computer Science,1,BS,CS,224,Foundations of Computer Science,1,BS in Computer Science
+Computer Science,1,BS,CS,253,Data Structures and Algorithms,1,BS in Computer Science
+Computer Science,1,BS,CS,255,Computer Architecture and Machine Level Programming,1,BS in Computer Science
+Computer Science,1,BS,CS,326,Analysis of Algorithms,1,BS in Computer Science
+Computer Science,1,BS,CS,350,Systems Programming,1,BS in Computer Science
+Computer Science,1,BS,CS,370,Computer Science Practicum,1,BS in Computer Science
+Computer Science,1,BS,CS,325,Artificial Intelligence,0,BS in Computer Science
+Computer Science,1,BS,CS,329,Computational Linguistics,0,BS in Computer Science
+Computer Science,1,BS,CS,334,Machine Learning,0,BS in Computer Science
+Computer Science,1,BS,CS,355,Computer Architecture,0,BS in Computer Science
+Computer Science,1,BS,CS,377,Database Systems,0,BS in Computer Science
+Computer Science,1,BS,CS,424,Theory of Computing,0,BS in Computer Science
+Computer Science,1,BS,CS,452,Operating Systems,0,BS in Computer Science
+Computer Science,1,BS,CS,453,Computer Security,0,BS in Computer Science
+Computer Science,1,BS,CS,455,Intro to Computer Networking,0,BS in Computer Science
+Computer Science,1,BS,CS,470,Data Mining,0,BS in Computer Science
+Computer Science,1,BA,MATH,111,Calculus I,1,BA in Computer Science
+Computer Science,1,BA,MATH,112,Calculus II,1,BA in Computer Science
+Computer Science,1,BA,MATH,221,Linear Algebra,1,BA in Computer Science
+Computer Science,1,BA,CS,170,Intro to Computer Science I,1,BA in Computer Science
+Computer Science,1,BA,CS,171,Intro to Computer Science II,1,BA in Computer Science
+Computer Science,1,BA,CS,224,Foundations of Computer Science,1,BA in Computer Science
+Computer Science,1,BA,CS,253,Data Structures and Algorithms,1,BA in Computer Science
+Computer Science,1,BA,CS,255,Computer Architecture and Machine Level Programming,1,BA in Computer Science
+Computer Science,1,BA,CS,326,Analysis of Algorithms,1,BA in Computer Science
+Computer Science,1,BA,CS,350,Systems Programming,1,BA in Computer Science
+Computer Science,1,BA,CS,370,Computer Science Practicum,1,BA in Computer Science
+Computer Science,1,BA,CS,325,Artificial Intelligence,0,BA in Computer Science
+Computer Science,1,BA,CS,329,Computational Linguistics,0,BA in Computer Science
+Computer Science,1,BA,CS,334,Machine Learning,0,BA in Computer Science
+Computer Science,1,BA,CS,355,Computer Architecture,0,BA in Computer Science
+Computer Science,1,BA,CS,377,Database Systems,0,BA in Computer Science
+Computer Science,1,BA,CS,424,Theory of Computing,0,BA in Computer Science
+Computer Science,1,BA,CS,452,Operating Systems,0,BA in Computer Science
+Computer Science,1,BA,CS,453,Computer Security,0,BA in Computer Science
+Computer Science,1,BA,CS,455,Intro to Computer Networking,0,BA in Computer Science
+Computer Science,1,BA,CS,470,Data Mining,0,BA in Computer Science
+Economics,1,BA,MATH,111,Calculus I,1,BA in Economics
+Economics,1,BA,ECON,101,Principles of Microeconomics,1,BA in Economics
+Economics,1,BA,ECON,112,Principles of Macroeconomics,1,BA in Economics
+Economics,1,BA,ECON,201,Intermediate Microeconomics,1,BA in Economics
+Economics,1,BA,ECON,212,Intermediate Macroeconomics,1,BA in Economics
+Economics,1,BA,ECON,220,Probability & Statistics for Economists,1,BA in Economics
+Economics,1,BA,ECON,320,Econometrics,1,BA in Economics
+Economics,1,BA,ECON,215,"Stocks, Bonds & Financial Markets",0,BA in Economics
+Economics,1,BA,ECON,231,Intro To Global Trade And Finance,0,BA in Economics
+Economics,1,BA,ECON,309,Contemporary Economic Issues,0,BA in Economics
+Economics,1,BA,ECON,310,Experimental Economics,0,BA in Economics
+Economics,1,BA,ECON,315,Economics and Psychology,0,BA in Economics
+Economics,1,BA,ECON,333,Financial Economics,0,BA in Economics
+Economics,1,BA,ECON,341,Business & Government,0,BA in Economics
+Economics,1,BA,ECON,356,Development of Modern U.S. Economy,0,BA in Economics
+Economics,1,BA,ECON,363,The Political Economy of China,0,BA in Economics
+Economics,1,BA,ECON,365,Environmental Economics And Policy,0,BA in Economics
+Economics,1,BA,ECON,366,Development Issues for Africa,0,BA in Economics
+Economics,1,BA,ECON,371,Health Economics,0,BA in Economics
+Economics,1,BA,ECON,372,Health Care Markets,0,BA in Economics
+Economics,1,BA,ECON,405,Industrial Organization,0,BA in Economics
+Economics,1,BA,ECON,410,Topics In Macroeconomics Fiscal Policy,0,BA in Economics
+Economics,1,BA,ECON,411,Money & Banking,0,BA in Economics
+Economics,1,BA,ECON,415,Behavioral Economics & Finance,0,BA in Economics
+Economics,1,BA,ECON,422,Economic Forecasting,0,BA in Economics
+Economics,1,BA,ECON,423,Financial Econometrics,0,BA in Economics
+Economics,1,BA,ECON,425,Mathematical Economics,0,BA in Economics
+Economics,1,BA,ECON,430,Economics of Labor Markets,0,BA in Economics
+Economics,1,BA,ECON,431,International Trade,0,BA in Economics
+Economics,1,BA,ECON,432,International Finance,0,BA in Economics
+Economics,1,BA,ECON,434,Public Finance,0,BA in Economics
+Economics,1,BA,ECON,442,Law and Economics,0,BA in Economics
+Economics,1,BA,ECON,487,Game Theory & Economic Activity,0,BA in Economics
+History,1,BA,HIST,100,Perspectives on the Past,0,BA in History
+History,1,BA,HIST,201,Formation of European Society,0,BA in History
+History,1,BA,HIST,204,The Silk Road & Central Eurasia,0,BA in History
+History,1,BA,HIST,211,Latin America A History,0,BA in History
+History,1,BA,HIST,221,The Making of Modern Africa,0,BA in History
+History,1,BA,HIST,231,Foundations of American Society to 1877,0,BA in History
+History,1,BA,HIST,232,Making of Modern America U.S. Since 1877,0,BA in History
+History,1,BA,HIST,238,History of African Americans to 1865,0,BA in History
+History,1,BA,HIST,249,Tropical Encounters,0,BA in History
+History,1,BA,HIST,260,East Asia 1500 to Present,0,BA in History
+History,1,BA,HIST,263,Plantation to Postcolonial,0,BA in History
+History,1,BA,HIST,267,The Civil Rights Movement,0,BA in History
+History,1,BA,HIST,279,Post-Mao China After 1976,0,BA in History
+History,1,BA,HIST,304,"Emperors, Barbarians, & Monks",0,BA in History
+History,1,BA,HIST,306,The Italian Renaissance,0,BA in History
+History,1,BA,HIST,309,Europe in the Age of Empire,0,BA in History
+History,1,BA,HIST,310,Europe Era of Total War 1900-1945,0,BA in History
+History,1,BA,HIST,311,Europe Nuclear Age 1945 - Present,0,BA in History
+History,1,BA,HIST,315,Nazi Medicine and Biology,0,BA in History
+History,1,BA,HIST,318,Modern Germany,0,BA in History
+History,1,BA,HIST,320,The Soviet Union,0,BA in History
+History,1,BA,HIST,323,Reformation Europe,0,BA in History
+History,1,BA,HIST,324,Age of Religious Wars,0,BA in History
+History,1,BA,HIST,325,The Classical Tradition & American Founding,0,BA in History
+History,1,BA,HIST,327,The Soviet World War 1939-1945,0,BA in History
+History,1,BA,HIST,338,Jews of Eastern Europe,0,BA in History
+History,1,BA,HIST,356,Development of Modern U.S. Economy,0,BA in History
+History,1,BA,HIST,360,Mexico Aztecs to Narcos,0,BA in History
+History,1,BA,HIST,363,Sugar and Rum,0,BA in History
+History,1,BA,HIST,366,Afghanistan and Central Asia,0,BA in History
+History,1,BA,HIST,367,The Making of South Africa,0,BA in History
+History,1,BA,HIST,383,The Arab-Israeli Conflict,0,BA in History
+History,1,BA,HIST,384,Slavery in US History and Culture,0,BA in History
+History,1,BA,HIST,407,Love & Sex Renaissance Europe,0,BA in History
+History,1,BA,HIST,456,Capitalism and Anthropocene,0,BA in History
+History,1,BA,HIST,466,India The Home and the World,0,BA in History
+Spanish,1,BA,SPAN,101,Elementary Spanish I,1,BA in Spanish
+Spanish,1,BA,SPAN,102,Elementary Spanish II,1,BA in Spanish
+Spanish,1,BA,SPAN,201,Intermediate Spanish I,1,BA in Spanish
+Spanish,1,BA,SPAN,202,Intermediate Spanish II,1,BA in Spanish
+Spanish,1,BA,SPAN,210,Spanish For Reading Comprehension,0,BA in Spanish
+Spanish,1,BA,SPAN,212,Intro to Hisp Texts & Contexts,0,BA in Spanish
+Spanish,1,BA,SPAN,215,Reading and Writing Strategies,0,BA in Spanish
+Spanish,1,BA,SPAN,219,Practical Conversation Abroad,0,BA in Spanish
+Spanish,1,BA,SPAN,300,Introduction to Hispanic Cultural History,0,BA in Spanish
+Spanish,1,BA,SPAN,301,Early Hispanic Texts & Contexts,0,BA in Spanish
+Spanish,1,BA,SPAN,302,Modern Hispanic Texts & Contexts,0,BA in Spanish
+Spanish,1,BA,SPAN,303,Phonetics The Sounds of Spanish,0,BA in Spanish
+Spanish,1,BA,SPAN,304,Introduction to Spanish Linguistics,0,BA in Spanish
+Spanish,1,BA,SPAN,308,Contemporary Spanish Culture,0,BA in Spanish
+Spanish,1,BA,SPAN,310,Advanced Communication Strategies,0,BA in Spanish
+Spanish,1,BA,SPAN,311,Hispanic Narrative,0,BA in Spanish
+Spanish,1,BA,SPAN,331,The Spanish Civil War,0,BA in Spanish
+Spanish,1,BA,SPAN,336,Introduction to Translation,0,BA in Spanish
+Spanish,1,BA,SPAN,381,Islamic West 600-1600,0,BA in Spanish
+Spanish,1,BA,SPAN,405,Language and Discourse on the Web,0,BA in Spanish
+Spanish,1,BA,SPAN,407,Hispanic Sociolinguistics,0,BA in Spanish
+Spanish,1,BA,SPAN,408,Language and Identity in Spain,0,BA in Spanish
+Spanish,1,BA,SPAN,409,Medical Discourse in Latin America,0,BA in Spanish
+Spanish,1,BA,SPAN,411,Translation Theory and Practice,0,BA in Spanish
+Spanish,1,BA,SPAN,422,Matza and Tortillas,0,BA in Spanish
+Spanish,1,BA,SPAN,424,Culture of Human Rights,0,BA in Spanish
+Spanish,1,BA,SPAN,425,Colonial Medicine and Empire,0,BA in Spanish
+Japanese,1,BA,JPN,101,Elementary Japanese I,1,BA in Japanese
+Japanese,1,BA,JPN,102,Elementary Japanese II,1,BA in Japanese
+Japanese,1,BA,JPN,201,Intermediate Japanese I,1,BA in Japanese
+Japanese,1,BA,JPN,202,Intermediate Japanese II,1,BA in Japanese
+Japanese,1,BA,JPN,234,Introduction to Japanese Linguistics,0,BA in Japanese
+Japanese,1,BA,JPN,270,Intro to Japanese Culture,0,BA in Japanese
+Japanese,1,BA,JPN,275,Nature and Culture in Japan,0,BA in Japanese
+Japanese,1,BA,JPN,301,Advanced Conversation & Composition I,0,BA in Japanese
+Japanese,1,BA,JPN,302,Advanced Conversation & Composition II,0,BA in Japanese
+Japanese,1,BA,JPN,360,Japanese Modern Women Writers,0,BA in Japanese
+Japanese,1,BA,JPN,378,Postwar Japan Through Its Media,0,BA in Japanese
+Japanese,1,BA,JPN,451,Great Writers of Modern Japan Murakami Haruki,0,BA in Japanese
+Japanese,1,BA,JPN,401,Advanced Language & Cultural Studies I,0,BA in Japanese
+Japanese,1,BA,JPN,402,Advanced Language & Cultural Studies II,0,BA in Japanese

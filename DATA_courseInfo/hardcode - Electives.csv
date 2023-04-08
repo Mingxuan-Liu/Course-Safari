@@ -1,0 +1,19 @@
+subject_name,major,degree,num_electives,major_name
+Applied Mathematics & Statistics,1,BS,6,BS in Applied Mathematics & Statistics
+Mathematics,1,BS,3,BS in Mathematics
+Mathematics,1,BA,6,BA in Mathematics
+Political Science,1,BA,8,BA in Political Science
+Computer Science,1,BS,7,BS in Computer Science
+Computer Science,1,BA,3,BA in Computer Science
+Economics,1,BA,4,BA in Economics
+History,1,BA,11,BA in History
+Spanish,1,BA,8,BA in Spanish
+Japanese,1,BA,8,BA in Japanese
+Mathematics,0,NULL,5,Minor in Mathematics
+Political Science,0,NULL,6,Minor in Political Science
+Computer Science,0,NULL,3,Minor in Computer Science
+Economics,0,NULL,4,Minor in Economics
+History,0,NULL,7,Minor in History
+Spanish,0,NULL,6,Minor in Spanish
+Japanese,0,NULL,4,Minor in Japanese
+Korean,0,NULL,4,Minor in Korean

@@ -1,0 +1,188 @@
+subject_name,major,degree,course_prefix,course_num,course_name,required,major_name
+Mathematics,0,NULL,MATH,111,Calculus I,1,Minor in Mathematics
+Mathematics,0,NULL,MATH,112,Calculus II,1,Minor in Mathematics
+Mathematics,0,NULL,MATH,211,Multivariable Calculus,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,212,Differential Equations,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,221,Linear Algebra,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,250,Foundations of Mathematics,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,315,Numerical Analysis,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,361,Mathematical Statistics I,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,362,Mathematical Statistics II,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,318,Complex Variables,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,321,Abstract Vector Spaces,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,328,Number Theory,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,330,Intro to Combinatorics,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,344,Differential Geometry,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,345,Mathematical Modeling,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,346,Linear Optimization,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,347,Non-Linear Optimization,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,351,Partial Differential Equations,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,411,Real Analysis I,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,412,Real Analysis II,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,421,Abstract Algebra I,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,422,Abstract Algebra II,0,Minor in Mathematics
+Mathematics,0,NULL,MATH,425,Mathematical Economics,0,Minor in Mathematics
+Political Science,0,NULL,POLS,111,Principles of Political Science,1,Minor in Political Science
+Political Science,0,NULL,POLS,208,Political Science Methods,0,Minor in Political Science
+Political Science,0,NULL,POLS,201,Classical Political Thought,0,Minor in Political Science
+Political Science,0,NULL,POLS,202,Modern Political Thought,0,Minor in Political Science
+Political Science,0,NULL,POLS,210,Intermediate International Politics,0,Minor in Political Science
+Political Science,0,NULL,POLS,220,Intermediate Comparative Politics,0,Minor in Political Science
+Political Science,0,NULL,POLS,227,Environmental Policy,0,Minor in Political Science
+Political Science,0,NULL,POLS,312,International Law,0,Minor in Political Science
+Political Science,0,NULL,POLS,317,Global Human Rights,0,Minor in Political Science
+Political Science,0,NULL,POLS,321,Comparative Political Economy,0,Minor in Political Science
+Political Science,0,NULL,POLS,325,Eastern European Politics,0,Minor in Political Science
+Political Science,0,NULL,POLS,326,Western European Politics,0,Minor in Political Science
+Political Science,0,NULL,POLS,334,Contemporary African Politics,0,Minor in Political Science
+Political Science,0,NULL,POLS,337,Islam and Politics,0,Minor in Political Science
+Political Science,0,NULL,POLS,346,African American Politics,0,Minor in Political Science
+Political Science,0,NULL,POLS,352,Constitutional Law,0,Minor in Political Science
+Political Science,0,NULL,POLS,353,Civil Liberties,0,Minor in Political Science
+Political Science,0,NULL,POLS,354,Criminal Justice,0,Minor in Political Science
+Political Science,0,NULL,POLS,358,Women and the Law,0,Minor in Political Science
+Political Science,0,NULL,POLS,360,Public Policy,0,Minor in Political Science
+Political Science,0,NULL,POLS,366,Poverty in America,0,Minor in Political Science
+Political Science,0,NULL,POLS,368,Urban Public Policy,0,Minor in Political Science
+Political Science,0,NULL,POLS,369,Public Policy Analysis,0,Minor in Political Science
+Computer Science,0,NULL,MATH,111,Calculus I,1,Minor in Computer Science
+Computer Science,0,NULL,CS,170,Intro to Computer Science I,1,Minor in Computer Science
+Computer Science,0,NULL,CS,171,Intro to Computer Science II,1,Minor in Computer Science
+Computer Science,0,NULL,CS,224,Foundations of Computer Science,1,Minor in Computer Science
+Computer Science,0,NULL,CS,253,Data Structures and Algorithms,1,Minor in Computer Science
+Computer Science,0,NULL,CS,255,Computer Architecture and Machine Level Programming,1,Minor in Computer Science
+Computer Science,0,NULL,CS,326,Analysis of Algorithms,0,Minor in Computer Science
+Computer Science,0,NULL,CS,350,Systems Programming,0,Minor in Computer Science
+Computer Science,0,NULL,CS,370,Computer Science Practicum,0,Minor in Computer Science
+Computer Science,0,NULL,CS,325,Artificial Intelligence,0,Minor in Computer Science
+Computer Science,0,NULL,CS,329,Computational Linguistics,0,Minor in Computer Science
+Computer Science,0,NULL,CS,334,Machine Learning,0,Minor in Computer Science
+Computer Science,0,NULL,CS,355,Computer Architecture,0,Minor in Computer Science
+Computer Science,0,NULL,CS,377,Database Systems,0,Minor in Computer Science
+Computer Science,0,NULL,CS,424,Theory of Computing,0,Minor in Computer Science
+Computer Science,0,NULL,CS,452,Operating Systems,0,Minor in Computer Science
+Computer Science,0,NULL,CS,453,Computer Security,0,Minor in Computer Science
+Computer Science,0,NULL,CS,455,Intro to Computer Networking,0,Minor in Computer Science
+Computer Science,0,NULL,CS,470,Data Mining,0,Minor in Computer Science
+Economics,0,NULL,MATH,111,Calculus I,1,Minor in Economics
+Economics,0,NULL,ECON,101,Principles of Microeconomics,1,Minor in Economics
+Economics,0,NULL,ECON,112,Principles of Macroeconomics,1,Minor in Economics
+Economics,0,NULL,ECON,201,Intermediate Microeconomics,0,Minor in Economics
+Economics,0,NULL,ECON,212,Intermediate Macroeconomics,0,Minor in Economics
+Economics,0,NULL,ECON,220,Probability & Statistics for Economists,0,Minor in Economics
+Economics,0,NULL,ECON,320,Econometrics,0,Minor in Economics
+Economics,0,NULL,ECON,215,"Stocks, Bonds & Financial Markets",0,Minor in Economics
+Economics,0,NULL,ECON,231,Intro To Global Trade And Finance,0,Minor in Economics
+Economics,0,NULL,ECON,309,Contemporary Economic Issues,0,Minor in Economics
+Economics,0,NULL,ECON,310,Experimental Economics,0,Minor in Economics
+Economics,0,NULL,ECON,315,Economics and Psychology,0,Minor in Economics
+Economics,0,NULL,ECON,333,Financial Economics,0,Minor in Economics
+Economics,0,NULL,ECON,341,Business & Government,0,Minor in Economics
+Economics,0,NULL,ECON,356,Development of Modern U.S. Economy,0,Minor in Economics
+Economics,0,NULL,ECON,363,The Political Economy of China,0,Minor in Economics
+Economics,0,NULL,ECON,365,Environmental Economics And Policy,0,Minor in Economics
+Economics,0,NULL,ECON,366,Development Issues for Africa,0,Minor in Economics
+Economics,0,NULL,ECON,371,Health Economics,0,Minor in Economics
+Economics,0,NULL,ECON,372,Health Care Markets,0,Minor in Economics
+Economics,0,NULL,ECON,405,Industrial Organization,0,Minor in Economics
+Economics,0,NULL,ECON,410,Topics In Macroeconomics Fiscal Policy,0,Minor in Economics
+Economics,0,NULL,ECON,411,Money & Banking,0,Minor in Economics
+Economics,0,NULL,ECON,415,Behavioral Economics & Finance,0,Minor in Economics
+Economics,0,NULL,ECON,422,Economic Forecasting,0,Minor in Economics
+Economics,0,NULL,ECON,423,Financial Econometrics,0,Minor in Economics
+Economics,0,NULL,ECON,425,Mathematical Economics,0,Minor in Economics
+Economics,0,NULL,ECON,430,Economics of Labor Markets,0,Minor in Economics
+Economics,0,NULL,ECON,431,International Trade,0,Minor in Economics
+Economics,0,NULL,ECON,432,International Finance,0,Minor in Economics
+Economics,0,NULL,ECON,434,Public Finance,0,Minor in Economics
+Economics,0,NULL,ECON,442,Law and Economics,0,Minor in Economics
+Economics,0,NULL,ECON,487,Game Theory & Economic Activity,0,Minor in Economics
+History,0,NULL,HIST,100,Perspectives on the Past,0,Minor in History
+History,0,NULL,HIST,201,Formation of European Society,0,Minor in History
+History,0,NULL,HIST,204,The Silk Road & Central Eurasia,0,Minor in History
+History,0,NULL,HIST,211,Latin America A History,0,Minor in History
+History,0,NULL,HIST,221,The Making of Modern Africa,0,Minor in History
+History,0,NULL,HIST,231,Foundations of American Society to 1877,0,Minor in History
+History,0,NULL,HIST,232,Making of Modern America U.S. Since 1877,0,Minor in History
+History,0,NULL,HIST,238,History of African Americans to 1865,0,Minor in History
+History,0,NULL,HIST,249,Tropical Encounters,0,Minor in History
+History,0,NULL,HIST,260,East Asia 1500 to Present,0,Minor in History
+History,0,NULL,HIST,263,Plantation to Postcolonial,0,Minor in History
+History,0,NULL,HIST,267,The Civil Rights Movement,0,Minor in History
+History,0,NULL,HIST,279,Post-Mao China After 1976,0,Minor in History
+History,0,NULL,HIST,304,"Emperors, Barbarians, & Monks",0,Minor in History
+History,0,NULL,HIST,306,The Italian Renaissance,0,Minor in History
+History,0,NULL,HIST,309,Europe in the Age of Empire,0,Minor in History
+History,0,NULL,HIST,310,Europe Era of Total War 1900-1945,0,Minor in History
+History,0,NULL,HIST,311,Europe Nuclear Age 1945 - Present,0,Minor in History
+History,0,NULL,HIST,315,Nazi Medicine and Biology,0,Minor in History
+History,0,NULL,HIST,318,Modern Germany,0,Minor in History
+History,0,NULL,HIST,320,The Soviet Union,0,Minor in History
+History,0,NULL,HIST,323,Reformation Europe,0,Minor in History
+History,0,NULL,HIST,324,Age of Religious Wars,0,Minor in History
+History,0,NULL,HIST,325,The Classical Tradition & American Founding,0,Minor in History
+History,0,NULL,HIST,327,The Soviet World War 1939-1945,0,Minor in History
+History,0,NULL,HIST,338,Jews of Eastern Europe,0,Minor in History
+History,0,NULL,HIST,356,Development of Modern U.S. Economy,0,Minor in History
+History,0,NULL,HIST,360,Mexico Aztecs to Narcos,0,Minor in History
+History,0,NULL,HIST,363,Sugar and Rum,0,Minor in History
+History,0,NULL,HIST,366,Afghanistan and Central Asia,0,Minor in History
+History,0,NULL,HIST,367,The Making of South Africa,0,Minor in History
+History,0,NULL,HIST,383,The Arab-Israeli Conflict,0,Minor in History
+History,0,NULL,HIST,384,Slavery in US History and Culture,0,Minor in History
+History,0,NULL,HIST,407,Love & Sex Renaissance Europe,0,Minor in History
+History,0,NULL,HIST,456,Capitalism and Anthropocene,0,Minor in History
+History,0,NULL,HIST,466,India The Home and the World,0,Minor in History
+Spanish,0,NULL,SPAN,101,Elementary Spanish I,1,Minor in Spanish
+Spanish,0,NULL,SPAN,102,Elementary Spanish II,1,Minor in Spanish
+Spanish,0,NULL,SPAN,201,Intermediate Spanish I,1,Minor in Spanish
+Spanish,0,NULL,SPAN,202,Intermediate Spanish II,1,Minor in Spanish
+Spanish,0,NULL,SPAN,210,Spanish For Reading Comprehension,0,Minor in Spanish
+Spanish,0,NULL,SPAN,212,Intro to Hisp Texts & Contexts,0,Minor in Spanish
+Spanish,0,NULL,SPAN,215,Reading and Writing Strategies,0,Minor in Spanish
+Spanish,0,NULL,SPAN,219,Practical Conversation Abroad,0,Minor in Spanish
+Spanish,0,NULL,SPAN,300,Introduction to Hispanic Cultural History,0,Minor in Spanish
+Spanish,0,NULL,SPAN,301,Early Hispanic Texts & Contexts,0,Minor in Spanish
+Spanish,0,NULL,SPAN,302,Modern Hispanic Texts & Contexts,0,Minor in Spanish
+Spanish,0,NULL,SPAN,303,Phonetics The Sounds of Spanish,0,Minor in Spanish
+Spanish,0,NULL,SPAN,304,Introduction to Spanish Linguistics,0,Minor in Spanish
+Spanish,0,NULL,SPAN,308,Contemporary Spanish Culture,0,Minor in Spanish
+Spanish,0,NULL,SPAN,310,Advanced Communication Strategies,0,Minor in Spanish
+Spanish,0,NULL,SPAN,311,Hispanic Narrative,0,Minor in Spanish
+Spanish,0,NULL,SPAN,331,The Spanish Civil War,0,Minor in Spanish
+Spanish,0,NULL,SPAN,336,Introduction to Translation,0,Minor in Spanish
+Spanish,0,NULL,SPAN,381,Islamic West 600-1600,0,Minor in Spanish
+Spanish,0,NULL,SPAN,405,Language and Discourse on the Web,0,Minor in Spanish
+Spanish,0,NULL,SPAN,407,Hispanic Sociolinguistics,0,Minor in Spanish
+Spanish,0,NULL,SPAN,408,Language and Identity in Spain,0,Minor in Spanish
+Spanish,0,NULL,SPAN,409,Medical Discourse in Latin America,0,Minor in Spanish
+Spanish,0,NULL,SPAN,411,Translation Theory and Practice,0,Minor in Spanish
+Spanish,0,NULL,SPAN,422,Matza and Tortillas,0,Minor in Spanish
+Spanish,0,NULL,SPAN,424,Culture of Human Rights,0,Minor in Spanish
+Spanish,0,NULL,SPAN,425,Colonial Medicine and Empire,0,Minor in Spanish
+Japanese,0,NULL,JPN,101,Elementary Japanese I,1,Minor in Japanese
+Japanese,0,NULL,JPN,102,Elementary Japanese II,1,Minor in Japanese
+Japanese,0,NULL,JPN,201,Intermediate Japanese I,1,Minor in Japanese
+Japanese,0,NULL,JPN,202,Intermediate Japanese II,1,Minor in Japanese
+Japanese,0,NULL,JPN,234,Introduction to Japanese Linguistics,0,Minor in Japanese
+Japanese,0,NULL,JPN,270,Intro to Japanese Culture,0,Minor in Japanese
+Japanese,0,NULL,JPN,275,Nature and Culture in Japan,0,Minor in Japanese
+Japanese,0,NULL,JPN,301,Advanced Conversation & Composition I,0,Minor in Japanese
+Japanese,0,NULL,JPN,302,Advanced Conversation & Composition II,0,Minor in Japanese
+Japanese,0,NULL,JPN,360,Japanese Modern Women Writers,0,Minor in Japanese
+Japanese,0,NULL,JPN,378,Postwar Japan Through Its Media,0,Minor in Japanese
+Japanese,0,NULL,JPN,451,Great Writers of Modern Japan Murakami Haruki,0,Minor in Japanese
+Japanese,0,NULL,JPN,401,Advanced Language & Cultural Studies I,0,Minor in Japanese
+Japanese,0,NULL,JPN,402,Advanced Language & Cultural Studies II,0,Minor in Japanese
+Korean,0,NULL,KRN,101,Elementary Korean I,1,Minor in Korean
+Korean,0,NULL,KRN,102,Elementary Korean II,1,Minor in Korean
+Korean,0,NULL,KRN,201,Intermediate Korean I,1,Minor in Korean
+Korean,0,NULL,KRN,202,Intermediate Korean II,1,Minor in Korean
+Korean,0,NULL,KRN,227,Food Media and Transnational Culture,0,Minor in Korean
+Korean,0,NULL,KRN,270,Making of Modern Korea,0,Minor in Korean
+Korean,0,NULL,KRN,271,Political Change in Korea,0,Minor in Korean
+Korean,0,NULL,KRN,301,Advanced Korean I,0,Minor in Korean
+Korean,0,NULL,KRN,302,Advanced Korean II,0,Minor in Korean
+Korean,0,NULL,KRN,374,Choson Last Dynasty of Korea,0,Minor in Korean
+Korean,0,NULL,KRN,401,High Advanced Korean I,0,Minor in Korean
+Korean,0,NULL,KRN,402,High Advanced Korean II,0,Minor in Korean
