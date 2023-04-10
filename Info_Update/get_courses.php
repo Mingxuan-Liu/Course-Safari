@@ -24,6 +24,10 @@ if (isset($_GET["major"])) {
     // Calculate the completion percentage
     $completion_percentage = ($completed_courses / ($total_required_courses + $total_elective_courses)) * 100;
 
+    if ($completion_percentage > 100) {
+        $completion_percentage = 100;
+    }
+
     // Display the progress bar
     echo "<div class='progress-container'>";
     echo "<div class='completed' style='width: " . $completion_percentage . "%;'></div>";
@@ -69,7 +73,7 @@ if (isset($_GET["major"])) {
     }
     echo "</div>"; // Close the courses container
 
-    if ($completion_percentage >= 100) {
+    if ($completion_percentage == 100) {
         echo "Congratulations! You have completed this major!";
     }
     else {

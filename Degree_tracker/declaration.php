@@ -86,29 +86,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="drop-down">
                         <select name="primary_major">
                             <option value="None" selected>None</option>
-                            <option value="BA in Computer Science">BA in Computer Science</option>
+                            <option value="BS in Applied Mathematics & Statistics">BS in Applied Mathematics & Statistics</option>
+                            <option value="BS in Mathematics">BS in Mathematics</option>
+                            <option value="BA in Mathematics">BA in Mathematics</option>
                             <option value="BS in Computer Science">BS in Computer Science</option>
+                            <option value="BA in Computer Science">BA in Computer Science</option>
                             <option value="BA in Economics">BA in Economics</option>
                             <option value="BA in History">BA in History</option>
+                            <option value="BA in Spanish">BA in Spanish</option>
+                            <option value="BA in Japanese">BA in Japanese</option>
                         </select>
                     </div>
                     <div class="declare-name">Secondary Major</div>
                     <div class="drop-down">
                         <select name="secondary_major">
                             <option value="None" selected>None</option>
-                            <option value="BA in Computer Science">BA in Computer Science</option>
+                            <option value="BS in Applied Mathematics & Statistics">BS in Applied Mathematics & Statistics</option>
+                            <option value="BS in Mathematics">BS in Mathematics</option>
+                            <option value="BA in Mathematics">BA in Mathematics</option>
                             <option value="BS in Computer Science">BS in Computer Science</option>
+                            <option value="BA in Computer Science">BA in Computer Science</option>
                             <option value="BA in Economics">BA in Economics</option>
                             <option value="BA in History">BA in History</option>
+                            <option value="BA in Spanish">BA in Spanish</option>
+                            <option value="BA in Japanese">BA in Japanese</option>
                         </select>
                     </div>
                     <div class="declare-name">Minor</div>
                     <div class="drop-down">
                         <select name="minor">
                             <option value="None" selected>None</option>
+                            <option value="Minor in Mathematics">Minor in Mathematics</option>
+                            <option value="Minor in Political Science">Minor in Political Science</option>
                             <option value="Minor in Computer Science">Minor in Computer Science</option>
                             <option value="Minor in Economics">Minor in Economics</option>
                             <option value="Minor in History">Minor in History</option>
+                            <option value="Minor in Spanish">Minor in Spanish</option>
+                            <option value="Minor in Japanese">Minor in Japanese</option>
+                            <option value="Minor in Korean">Minor in Korean</option>
                         </select>
                     </div>
                     <input type="submit" value="Declare" class="btn">
