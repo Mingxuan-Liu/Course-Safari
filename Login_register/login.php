@@ -45,7 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <a href="welcome.php" class="back-btn">
         <i class="fas fa-arrow-left"></i> Back
       </a>
-      <h1>Login to Course Safari</h1>
+      <!-- <h1>Login to Course Safari</h1> -->
+      <div class="title">
+          Login to Course Safari
+      </div>
       <?php if (isset($_SESSION["error"])): ?>
         <p class="error">Incorrect username or password</p>
       <?php endif; ?>

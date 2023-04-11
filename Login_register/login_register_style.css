@@ -1,21 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 body {
-  background-color: white;
-  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #012169 !important;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-
+ 
 }
 
 .container {
+
   background-color: white;
   box-shadow: 0 0 10px #ddd;
   border-radius: 10px;
   padding: 40px;
   text-align: center;
-  min-height: 100%;
+  width: 35%;
+
+
+/* max-width: 500px;
   width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 20px; */
+
+}
+
+/*added a separate class "title" in html code*/
+.main .title{
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #3aaf9f;
+  position: relative; top: 30px;
 }
 
 .buttons-container {
@@ -97,7 +130,7 @@ select {
   margin-bottom: 20px;
   align-items: center;
   justify-content: center;
-  position: relative; top: 255px;
+  position: relative; top: 35px;
 }
 
 .form-control {
@@ -106,7 +139,7 @@ select {
   border-radius: 10px;
   font-size: 18px;
   padding: 10px 20px;
-  width: 17%;
+  width: 45%;
 }
 
 .btn {
@@ -119,7 +152,7 @@ select {
   padding: 10px 20px;
   transition: background-color 0.3s ease;
   margin-bottom: 10px;
-  position: relative; top: 275px;
+  position: relative; top: 150px;
 }
 
 .btn:hover {
@@ -131,26 +164,28 @@ select {
   font-size: 18px;
   margin-top: 20px;
   text-decoration: none;
-  position: relative; top: 300px;
+  position: relative; top: 170px;
 }
 
 .link:hover {
   color: #007aff;
 }
 
+
 .back-btn {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 0px;
+  left: 15px;
   display: flex;
   align-items: center;
   font-size: 18px;
   color: #000;
-  position: relative; top: 25px;
+  position: absolute; top: 0px;
 }
 
+
 .back-btn i {
-  margin-right: 10px;
+  margin-left: 1px;
 }
 
 .main {

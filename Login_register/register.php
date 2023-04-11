@@ -47,10 +47,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" href="login_register_style.css">
   <title>Welcome to Course Safari</title>
 </head>
+
 <body>
   <div class="container">
     <div class="main">
@@ -72,7 +72,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="welcome.php" class="back-btn">
           <i class="fas fa-arrow-left"></i> Back
         </a>
-        <h1>Register for Course Safari</h1>
+        <div class="title">
+          Register for Course Safari
+        </div>
+        <!-- <h1>Register for Course Safari</h1> -->
         <form action="register.php" method="post">
           <div class="form-group">
             <input type="text" class="form-control" name="username" placeholder="Username">
