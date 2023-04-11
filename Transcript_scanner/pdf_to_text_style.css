@@ -61,7 +61,7 @@ body {
 }
 
 .main p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 40px;
     color: #999;
 }
@@ -291,15 +291,36 @@ select {
 }
 
 .tips-container h2 {
+    font-size: 24px;
+    color: #007bff;
+    font-weight: bold;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .tips-container ol {
     margin-left: 20px;
+    counter-reset: step-counter;
+    list-style: none; /* Add this line to remove default numbers */
 }
 
 .tips-container ol li {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
     margin-bottom: 10px;
+    position: relative;
+    padding-left: 0px; /* Add this line to adjust the left padding of list items */
+}
+
+.tips-container ol li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 0; /* Change this value to move the custom counter closer */
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
 }
 
 .tips-container a {
@@ -310,6 +331,22 @@ select {
 .tips-container a:hover {
     color: #0056b3;
     text-decoration: underline;
+}
+
+.tips-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tips-container p {
+    font-size: 14px;
+    font-weight: normal;
+    color: #666;
+    text-align: center;
 }
 
 

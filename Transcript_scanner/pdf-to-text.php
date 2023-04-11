@@ -242,13 +242,16 @@
                         <h2>Where to find & download your PDF transcript?</h2>
                         <ol>
                             <li>Visit Emory OPUS: <a href="https://saprod.emory.edu/">https://saprod.emory.edu/</a></li>
+                            <img src="opus.png" alt="Step 1">
                             <li>Log in using your Emory NetID and password.</li>
                             <li>Click the "Academic Progress" tab or find it in the navigation menu.</li>
+                            <img src="progress.png" alt="Step 3">
                             <li>Select "Degree Audit/Degree Tracker" and click "OK" if prompted.</li>
                             <li>Click "View Report as PDF" to generate a PDF version of your transcript.</li>
+                            <img src="degree_tracker.png" alt="Step 5">
                             <li>Download the PDF by clicking the download icon or right-clicking and selecting "Save as."</li>
                         </ol>
-                        <p>For assistance, contact Emory's Registrar's Office or IT Help Desk.</p>
+                        <p>For more assistance, contact Emory's Registrar's Office or IT Help Desk.</p>
                     </div>
                     <!-- End of tips container code -->
                 </div>
