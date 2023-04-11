@@ -71,7 +71,7 @@ body{
 	color:#fff;
 }
 .main .heading .head span{
-	color:#017fb5;
+	color:#007aff;
 }
 .main .heading  .sub{
 	position: relative;
@@ -89,6 +89,7 @@ body{
 	align-items: center;
 	justify-content: center;
 	position: relative;
+  padding: 10px 20px;
 }
 .main .heading .btns a{
 	color:#fff;
@@ -101,25 +102,26 @@ body{
 	border:1px solid rgba(255, 255, 255, 0.5);
 	height:auto;
 	width:150px;
-	padding:10px;
+	/* padding:10px; */
+  padding: 10px 20px;
 	display: flex;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
 	margin-left:1%;
-	border-radius: 2px;
+	border-radius: 10px;
 	transition: 0.5s ease-in-out;
 }
 .main .heading .btns a:hover{
-	background:#017fb5;
-	border:1px solid #017fb5;
+	background: #969ba1;
+	border:1px solid #969ba1;
 }
 .main .heading .btns .btn1{
-	background:#017fb5;
-	border:1px solid #017fb5;
+	background:#007aff;
+	border:1px solid #007aff;
 }
 .main .heading .btns .btn1:hover{
-	background:#017fb5;
-	border:1px solid #017fb5 ;
+	background:#0062cc;
+	border:1px solid #0062cc ;
 	color:rgba(255, 255, 255, 0.95);
 }
