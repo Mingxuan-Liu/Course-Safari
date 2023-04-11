@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link rel="stylesheet" href="login_register_style.css">
   <title>Welcome to Course Safari</title>
 </head>
@@ -70,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         else: 
       ?>
         <a href="welcome.php" class="back-btn">
-          <i class="fas fa-arrow-left"></i> Back
+          <i class="fas fa-arrow-left"></i> <!--Back-->
         </a>
         <div class="title">
           Register for Course Safari
@@ -78,16 +79,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- <h1>Register for Course Safari</h1> -->
         <form action="register.php" method="post">
           <div class="form-group">
-            <input type="text" class="form-control" name="username" placeholder="Username">
+              <input type="text" class="form-control" name="username" placeholder="Username">
+              <i class="fas fa-user"></i>
           </div>
           <div class="form-group">
             <input type="email" class="form-control" name="email" placeholder="Email">
+            <i class="far fa-envelope"></i>
           </div>
           <div class="form-group">
             <input type="password" class="form-control" name="password" placeholder="Password">
+            <i class="fas fa-lock"></i>
           </div>
           <div class="form-group">
             <input type="password" class="form-control" name="confirm_password" placeholder="Confirm password">
+            <i class="fas fa-lock"></i>
           </div>
           <input type="submit" value="Register" class="btn">
         </form>

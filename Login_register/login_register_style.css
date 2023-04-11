@@ -126,11 +126,23 @@ select {
 }
 
 .form-group {
+  position: relative;
+  top: 35px;
   display: flex;
   margin-bottom: 20px;
   align-items: center;
   justify-content: center;
-  position: relative; top: 35px;
+}
+
+
+.form-group i{
+  position: absolute;
+  top: 30%;
+  left: 29%;
+  font-size: 14px;
+  color: #1d2120;
+  /* transform: translateY(-50%); */
+  z-index: 1;
 }
 
 .form-control {
@@ -139,6 +151,7 @@ select {
   border-radius: 10px;
   font-size: 18px;
   padding: 10px 20px;
+  padding-left: 5%;
   width: 45%;
 }
 
