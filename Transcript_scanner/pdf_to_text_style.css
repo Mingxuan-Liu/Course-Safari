@@ -13,7 +13,7 @@ body {
     box-shadow: 0 0 10px #ddd;
     padding: 40px;
     text-align: center;
-    width: 750px;
+    width: 900px;
 }
 
 .buttons-container {
@@ -282,45 +282,35 @@ select {
     cursor: pointer;
 }
   
-.toggled-list {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
+.tips-container {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.toggled-list-header {
-    background-color: #f1f1f1;
-    color: #333;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
+.tips-container h2 {
+    margin-bottom: 15px;
 }
 
-.toggled-list-header:hover {
-    background-color: #ddd;
+.tips-container ol {
+    margin-left: 20px;
 }
 
-.toggled-list-content {
-    padding: 0 15px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: #f9f9f9;
+.tips-container ol li {
+    margin-bottom: 10px;
 }
 
-.toggled-list input[type="checkbox"] {
-    display: none;
+.tips-container a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-.toggled-list input[type="checkbox"]:checked + .toggled-list-header + .toggled-list-content {
-    max-height: 1000px;
+.tips-container a:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
-.toggled-list-content img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    margin: 10px 0;
-}
 
   

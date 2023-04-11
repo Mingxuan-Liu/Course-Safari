@@ -226,39 +226,37 @@
                     <p><?php echo $errorMessage; ?>
                 <?php } ?>
 
-                <form action="pdf-to-text.php" method="post" enctype="multipart/form-data">
+                <div class="form-container">
+                    <form action="pdf-to-text.php" method="post" enctype="multipart/form-data">
 
-                    <div class="temp_upload">
-                        <label for="transcript">Transcript PDF</label>
-                        <input type="file" name="transcript" id="transcript" placeholder="Select a PDF file" required="">
-                    </div>
-                    <button type="submit">Upload</button>
-                    <button type="reset">Clear</button>
-                </form>
+                        <div class="temp_upload">
+                            <label for="transcript">Transcript PDF</label>
+                            <input type="file" name="transcript" id="transcript" placeholder="Select a PDF file" required="">
+                        </div>
+                        <button type="submit">Upload</button>
+                        <button type="reset">Clear</button>
+                    </form>
 
-                <!-- Toggled list code -->
-                <div class="toggled-list">
-                    <input type="checkbox" id="toggle-tip">
-                    <label class="toggled-list-header" for="toggle-tip">Find & Download Your Transcript on Emory's Website</label>
-                    <div class="toggled-list-content">
-                        <p>1. Visit Emory OPUS: <a href="https://saprod.emory.edu/">https://saprod.emory.edu/</a></p>
-                        <p>2. Log in using your Emory NetID and password.</p>
-                        <img src="opus.png" alt="Step 2">
-                        <p>3. Click the "Academic Progress" tab or find it in the navigation menu.</p>
-                        <img src="progress.png" alt="Step 3">
-                        <p>4. Select "Degree Audit/Degree Tracker" and click "OK" if prompted.</p>
-                        <p>5. Click "View Report as PDF" to generate a PDF version of your transcript.</p>
-                        <img src="degree tracker.png" alt="Step 5">
-                        <p>6. Download the PDF by clicking the download icon or right-clicking and selecting "Save as."</p>
+                    <!-- Tips container code -->
+                    <div class="tips-container">
+                        <h2>Where to find & download your PDF transcript?</h2>
+                        <ol>
+                            <li>Visit Emory OPUS: <a href="https://saprod.emory.edu/">https://saprod.emory.edu/</a></li>
+                            <li>Log in using your Emory NetID and password.</li>
+                            <li>Click the "Academic Progress" tab or find it in the navigation menu.</li>
+                            <li>Select "Degree Audit/Degree Tracker" and click "OK" if prompted.</li>
+                            <li>Click "View Report as PDF" to generate a PDF version of your transcript.</li>
+                            <li>Download the PDF by clicking the download icon or right-clicking and selecting "Save as."</li>
+                        </ol>
                         <p>For assistance, contact Emory's Registrar's Office or IT Help Desk.</p>
                     </div>
+                    <!-- End of tips container code -->
                 </div>
-                <!-- End of toggled list code -->
 
             <?php endif; ?>
             <?php unset($_SESSION["upload_success"]); ?>
-</div>
-</div>
-
+        </div>
+    </div>
 </body>
+
 </html>
