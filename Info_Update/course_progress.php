@@ -112,6 +112,7 @@ require_once '../db_connection.php';
                     <!-- The content of this section is automatically updated by javascripts whenever a different list item is clicked-->
                 </div>
             </div>
+            <p>Have concerns about your major requirements? Check out this link: <a href="http://catalog.college.emory.edu/academics/concentrations/index.html">Majors & Minors</a></p>
         </div>
     </body>
 </html>
