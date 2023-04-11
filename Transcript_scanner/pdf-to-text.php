@@ -40,12 +40,10 @@
                 $text = $pdf->getText();
 
                 // clean up the text from file
-                if (strpos($text, "Course History")) { //***********************************
+                if (strpos($text, "Course History")) {
                     $text = strstr($text, "Course History");
                     $text = substr($text, 0, strpos($text, "LEGEND"));
                 }
-                // $text = strstr($text, "Course History");
-                // $text = substr($text, 0, strpos($text, "LEGEND"));
 
                 $textArray = preg_split("/[\s,]+/", $text);
                 $textArray = preg_grep ('/[A-Z]{2,}|[0-9]{3}/', $textArray);
@@ -60,11 +58,11 @@
                     if ($index = strpos($prefix, "_OX")) {
                         $prefix = substr($prefix, 0, $index);
                     }
-                    $prefix = preg_replace('/as/', '', $prefix); //***************************
+                    $prefix = preg_replace('/as/', '', $prefix);
                     if (preg_match('/[0-9]{3}[A-Z]/', $num)) {
                         $num = substr($num, 0, 3);
                     }
-                    if ((preg_match('/[A-Z]{2,}/', $prefix)) && (preg_match('/^[0-9]{3}$/', $num))) { //****************************
+                    if ((preg_match('/[A-Z]{2,}/', $prefix)) && (preg_match('/^[0-9]{3}$/', $num))) {
                         $temp_str = $prefix.$num;
                         if (!in_array($temp_str, $tempArray)) {
                             array_push($tempArray, $temp_str);
