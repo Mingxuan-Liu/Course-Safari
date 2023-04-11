@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="container">
+<!--   <div class="container">
     <div class="main">
       <h1>Welcome to Course Safari</h1>
       <p>Easy tracking, easy planning</p>
@@ -19,12 +19,37 @@
       <a href="login.php" class="btn btn-primary">Login</a>
       <a href="register.php" class="btn btn-secondary">Register</a>
     </div>
-  </div>
+  </div> -->
 
-  <div class="image">
+<!--   <div class="image">
     <div class="image-overlay">
-        
+      <div class="container">
+        <div class="main">
+          <h1 class="head">Welcome to Course Safari</h1>
+          <h3 class="sub">Easy tracking, easy planning</h3>
+        </div>
+        <div class="btns">
+          <a href="login.php" class="btn1">Login</a>
+          <a href="register.php" class="btn2">Register</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </div> -->
+
+  <div class="main">
+		<!-- <pciture>
+			<img src="./background_3.jpg">
+    </pciture> -->
+		<div class="overlay"></div>
+		<div class="heading">
+				<h1 class="head">WELCOME TO <span>COURSE SAFARI</span></h1>
+				<h3 class="sub">Easy tracking, easy planning</h3>	
+				<div class="btns">
+					<a class="btn1" href="./login.php">LOGIN</a>
+					<a class="btn2" href="./register.php">REGISTER</a>
+				</div>	
+		</div>
+	</div>	
+
 </body>
 </html>
