@@ -89,6 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <option value="BS in Applied Mathematics & Statistics">BS in Applied Mathematics & Statistics</option>
                             <option value="BS in Mathematics">BS in Mathematics</option>
                             <option value="BA in Mathematics">BA in Mathematics</option>
+                            <option value="BA in Political Science">BA in Political Science</option>
                             <option value="BS in Computer Science">BS in Computer Science</option>
                             <option value="BA in Computer Science">BA in Computer Science</option>
                             <option value="BA in Economics">BA in Economics</option>
@@ -104,6 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <option value="BS in Applied Mathematics & Statistics">BS in Applied Mathematics & Statistics</option>
                             <option value="BS in Mathematics">BS in Mathematics</option>
                             <option value="BA in Mathematics">BA in Mathematics</option>
+                            <option value="BA in Political Science">BA in Political Science</option>
                             <option value="BS in Computer Science">BS in Computer Science</option>
                             <option value="BA in Computer Science">BA in Computer Science</option>
                             <option value="BA in Economics">BA in Economics</option>
