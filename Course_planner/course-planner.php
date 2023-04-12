@@ -32,6 +32,18 @@
                     <button class="btn btn-outline-secondary btn-sm" data-tag="math">Math</button>
                     <button class="btn btn-outline-secondary btn-sm" data-tag="morning">Morning</button>
                 </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sort" id="sort-none" value="" checked>
+                    <label class="form-check-label" for="sort-none">No sort</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sort" id="sort-difficulty" value="professor_lev_diff">
+                    <label class="form-check-label" for="sort-difficulty">Sort by difficulty (easy to difficult)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sort" id="sort-rating" value="professor_rate">
+                    <label class="form-check-label" for="sort-rating">Sort by professor rating (good to bad)</label>
+                </div>
                 <div id="results" class="list-group results-container mt-3"></div>
             </div>
             <div class="col">
@@ -129,6 +141,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        $('input[name="sort"]').on('change', function() {
+            searchCourses();
+        });
+
         function loadUserCourses() {
             $.getJSON('get_courses.php', function(courses) {
                 for (let course of courses) {
@@ -178,7 +194,7 @@
             searchResults.empty();
 
             for (let course of courses) {
-                let resultItem = $('<div class="list-group-item list-group-item-action"></div>').text(course.course_code + ' - ' + course.course_name);
+                let resultItem = $('<div class="list-group-item list-group-item-action"></div>').text(course.course_code + course.course_num + ' - ' + course.course_name + ' Difiiculty: ' + course.professor_lev_diff + ' Professor: ' + course.professor + "(" + course.professor_rate + ")");
                 resultItem.click(() => {
                     addCourseToSchedule(course);
                 });
@@ -209,6 +225,15 @@
             filterCoursesByTags(Array.from(activeTags));
         });
 
+        // Color generator function
+        function generateColor(seed) {
+            const hue = ((seed * 137) % 360) / 360;
+            return `hsl(${hue * 360}, 60%, 70%)`;
+        }
+
+        // Assign colors to course codes
+        const courseColors = {};
+
         let allCourses = [];
         fetchCourses();
 
@@ -225,6 +250,11 @@
                 'R': 'Thursday',
                 'F': 'Friday'
             };
+
+            // Assign a color to the course if it doesn't have one
+            if (!courseColors[(course.course_code + course.course_num)]) {
+                courseColors[(course.course_code + course.course_num)] = generateColor(Object.keys(courseColors).length);
+            }
 
             for (let dayChar of course.days) {
                 let day = days[dayChar];
@@ -248,8 +278,8 @@
                 for (let time = startTime; time < endTime; time += interval) {
                     const cell = $(`#schedule td[data-day="${day}"][data-time="${time}"]`);
                     cell.data('course', course);
-                    cell.text(course.course_code);
-                    cell.addClass('table-primary');
+                    cell.text(course.course_code + course.course_num);
+                    cell.css('background-color', courseColors[(course.course_code + course.course_num)]);
 
                     if (time === startTime) {
                         const durationInIntervals = Math.ceil((endTime - startTime) / interval);
@@ -285,6 +315,7 @@
                     const cell = $(`#schedule td[data-day="${day}"][data-time="${time}"]`);
                     cell.removeData('course');
                     cell.text('');
+                    cell.css('background-color', '');
                     cell.removeClass('table-primary');
                     cell.removeAttr('rowspan');
                     cell.css('vertical-align', '');
@@ -312,22 +343,18 @@
             let searchResults = $('#results');
             searchResults.empty();
 
-            if (keyword.length < 3) {
-                // Show all courses if the keyword is too short
+            if (keyword.length < 2) {
                 keyword = '';
             }
 
-            // Get the selected tags
-            const selectedTags = $('.btn-outline-primary.active').map(function() {
-                return $(this).data('tag');
-            }).get();
+            const selectedTags = Array.from(activeTags);
 
-            // Add an optional filter to the search.php request based on the selected tags
-            const tagFilter = selectedTags.length > 0 ? { tags: selectedTags.join(',') } : {};
+            const sortBy = $('input[name="sort"]:checked').val();
 
-            $.getJSON('search.php', { keyword: keyword, ...tagFilter }, function(data) {
+            // Pass the keyword, sortBy, and tags to the search.php script
+            $.getJSON('search.php', { keyword: keyword, sortBy: sortBy, tags: selectedTags.join(',') }, function(data) {
                 for (let course of data) {
-                    let resultItem = $('<div class="list-group-item list-group-item-action"></div>').text(course.course_code + ' - ' + course.course_name);
+                    let resultItem = $('<div class="list-group-item list-group-item-action"></div>').text(course.course_code + course.course_num + ' - ' + course.course_name + ' Difiiculty: ' + course.professor_lev_diff + ' Professor: ' + course.professor + "(" + course.professor_rate + ")");
                     resultItem.click(() => {
                         addCourseToSchedule(course);
                     });
@@ -335,6 +362,11 @@
                 }
             });
         }
+
+
+
+        $('input[name="sort"]').on('change', searchCourses);
+
 
 
         function addCustomEventToSchedule(event) {
@@ -380,29 +412,10 @@
         $('#search-button').on('click', searchCourses);
 
         $('#search').on('keyup', function (event) {
-            if (event.which === 13) {
-                // Enter key pressed, trigger search
-                searchCourses();
-            } else {
-                // Other keys pressed, update search results
-                searchCourses();
-            }
-        });
-
-        $.getJSON('search.php', { keyword: keyword })
-            .done(function(data) {
-                // Success
-            })
-            .fail(function(jqXHR, textStatus, errorThrown) {
-                // Error
-                console.error('Error loading data:', textStatus, errorThrown);
-            });
-        
-        // Toggle tag buttons and trigger search
-        $('button[data-tag]').on('click', function() {
-            $(this).toggleClass('active');
             searchCourses();
         });
+
+        searchCourses();
 
     </script>
 </body>
