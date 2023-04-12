@@ -5,10 +5,36 @@ require_once '../db_connection.php';
 
 $user_id = $_SESSION["user_id"];
 
-$sql = "SELECT * FROM courses_taken WHERE user_id = '$user_id'";
+$sql = "SELECT DISTINCT major_name FROM courses_taken WHERE user_id = '$user_id'";
 $result = mysqli_query($conn, $sql);
-if (mysqli_num_rows($result) == 0) {
+$temp_list = array();
+while ($obj = mysqli_fetch_assoc($result)) {
+    array_push($temp_list, $obj['major_name']);
+}
+
+if (count($temp_list) == 0) {
     $non_declare = true;
+}
+elseif (count($temp_list) == 1) {
+    $_SESSION['primary_major'] = $temp_list[0];
+    $_SESSION['secondary_major'] = 'None';
+    $_SESSION['minor'] = 'None';
+}
+elseif (count($temp_list) == 2) {
+    $_SESSION['primary_major'] = $temp_list[0];
+    if (str_contains($temp_list[1], 'Minor')) {
+        $_SESSION['secondary_major'] = 'None';
+        $_SESSION['minor'] = $temp_list[1];
+    }
+    else {
+        $_SESSION['secondary_major'] = $temp_list[1];
+        $_SESSION['minor'] = 'None';
+    }
+}
+else {
+    $_SESSION['primary_major'] = $temp_list[0];
+    $_SESSION['secondary_major'] = $temp_list[1];
+    $_SESSION['minor'] = $temp_list[2];
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
