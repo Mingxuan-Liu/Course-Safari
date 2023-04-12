@@ -373,6 +373,7 @@
             const customEvent = {
                 code: 'custom_' + Date.now(),
                 course_code: event.name,
+                course_num: '',
                 start_time: event.start_time,
                 end_time: event.end_time,
                 days: event.days.join('')
