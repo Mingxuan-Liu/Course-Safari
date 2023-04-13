@@ -28,8 +28,8 @@
 
         else {
             $password = $user["password"];
-            // $link = "www.dooleyplanner.com/Reset_Password/reset-password.php?key=".$email."&reset=".$password;
-            $link = "Localhost/Reset_Password/reset-password.php?key=".$email."&reset=".$password; // use this link instead when you need to test the reset-password.php locally
+            $link = "www.dooleyplanner.com/Reset_Password/reset-password.php?key=".$email."&reset=".$password;
+            // $link = "Localhost/Reset_Password/reset-password.php?key=".$email."&reset=".$password; // use this link instead when you need to test the reset-password.php locally
             $username = $user["username"];
             $body = "
             <p>Hi $username,</p>
