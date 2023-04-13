@@ -211,6 +211,7 @@
     <meta name="description" content="This page allows users to check their taken courses by uploading their transcript.">
     <title>Scan Transcript</title>
     <link rel="stylesheet" href="pdf_to_text_style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1J4z7GpdyZ8dJ9TIk1skMjTGmSks1U5i5jkjz5" crossorigin="anonymous">
 </head>
 
 <body>
@@ -240,6 +241,20 @@
                         <button type="reset">Clear</button>
                     </form>
 
+                    <!-- Add a wrapper div for the security statement and title -->
+                    <div class="security-statement-wrapper">
+                        <!-- Add the lock icon before the security statement title -->
+                        <i class="fas fa-lock security-statement-icon"></i>
+
+                        <!-- Add the security statement title here -->
+                        <h3 class="security-statement-title">Your Privacy Matters to Us</h3>
+
+                        <!-- Add the updated security statement here -->
+                        <p class="security-statement">
+                            The security and privacy of your transcripts and personal information are our top priority. Upon uploading your transcript to our website, we only extract the necessary course information for processing and analysis. We do not store or retain any of your personal data, including your transcripts.
+                        </p>
+                    </div>
+
                     <!-- Tips container code -->
                     <div class="tips-container">
                         <h2>Where to find & download your PDF transcript?</h2>
@@ -268,9 +283,10 @@
                                 <li>Select "Degree Audit/Degree Tracker" and click "OK" if prompted.</li>
                                 <li>Click "View Report as PDF" to generate a PDF report of degree tracker.</li>
                                 <img src="degree_tracker.png" alt="Step 5">
+                                <li>Download the report by clicking the download icon or right-clicking and selecting "Save as."</li>
                             </ul>
                         </div>
-                        <p>For more assistance, contact Emory's Registrar's Office or IT Help Desk.</p>
+                        
                     </div>
                     <!-- End of tips container code -->
 
