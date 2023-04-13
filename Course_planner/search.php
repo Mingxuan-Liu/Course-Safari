@@ -8,16 +8,7 @@ error_reporting(E_ALL);
 
 header('Content-Type: application/json');
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "user_db";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once '../db_connection.php';
 
 $keyword = isset($_GET['keyword']) && strlen($_GET['keyword']) >= 2 ? $_GET['keyword'] : '';
 $tags = isset($_GET['tags']) ? explode(',', $_GET['tags']) : [];
