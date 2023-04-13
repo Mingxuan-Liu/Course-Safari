@@ -26,8 +26,8 @@ CREATE TABLE schedule_courses (
 INSERT INTO courses (course_code, course_num, course_name, days, start_time, end_time, professor, professor_rate, professor_lev_diff)
 VALUES
 ('AAS',100,'Intro To African American Studies','MWF','13:00:00','14:15:00','M. Gordon',3.0,2.4),
-('AAS',190,'Fresh Sem: Africn Amer Studies: Sex/Gender in Afr. Diaspora','TTh','14:30:00','15:45:00','A. Chapman',3.0,2.4),
-('AAS',190,'Fresh Sem: Africn Amer Studies: Sounds of Protest & Change:','TTh','16:00:00','17:15:00','M. Yates-Richard',3.0,2.4),
+('AAS',190,'Fresh Sem: Africn Amer Studies: Sex/Gender in Afr. Diaspora','TR','14:30:00','15:45:00','A. Chapman',3.0,2.4),
+('AAS',190,'Fresh Sem: Africn Amer Studies: Sounds of Protest & Change:','TR','16:00:00','17:15:00','M. Yates-Richard',3.0,2.4),
 ('AAS',190,'Fresh Sem: Africn Amer Studies: Writing Bodies in the World','W','13:00:00','15:45:00','T. Yanique',5.0,4.0),
 ('AAS',215,'Jazz: Its Evolution & Essence','TTh','11:30:00','12:45:00','D. Andrews',3.6,2.8),
 ('AAS',240,'Methods in Black Studies','MW','11:30:00','12:45:00','J. Easley',3.0,2.4),
