@@ -169,7 +169,7 @@ select {
   font-size: 18px;
   padding: 10px 20px;
   padding-left: 5%;
-  width: 45%;
+  width: 48%;
 }
 
 .btn {
@@ -291,4 +291,12 @@ select {
   text-decoration: none;
   font-size: 20px;
   cursor: pointer;
+}
+
+.error{
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #ff0000;
+  position: absolute; top: 250px;left: 50%;
+  transform: translateX(-50%);
 }
