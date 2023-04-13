@@ -28,7 +28,8 @@
 
         else {
             $password = $user["password"];
-            $link = "www.dooleyplanner.com/Reset_Password/reset-password.php?key=".$email."&reset=".$password;
+            // $link = "www.dooleyplanner.com/Reset_Password/reset-password.php?key=".$email."&reset=".$password;
+            $link = "Localhost/Reset_Password/reset-password.php?key=".$email."&reset=".$password; // use this link instead when you need to test the reset-password.php locally
             $username = $user["username"];
             $body = "
             <p>Hi $username,</p>
@@ -82,7 +83,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This page allows users to update their Course Safari usernames.">
     <title>Reset Password</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="./reset_pswd_style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 </head>
 
 <body>
@@ -92,9 +94,9 @@
             <?php
                 if (isset($_SESSION["error"])): 
             ?>
-                <section class="error-message">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <h1>An Error Occured</h1>
+                <section class="prompt error-message">
+                    <!-- <i class="fas fa-exclamation-circle"></i> -->
+                    <div class="title-error">An Error Occured</div>
 
                     <?php if ($_SESSION["error"] == "not_found"): ?>
                         <p>Account registered with <?php echo $email?> is not found. Please check your email address.</p>
@@ -104,7 +106,7 @@
                         <p>An error occured. Please try again later.</p>
                     <?php endif; ?>
 
-                    <a href = "email.html" class = "buttons">Try Again</a>
+                    <a href = "email.html" class = "btn">Try Again</a>
                 </section>
 
             <?php 
@@ -112,12 +114,12 @@
             ?>
 
                 <section class="success-message">
-                    <h1>Success!</h1>
-
-                    <p>The reset link was sent to your through email successfully!</p>
-                    <p>Please use the link to reset your password.<p>
-
-                    <a href = "../Login_register/welcome.php" class = "buttons">Login</a>
+                    <div class="title">Success!</div>
+                    <div class=prompt>
+                        The reset link was sent to your through email successfully!
+                        Please use the link to reset your password.
+                    </div>
+                    <a href = "../Login_register/welcome.php" class = "btn">Login</a>
                 </section>
 
             <?php 

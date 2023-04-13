@@ -16,32 +16,12 @@ body {
   justify-content: center;
   height: 100vh;
  
+  background-image: url('./user_background_2.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-.container {
-
-  background-color: white;
-  box-shadow: 0 0 10px #ddd;
-  border-radius: 10px;
-  padding: 40px;
-  text-align: center;
-  width: 35%;
-
-
-/* max-width: 500px;
-  width: 100%;
-  height: auto;
-  background: #fff;
-  padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  border-radius: 20px; */
-
-}
-
-/*added a separate class "title" in html code*/
 .main .title{
   margin-bottom: 30px;
   text-align: center;
@@ -70,11 +50,11 @@ body {
 }
 
 .main h1 {
-  font-size: 16px;
+  font-size: 40px;
   margin-bottom: 40px;
-  position: absolute; top: 370px;left: 50%;
+  position: absolute; top: -50px;left: 50%;
   transform: translateX(-50%);
-  color: #ff0000;
+  color: #3aaf9f;
 }
 
 .main h1S {
@@ -85,9 +65,9 @@ body {
 }
 
 .main p {
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 30px;
-  color: #ff0000;
+  color: #3aaf9f;
   position: absolute; top: 400px;left: 50%;
   transform: translateX(-50%);
 }
@@ -103,8 +83,9 @@ body {
 .main logout {
   font-size: 18px;
   margin-bottom: 40px;
-  color: #999;
-  position: relative; top: 325px;
+  color: #ffffff;
+  position: absolute; top: 480px; left: 50%;
+  transform: translateX(-50%);
 }
 
 .main user_note {
@@ -186,7 +167,7 @@ select {
 }
 
 .btn:hover {
-  background-color: #0062cc;
+  background-color: #277c71;
 }
 
 .link {
@@ -232,16 +213,17 @@ select {
   justify-content: center;
   text-align: center;
   font-size: 20px;
-  border-radius: 20%;
-  background-color: #007aff;
+  border-radius: 10%;
+  background-color: #3aaf9f;
   color: #fff;
   margin: 20px;
+  position: relative; top: 80px
 }
 
 .btn-big i {
   font-size: 50px;
   margin-bottom: 20px;
-  position: relative; top: 20px;
+  position: absolute; top: 50px;
 }
 
 .btn-big p {
@@ -251,7 +233,7 @@ select {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
-  position: relative; top: 0px;
+  position: absolute; top: 100px;
 }
 
 .buttons {

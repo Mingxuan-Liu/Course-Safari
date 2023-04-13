@@ -47,10 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link rel="stylesheet" href="login_register_style.css">
   <title>Welcome to Course Safari</title>
 </head>
+
 <body>
   <div class="container">
     <div class="main">
@@ -59,8 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       ?>
         <div class="success-message">
           <i class="fas fa-check-circle"></i>
-          <h1>Registration Successful!</h1>
-          <p>Do you want to go to the user page?</p>
+          <h1S>Registration Successful!</h1S>
+          <pS>Do you want to go to the user page?</pS>
           <div class="btn-group">
             <a href="user.php" class="btn">Yes</a>
             <a href="welcome.php" class="btn">No</a>
@@ -70,21 +71,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         else: 
       ?>
         <a href="welcome.php" class="back-btn">
-          <i class="fas fa-arrow-left"></i> Back
+          <i class="fas fa-arrow-left"></i> <!--Back-->
         </a>
-        <h1>Register for Course Safari</h1>
+        <div class="title">
+          Register for Course Safari
+        </div>
+        <!-- <h1>Register for Course Safari</h1> -->
         <form action="register.php" method="post">
           <div class="form-group">
-            <input type="text" class="form-control" name="username" placeholder="Username">
+              <input type="text" class="form-control" name="username" placeholder="Username">
+              <i class="fas fa-user"></i>
           </div>
           <div class="form-group">
             <input type="email" class="form-control" name="email" placeholder="Email">
+            <i class="far fa-envelope"></i>
           </div>
           <div class="form-group">
             <input type="password" class="form-control" name="password" placeholder="Password">
+            <i class="fas fa-lock"></i>
           </div>
           <div class="form-group">
             <input type="password" class="form-control" name="confirm_password" placeholder="Confirm password">
+            <i class="fas fa-lock"></i>
           </div>
           <input type="submit" value="Register" class="btn">
         </form>
@@ -94,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($_SESSION["error"] == "existing_1"):
         ?>
           <div class="error-message">
-            <i class="fas fa-exclamation-circle"></i>
+            
             <h1>Registration Failed!</h1>
             <p>Username or email already exists. Please try again with a different one.</p>
           </div>
@@ -110,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             else:
         ?>
           <div class="error-message">
-            <i class="fas fa-exclamation-circle"></i>
+            
             <h1>Registration Failed!</h1>
             <p>An error occurred. Please try again later.</p>
           </div>

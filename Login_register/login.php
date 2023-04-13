@@ -43,18 +43,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="container">
     <div class="main">
       <a href="welcome.php" class="back-btn">
-        <i class="fas fa-arrow-left"></i> Back
+        <i class="fas fa-arrow-left"></i> <!--Back-->
       </a>
-      <h1>Login to Course Safari</h1>
+      <!-- <h1>Login to Course Safari</h1> -->
+      <div class="title">
+          Login to Course Safari
+      </div>
       <?php if (isset($_SESSION["error"])): ?>
         <p class="error">Incorrect username or password</p>
       <?php endif; ?>
       <form action="login.php" method="post">
         <div class="form-group">
           <input type="text" class="form-control" name="username" placeholder="Username or email">
+          <i class="fas fa-user"></i>
         </div>
         <div class="form-group">
           <input type="password" class="form-control" name="password" placeholder="Password">
+          <i class="fas fa-lock"></i>
         </div>
         <input type="submit" value="Login" class="btn">
       </form>
