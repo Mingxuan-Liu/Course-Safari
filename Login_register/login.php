@@ -54,11 +54,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <?php endif; ?>
       <form action="login.php" method="post">
         <div class="form-group">
-          <input type="text" class="form-control" name="username" placeholder="Username or email">
+          <input type="text" class="form-control" name="username" placeholder="Username or email" required>
           <i class="fas fa-user"></i>
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" name="password" placeholder="Password">
+          <input type="password" class="form-control" name="password" placeholder="Password" requried>
           <i class="fas fa-lock"></i>
         </div>
         <input type="submit" value="Login" class="btn">

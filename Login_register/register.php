@@ -87,11 +87,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <i class="far fa-envelope"></i>
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password">
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
             <i class="fas fa-lock"></i>
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm password">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm password" required>
             <i class="fas fa-lock"></i>
           </div>
           <input type="submit" value="Register" class="btn">
