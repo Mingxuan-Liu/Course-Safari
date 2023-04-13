@@ -60,8 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       ?>
         <div class="success-message">
           <i class="fas fa-check-circle"></i>
-          <h1>Registration Successful!</h1>
-          <p>Do you want to go to the user page?</p>
+          <h1S>Registration Successful!</h1S>
+          <pS>Do you want to go to the user page?</pS>
           <div class="btn-group">
             <a href="user.php" class="btn">Yes</a>
             <a href="welcome.php" class="btn">No</a>
@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($_SESSION["error"] == "existing_1"):
         ?>
           <div class="error-message">
-            <i class="fas fa-exclamation-circle"></i>
+            
             <h1>Registration Failed!</h1>
             <p>Username or email already exists. Please try again with a different one.</p>
           </div>
@@ -118,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             else:
         ?>
           <div class="error-message">
-            <i class="fas fa-exclamation-circle"></i>
+            
             <h1>Registration Failed!</h1>
             <p>An error occurred. Please try again later.</p>
           </div>
