@@ -70,17 +70,34 @@ body {
 }
 
 .main h1 {
-  font-size: 36px;
+  font-size: 16px;
   margin-bottom: 40px;
-  position: relative;top: 255px;
+  position: absolute; top: 370px;left: 50%;
+  transform: translateX(-50%);
+  color: #ff0000;
 }
 
+.main h1S {
+  font-size: 28px;
+  position: absolute; top: 10px;left: 50%;
+  transform: translateX(-50%);
+  color: #3aaf9f;
+}
 
 .main p {
   font-size: 14px;
   margin-bottom: 30px;
   color: #ff0000;
-  position: relative; top: 250px;
+  position: absolute; top: 400px;left: 50%;
+  transform: translateX(-50%);
+}
+
+.main pS {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #3aaf9f;
+  position: absolute; top: 230px; left: 50%;
+  transform: translateX(-50%);
 }
 
 .main logout {
