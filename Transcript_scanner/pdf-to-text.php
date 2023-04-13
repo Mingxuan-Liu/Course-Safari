@@ -246,22 +246,28 @@
                         <ol>
                             <li>Visit Emory OPUS: <a href="https://saprod.emory.edu/">https://saprod.emory.edu/</a></li>
                             <li>Log in using your Emory NetID and password.</li>
-                            <img src="opus.png" alt="Step 1">
+                            <img src="opus.png" alt="Step 2">
                         </ol>
                         <!-- First column for option 1 -->
                         <div class="column">
-                            <h3>Option 1:</h3>
+                            <h3>Option 1: Unofficial Transcript</h3>
                             <ul>
-                                <li>Click the "Academic Progress" tab or find it in the navigation menu.</li>
-                                <img src="progress.png" alt="Step 3">
+                                <li>Click the "Academic Records" tab.</li>
+                                <img src="records.png" alt="Step 3">
+                                <li>Select "view Unofficial Transcript" and click "Submit" at the top right.</li>
+                                <img src="unofficial.png" alt="Step 4">
+                                <li>Download the latest transcript from "view All Requested Reports" tab. </li>
                             </ul>
                         </div>
                         <!-- Second column for option 2 -->
                         <div class="column">
-                            <h3>Option 2:</h3>
+                            <h3>Option 2: Degree Tracker Report</h3>
                             <ul>
-                                <li>Click the "Academic Progress" tab or find it in the navigation menu.</li>
+                                <li>Click the "Academic Progress" tab.</li>
                                 <img src="progress.png" alt="Step 3">
+                                <li>Select "Degree Audit/Degree Tracker" and click "OK" if prompted.</li>
+                                <li>Click "View Report as PDF" to generate a PDF report of degree tracker.</li>
+                                <img src="degree_tracker.png" alt="Step 5">
                             </ul>
                         </div>
                         <p>For more assistance, contact Emory's Registrar's Office or IT Help Desk.</p>
