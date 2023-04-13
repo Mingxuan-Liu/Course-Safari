@@ -48,7 +48,16 @@ body {
   font-size: 30px;
   font-weight: bold;
   color: #3aaf9f;
-  position: relative; top: 30px;
+  position: relative; top: 20px;
+}
+
+.title-error{
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff0000;
+  position: relative; top: 20px;
 }
 
 .buttons-container {
@@ -72,7 +81,7 @@ body {
 .main h1 {
   font-size: 36px;
   margin-bottom: 40px;
-  position: relative;top: 255px;
+  position: relative;top: 1px;
 }
 
 
@@ -138,7 +147,7 @@ select {
 .form-group i{
   position: absolute;
   top: 30%;
-  left: 29%;
+  left: 27%;
   font-size: 14px;
   color: #1d2120;
   /* transform: translateY(-50%); */
@@ -152,7 +161,7 @@ select {
   font-size: 18px;
   padding: 10px 20px;
   padding-left: 5%;
-  width: 45%;
+  width: 50%;
 }
 
 .btn {
@@ -165,7 +174,8 @@ select {
   padding: 10px 20px;
   transition: background-color 0.3s ease;
   margin-bottom: 10px;
-  position: relative; top: 150px;
+  position: relative; top: 175px;
+  width:100px;
 }
 
 .btn:hover {
@@ -261,8 +271,10 @@ select {
 }
 
 .success-message p {
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  position: relative; top: 20px;
   font-size: 20px;
+  color: #007aff;
 }
 
 .success-message .btn {
@@ -274,4 +286,21 @@ select {
   text-decoration: none;
   font-size: 20px;
   cursor: pointer;
+}
+
+.prompt{
+  font-size: 18px;
+  margin-bottom: 40px;
+  position: relative; bottom: 8px; left: 50%;
+  transform: translateX(-50%);
+  color: #3aaf9f;
+}
+
+.error-message{
+  color: #ff0000;
+}
+
+.error-message p{
+  position: relative; top: 15px;
+  font-size: 18px;
 }

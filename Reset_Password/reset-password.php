@@ -68,7 +68,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This page allows users to update their Course Safari usernames.">
     <title>Reset Password</title>
-    <link rel="stylesheet" href="login_register_style.css" type="text/css">
+    <link rel="stylesheet" href="./reset_pswd_style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 </head>
 
 <body>
@@ -78,33 +79,32 @@
             <?php
                 if (isset($_SESSION["error"])): 
             ?>
-                <section class="error-message">
-                    <i class="fas fa-exclamation-circle"></i>
-
+                <section class="prompt error-message">
+                    <!-- <i class="fas fa-exclamation-circle"></i> -->
                     <?php if ($_SESSION["error"] == "key_not_passed"): ?>
-                        <h1>An Error Occured</h1>
+                        <div class="title-error">An Error Occured</div>
                         <p>An Error Occured. Please request another link.</p>
-                        <a href = "email.html" class = "buttons">Request Another Link</a>
+                        <a href = "email.html" class = "btn">Request Another Link</a>
 
                     <?php elseif ($_SESSION["error"] == "link_expire"): ?>
-                        <h1>An Error Occured</h1>
+                        <div class="title-error">An Error Occured</div>
                         <p>Your are probably using a wrong or expired link. Please request another link.</p>
-                        <a href = "email.html" class = "buttons">Request Another Link</a>
+                        <a href = "email.html" class = "btn">Request Another Link</a>
 
                     <?php elseif ($_SESSION["error"] == "same_password"): ?>
-                        <h1>Reset Failed</h1>
+                        <div class="title-error">Reset Failed</div>
                         <p>New password cannot be the same as the current password. Please use another password.</p>
-                        <a href = "reset-password.php" class = "buttons">Try Again</a>
+                        <a href = "reset-password.php" class = "btn">Try Again</a>
 
                     <?php elseif ($_SESSION["error"] == "password_mismatch"): ?>
-                        <h1>Reset Failed</h1>
+                        <div class="title-error">Reset Failed</div>
                         <p>New password mismatch. Please confirm you new password again.</p>
-                        <a href = "reset-password.php" class = "buttons">Try Again</a>
+                        <a href = "reset-password.php" class = "btn">Try Again</a>
 
                     <?php elseif ($_SESSION["error"] == "failed"): ?>
-                        <h1> Reset Failed</h1>
+                        <div class="title-error"> Reset Failed</div>
                         <p>An error occured during resetting. Please try again later.</p>
-                        <a href = "reset-password.php" class = "buttons">Try Again</a>
+                        <a href = "reset-password.php" class = "btn">Try Again</a>
 
                     <?php endif; ?>
 
@@ -115,12 +115,12 @@
             ?>
 
                 <section class="success-message">
-                    <h1>Success!</h1>
+                    <div class="title">Success!</div>
 
                     <p>Password Reset Successful!</p>
                     <p>Please use the new password to lgoin.<p>
 
-                    <a href = "../Login_register/welcome.php" class = "buttons">Login</a>
+                    <a href = "../Login_register/welcome.php" class = "btn">Login</a>
                 </section>
 
             <?php 
@@ -128,19 +128,21 @@
             ?>
 
                 <section>
-
+                    <div class="title">Reset your password here</div>
                     <form action="reset-password.php" , method="post">
-                        <p>
-                            <label for="newPassword">New Password: </label>
-                            <input type="password" name="newPassword" id="newPassword" placeholder="Enter your new password" required>
-                        </p>
-                        <p>
-                            <label for="confirmPassword">Confirm New Password: </label>
-                            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm your new password" required>
-                        </p>
+                        <div class="form-group">
+                            <!-- <label for="newPassword">New Password: </label> -->
+                            <input type="password" class = "form-control" name="newPassword" id="newPassword" placeholder="Enter your new password" required>
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="confirmPassword">Confirm New Password: </label> -->
+                            <input type="password" class = "form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm your new password" required>
+                            <i class="fas fa-lock"></i>
+                        </div>
                         <br>
-                        <button type="submit">Update</button>
-                        <button type="reset">Clear</button>
+                        <button type="submit" class="btn">Update</button>
+                        <button type="reset" class="btn">Clear</button>
                     </form>
 
                 </section>
