@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           Login to Course Safari
       </div>
       <?php if (isset($_SESSION["error"])): ?>
-        <p class="error">Incorrect username or password</p>
+        <div class="error">Incorrect username or password</div>
       <?php endif; ?>
       <form action="login.php" method="post">
         <div class="form-group">
