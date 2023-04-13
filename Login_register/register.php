@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <div class="error-message">
             
             <h1>Registration Failed!</h1>
-            <p>Username or email already exists. Please try again.</p>
+            <p>Username or email already exists.</p>
           </div>
         <?php 
             elseif ($_SESSION["error"] == "password_mismatch"):
