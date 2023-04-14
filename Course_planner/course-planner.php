@@ -87,6 +87,7 @@
                     </table>
                 </div>
             </div>
+            <button id="finalize-button" class="btn btn-primary">Finalize</button>
         </div>
     </div>
 
@@ -140,6 +141,37 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        function loadUserCourses() {
+            $.getJSON('get_courses.php', function(courses) {
+                for (let course of courses) {
+                    addCourseToSchedule(course);
+                }
+            });
+        }
+
+        loadUserCourses();
+
+        $('#finalize-button').on('click', function () {
+            const courses = [];
+            $('#schedule td.table-primary').each(function () {
+                const course = $(this).data('course');
+                courses.push(course);
+            });
+
+            console.log('Courses to be sent:', courses); // Debugging line
+
+            $.ajax({
+                type: 'POST',
+                url: 'save_courses.php',
+                data: { courses: JSON.stringify(courses) }, // Modified line
+                success: function (response) {
+                    alert('Courses saved successfully!');
+                },
+                error: function () {
+                    alert('Error saving courses!');
+                }
+            });
+        });
 
         function filterCoursesByTags(tags) {
             let filteredCourses = allCourses;
@@ -245,6 +277,7 @@
                     const cell = $(`#schedule td[data-day="${day}"][data-time="${time}"]`);
                     cell.data('course', course);
                     cell.text(course.course_code + course.course_num);
+                    cell.addClass('table-primary');
                     cell.css('background-color', courseColors[(course.course_code + course.course_num)]);
 
                     if (time === startTime) {
