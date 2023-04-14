@@ -11,18 +11,6 @@ CREATE TABLE courses (
   professor_lev_diff DECIMAL(3,1) NOT NULL
 );
 
-CREATE TABLE schedule_courses (
-  id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  user_id INT(11) NOT NULL,
-  course_code VARCHAR(255) NOT NULL,
-  course_num INT(11) NOT NULL,
-  course_name VARCHAR(255) NOT NULL,
-  days VARCHAR(10) NOT NULL,
-  start_time TIME NOT NULL,
-  end_time TIME NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES users(id)
-);
-
 INSERT INTO courses (course_code, course_num, course_name, days, start_time, end_time, professor, professor_rate, professor_lev_diff)
 VALUES
 ('AAS',100,'Intro To African American Studies','MWF','13:00:00','14:15:00','M. Gordon',3.0,2.4),
