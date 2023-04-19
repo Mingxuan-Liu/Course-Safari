@@ -211,7 +211,7 @@
     <meta name="description" content="This page allows users to check their taken courses by uploading their transcript.">
     <title>Scan Transcript</title>
     <link rel="stylesheet" href="pdf_to_text_style.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1J4z7GpdyZ8dJ9TIk1skMjTGmSks1U5i5jkjz5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 
 <body>
@@ -221,7 +221,7 @@
                 <div class="success-message">
                     <i class="fas fa-check-circle"></i>
                     <h1>Upload Successful!</h1>
-                    <a href="../Info_Update/course_progress.php" class="btn">Check Your Academic Progress</a>
+                    <a href="../Info_Update/course_progress.php" target="_blank" class="btn-big">Check Your Academic Progress</a>
                 </div>
             <?php else: ?>
                 <h1>Upload Transcript</h1>
@@ -235,16 +235,16 @@
 
                         <div class="temp_upload">
                             <label for="transcript">Transcript PDF</label>
-                            <input type="file" name="transcript" id="transcript" placeholder="Select a PDF file" required="">
+                            <input type="file" name="transcript" class="btn-upload" id="transcript" placeholder="Select a PDF file" required>
                         </div>
-                        <button type="submit">Upload</button>
-                        <button type="reset">Clear</button>
+                        <button type="submit" class="btn">Upload</button>
+                        <button type="reset" class="btn">Clear</button>
                     </form>
 
                     <!-- Add a wrapper div for the security statement and title -->
                     <div class="security-statement-wrapper">
                         <!-- Add the lock icon before the security statement title -->
-                        <i class="fas fa-lock security-statement-icon"></i>
+                        <i class="fas fa-user-lock"></i>
 
                         <!-- Add the security statement title here -->
                         <h3 class="security-statement-title">Your Privacy Matters to Us</h3>
