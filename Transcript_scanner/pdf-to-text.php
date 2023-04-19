@@ -271,7 +271,7 @@
                                 <img src="records.png" alt="Step 3">
                                 <li>Select "view Unofficial Transcript" and click "Submit" at the top right.</li>
                                 <img src="unofficial.png" alt="Step 4">
-                                <li>Download the latest transcript from "view All Requested Reports" tab. Note that please download the pdf by selecting "Save as" instead of "Print," because otherwise the pdf will be saved as an image.</li>
+                                <li>Download the latest transcript from "view All Requested Reports" tab. Note that please download the PDF by selecting "Save as" instead of "Print," because otherwise the PDF will be saved as an image.</li>
                             </ul>
                         </div>
                         <!-- Second column for option 2 -->
