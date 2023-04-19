@@ -30,7 +30,7 @@ require_once '../db_connection.php';
                         // if the user has not declared any major yet, then warn the user
                         if (mysqli_num_rows($result) == 0):
                     ?>
-                            <h2>You have not declared your major. Please declare it <a href="../Degree_tracker/declaration.php">here</a>.</h2>
+                            <h2>You have not declared your major. Please declare it <a href="../Degree_tracker/declaration.php" target="blank">here</a>.</h2>
                     <?php
                         else:
                             // if more than one major is declared, then select the major names from the database for users to choose
