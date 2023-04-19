@@ -63,9 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 else:
             ?>
                 <a href="../Login_register/user.php" class="back-btn">
-                    <i class="fas fa-arrow-left"></i> Back
+                    <i class="fas fa-arrow-left"></i>
                 </a>
-                <h1>Major/Minor(s) Declaration</h1>
+                <div class="title">Major/Minor(s) Declaration</div>
                 <?php
                     if (isset($_SESSION['error']) && $_SESSION['error'] == "non_declaration"):
                 ?>
