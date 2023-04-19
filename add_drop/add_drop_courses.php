@@ -175,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class='main'>
             <?php if (isset($non_declare)): ?>
                 <div class="success-message">
-                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
                     <h1>You have not declared your major!</h1>
                     <a href="../Degree_tracker/declaration.php" class="btn">Declare it here.</a>
                 </div>
