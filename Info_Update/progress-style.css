@@ -171,7 +171,7 @@ body {
 
 .complete-tag {
   position: absolute;
-  left: 75px;
+  left: 20px;
   bottom: 0;
   background-color: rgba(97, 249, 160, 0.6);
   color: white;
@@ -184,7 +184,7 @@ body {
 
 .need-tag {
   position: absolute;
-  left: 75px;
+  left: 20px;
   bottom: 0;
   background-color: rgba(212, 218, 47, 0.6);
   color: white;

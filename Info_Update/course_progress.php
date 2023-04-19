@@ -1,10 +1,7 @@
 <?php
-// Reference web design: https://dribbble.com/shots/7169372-Course-Registration-App
-
 session_start();
 
 require_once '../db_connection.php';
-
 ?>
 
 
