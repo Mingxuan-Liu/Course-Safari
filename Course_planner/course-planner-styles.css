@@ -1,15 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+/*   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none; */
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
   background-color: #f5f5f5;
 }
 
 .navbar {
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-image: url('./user_background_2.jpeg');
 }
 
 .navbar-brand {
   font-weight: 500;
+  color: #fff;
+}
+
+.nav-link{
+  color: #fff;
 }
 
 .container {
@@ -19,7 +36,7 @@ body {
 
 h2 {
   font-weight: 500;
-  color: #333;
+  color: #3aaf9f;
   margin-bottom: 20px;
 }
 
@@ -63,14 +80,23 @@ h2 {
   justify-content: space-between;
 }
 
+.mt-4{
+  position: absolute;
+  width: 40%;
+  margin-left: 50%;
+  margin-bottom: 50%;
+}
+
 .col {
   width: 48%;
 }
 
 .results-container {
-  max-height: 500px;
+  max-height: 820px;
   overflow-y: auto;
   border: 1px solid #dee2e6;
+  position: relative;
+  right: 4%;
 }
 
 .list-group-item {
@@ -105,3 +131,41 @@ h2 {
 .course-block span:hover {
   background-color: #0a58ca;
 }
+
+.btn-finalize{
+  margin-top: 5%;
+  border-radius: 5px;
+  background-color: #3aaf9f;
+  border: #3aaf9f;
+  color: #fff;
+  width: 30%;
+  /* position: absolute; top: 370px;left: 50%; */
+  transform: translateX(110%);
+  height: 40px;
+  font-size: 20px;
+}
+
+.btn-search{
+  border-radius: 5px;
+  background-color: #3aaf9f;
+  border: #3aaf9f;
+  color: #fff;
+}
+
+.btn-event{
+  border-radius: 5px;
+  background-color: #3aaf9f;
+  border: #3aaf9f;
+  color: #fff;
+  height: 35px;
+}
+
+.event{
+  width: 48%;
+  margin-top: 10%;
+}
+
+.form-control{
+  width: 180%;
+}
+
