@@ -30,12 +30,16 @@ if (in_array('afternoon', $tags)) {
     $tag_conditions[] = "TIME(start_time) > '12:00:00'";
 }
 
+if (in_array('100-level', $tags)) {
+    $tag_conditions[] = "course_num LIKE '1__%'";
+}
+
 if (in_array('200-level', $tags)) {
     $tag_conditions[] = "course_num LIKE '2__%'";
 }
 
-if (in_array('300-level', $tags)) {
-    $tag_conditions[] = "course_num LIKE '3__%'";
+if (in_array('300-level+', $tags)) {
+    $tag_conditions[] = "(course_num LIKE '3__%' OR course_num LIKE '4__%' OR course_num LIKE '5__%' OR course_num LIKE '6__%' OR course_num LIKE '7__%')";
 }
 
 

@@ -33,8 +33,9 @@
                     <button class="btn btn-outline-secondary btn-sm" data-tag="math">Math</button>
                     <button class="btn btn-outline-secondary btn-sm" data-tag="morning">Morning</button>
                     <button class="btn btn-outline-secondary btn-sm" data-tag="afternoon">Afternoon</button>
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="100-level">100-level</button>
                     <button class="btn btn-outline-secondary btn-sm" data-tag="200-level">200-level</button>
-                    <button class="btn btn-outline-secondary btn-sm" data-tag="300-level">300-level</button>
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="300-level+">300-level+</button>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="sort" id="sort-none" value="" checked>
@@ -196,14 +197,16 @@
                 filteredCourses = filteredCourses.filter(course => parseInt(course.start_time.split(':')[0]) > 12);
             }
 
-            if (tags.includes('200-level')) {
-                filteredCourses = filteredCourses.filter(course => parseInt(course.course_num.charAt(0)) === 2);
-                // filteredCourses = filteredCourses.filter(course => parseInt(course.course_num.substring(0, 3)) > 200);
+            if (tags.includes('100-level')) {
+                filteredCourses = filteredCourses.filter(course => parseInt(course.course_num.charAt(0)) === 1);
             }
 
-            if (tags.includes('300-level')) {
-                filteredCourses = filteredCourses.filter(course => parseInt(course.course_num.charAt(0)) === 3);
-                // filteredCourses = filteredCourses.filter(course => parseInt(course.course_num.substring(0, 3)) > 200);
+            if (tags.includes('200-level')) {
+                filteredCourses = filteredCourses.filter(course => parseInt(course.course_num.charAt(0)) === 2);
+            }
+
+            if (tags.includes('300-level+')) {
+                filteredCourses = filteredCourses.filter(course => parseInt(course.course_num.charAt(0)) >= 3);
             }
 
             displayCourses(filteredCourses);
