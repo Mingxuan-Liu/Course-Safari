@@ -23,12 +23,28 @@ $sql = "SELECT course_code, course_num, course_name, days, start_time, end_time,
 
 $tag_conditions = [];
 
+if (in_array('cs', $tags)) {
+    $tag_conditions[] = "course_code LIKE 'CS%'";
+}
+
 if (in_array('math', $tags)) {
     $tag_conditions[] = "course_code LIKE 'MATH%'";
 }
 
 if (in_array('morning', $tags)) {
     $tag_conditions[] = "TIME(start_time) < '12:00:00'";
+}
+
+if (in_array('afternoon', $tags)) {
+    $tag_conditions[] = "TIME(start_time) > '12:00:00'";
+}
+
+if (in_array('200-level', $tags)) {
+    $tag_conditions[] = "course_num LIKE '2__%'";
+}
+
+if (in_array('300-level', $tags)) {
+    $tag_conditions[] = "course_num LIKE '3__%'";
 }
 
 
