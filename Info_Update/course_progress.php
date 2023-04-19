@@ -14,12 +14,16 @@ require_once '../db_connection.php';
         <meta name="description" content="This page shows the academic progress of the user.">
         <title>Course Progress</title>
         <link rel="stylesheet" href="progress-style.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     </head>
 
     <body>
         <div class="container">
             <div class="main">
-                <a href="../Login_register/user.php" class="back-btn">Home</a>
+                <a href="../Login_register/user.php" class="back-btn">
+                    <i class="fas fa-house-user"></i>
+                    Home
+                </a>
                 <h1>Degree Completion</h1>
                 <hr>
                     <?php $user_id = $_SESSION["user_id"]; ?>

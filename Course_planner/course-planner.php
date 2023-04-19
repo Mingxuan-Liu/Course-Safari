@@ -6,6 +6,7 @@
     <title>Course Planner</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="course-planner-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,7 +27,7 @@
                 <h2>Course Search</h2>
                 <div class="search-input-container">
                     <input type="text" id="search" class="form-control" placeholder="Search for a course...">
-                    <button id="search-button" class="btn btn-primary">Search</button>
+                    <button id="search-button" class="btn-search">Search</button>
                 </div>
                 <div class="tags mt-2">
                     <button class="btn btn-outline-secondary btn-sm" data-tag="cs">CS</button>
@@ -91,12 +92,60 @@
                         </tbody>
                     </table>
                 </div>
+
+                
+                    <div class="event">
+                        <h2>Add My Event</h2>
+                        <form id="custom-event-form">
+                            <div class="mb-3">
+                                <label for="event-name" class="form-label">Event Name</label>
+                                <input type="text" class="form-control" id="event-name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="start-time" class="form-label">Start Time (HH:mm)</label>
+                                <input type="text" class="form-control" id="start-time" pattern="^([0-1][0-9]|2[0-3]):[0-5][0-9]$" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="end-time" class="form-label">End Time (HH:mm)</label>
+                                <input type="text" class="form-control" id="end-time" pattern="^([0-1][0-9]|2[0-3]):[0-5][0-9]$" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Days</label>
+                                <div id="custom-event-days" class="d-flex">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="custom-event-day-m" value="M">
+                                        <label class="form-check-label" for="custom-event-day-m">Monday</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="custom-event-day-t" value="T">
+                                        <label class="form-check-label" for="custom-event-day-t">Tuesday</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="custom-event-day-w" value="W">
+                                        <label class="form-check-label" for="custom-event-day-w">Wednesday</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="custom-event-day-r" value="R">
+                                        <label class="form-check-label" for="custom-event-day-r">Thursday</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="custom-event-day-f" value="F">
+                                        <label class="form-check-label" for="custom-event-day-f">Friday</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-event">Add Event</button>
+                        </form>
+                    </div>
+                
+
             </div>
-            <button id="finalize-button" class="btn btn-primary">Finalize</button>
+            <button id="finalize-button" class="btn-finalize">Finalize</button>
         </div>
     </div>
 
-    <div class="row mt-4">
+    <!-- <div class="row mt-4">
         <div class="col">
             <h2>Add My Event</h2>
             <form id="custom-event-form">
@@ -141,7 +190,8 @@
                 <button type="submit" class="btn btn-primary">Add Event</button>
             </form>
         </div>
-    </div>
+    </div> -->
+    
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
