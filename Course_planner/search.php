@@ -22,6 +22,34 @@ if (in_array('math', $tags)) {
     $tag_conditions[] = "course_code LIKE 'MATH%'";
 }
 
+if (in_array('econ', $tags)) {
+    $tag_conditions[] = "course_code LIKE 'ECON%'";
+}
+
+if (in_array('eng', $tags)) {
+    $tag_conditions[] = "course_code LIKE 'ENG%'";
+}
+
+if (in_array('psyc', $tags)) {
+    $tag_conditions[] = "course_code LIKE 'PYSC%'";
+}
+
+if (in_array('ant', $tags)) {
+    $tag_conditions[] = "course_code LIKE 'ANT%'";
+}
+
+if (in_array('chem', $tags)) {
+    $tag_conditions[] = "course_code LIKE 'CHEM%'";
+}
+
+if (in_array('pols', $tags)) {
+    $tag_conditions[] = "course_code LIKE 'POLS%'";
+}
+
+if (in_array('qtm', $tags)) {
+    $tag_conditions[] = "course_code LIKE 'QTM%'";
+}
+
 if (in_array('morning', $tags)) {
     $tag_conditions[] = "TIME(start_time) < '12:00:00'";
 }
