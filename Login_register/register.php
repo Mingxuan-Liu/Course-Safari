@@ -71,12 +71,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         else: 
       ?>
         <a href="welcome.php" class="back-btn">
-          <i class="fas fa-arrow-left"></i> <!--Back-->
+          <i class="fas fa-arrow-left"></i>
         </a>
         <div class="title">
           Register for Course Safari
         </div>
-        <!-- <h1>Register for Course Safari</h1> -->
         <form action="register.php" method="post">
           <div class="form-group">
               <input type="text" class="form-control" name="username" placeholder="Username">

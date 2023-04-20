@@ -4,42 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> -->
   <link rel="stylesheet" href="welcome_style.css">
   <title>Welcome to Course Safari</title>
 </head>
 
 <body>
-<!--   <div class="container">
-    <div class="main">
-      <h1>Welcome to Course Safari</h1>
-      <p>Easy tracking, easy planning</p>
-    </div>
-    <div class="buttons-container">
-      <a href="login.php" class="btn btn-primary">Login</a>
-      <a href="register.php" class="btn btn-secondary">Register</a>
-    </div>
-  </div> -->
-
-<!--   <div class="image">
-    <div class="image-overlay">
-      <div class="container">
-        <div class="main">
-          <h1 class="head">Welcome to Course Safari</h1>
-          <h3 class="sub">Easy tracking, easy planning</h3>
-        </div>
-        <div class="btns">
-          <a href="login.php" class="btn1">Login</a>
-          <a href="register.php" class="btn2">Register</a>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   <div class="main">
-		<!-- <pciture>
-			<img src="./background_3.jpg">
-    </pciture> -->
 		<div class="overlay"></div>
 		<div class="heading">
 				<h1 class="head">WELCOME TO <span>COURSE SAFARI</span></h1>
