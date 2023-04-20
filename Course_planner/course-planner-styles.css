@@ -64,6 +64,12 @@ h2 {
   color: #fff;
 }
 
+.course-cell {
+  text-align: center; 
+  vertical-align: middle; 
+  border-radius: 10px;
+}
+
 .table-primary:hover {
   background-color: #0a58ca;
   cursor: pointer;
@@ -159,6 +165,7 @@ h2 {
   border: #3aaf9f;
   color: #fff;
   height: 35px;
+  margin-top: 10px;
 }
 
 .event{
@@ -170,3 +177,6 @@ h2 {
   width: 180%;
 }
 
+.form-check{
+  margin-top: 10px;
+}
