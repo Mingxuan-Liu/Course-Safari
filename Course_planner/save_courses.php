@@ -29,14 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $start_time = $course['start_time'];
         $end_time = $course['end_time'];
         $days = $course['days'];
-        
-        $sql = "INSERT INTO schedule_courses (user_id, course_code, course_num, course_name, start_time, end_time, days)
-                VALUES ('$user_id', '$course_code', '$course_num', '$course_name', '$start_time', '$end_time', '$days')
+        $professor = $course['professor'];
+        $professor_rate = $course['professor_rate'];
+        $professor_lev_diff = $course['professor_lev_diff'];
+
+        $sql = "INSERT INTO schedule_courses (user_id, course_code, course_num, course_name, start_time, end_time, days, professor, professor_rate, professor_lev_diff)
+                VALUES ('$user_id', '$course_code', '$course_num', '$course_name', '$start_time', '$end_time', '$days', '$professor', '$professor_rate', '$professor_lev_diff')
                 ON DUPLICATE KEY UPDATE course_name = '$course_name', end_time = '$end_time', days = '$days'";
-        
+
         if ($conn->query($sql) !== TRUE) {
             die("Error: " . $sql . "<br>" . $conn->error);
         }
+
     }
     
     echo 'Courses saved successfully!';
