@@ -31,7 +31,16 @@
                 </div>
                 <div class="tags mt-2">
                     <button class="btn btn-outline-secondary btn-sm" data-tag="cs">CS</button>
-                    <button class="btn btn-outline-secondary btn-sm" data-tag="math">Math</button>
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="math">MATH</button>
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="econ">ECON</button>
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="eng">ENG</button>
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="psyc">PSYC</button>
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="ant">ANT</button>
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="chem">CHEM</button>
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="pols">POLS</button>
+                </div>
+                <div class="tags mt-2">
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="qtm">QTM</button>
                     <button class="btn btn-outline-secondary btn-sm" data-tag="morning">Morning</button>
                     <button class="btn btn-outline-secondary btn-sm" data-tag="afternoon">Afternoon</button>
                     <button class="btn btn-outline-secondary btn-sm" data-tag="100-level">100-level</button>
@@ -146,6 +155,54 @@
                 </div>
         </div>
     </div>
+
+    <!-- <div class="row mt-4">
+        <div class="col">
+            <h2>Add My Event</h2>
+            <form id="custom-event-form">
+                <div class="mb-3">
+                    <label for="event-name" class="form-label">Event Name</label>
+                    <input type="text" class="form-control" id="event-name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="start-time" class="form-label">Start Time (HH:mm)</label>
+                    <input type="text" class="form-control" id="start-time" pattern="^([0-1][0-9]|2[0-3]):[0-5][0-9]$" required>
+                </div>
+                <div class="mb-3">
+                    <label for="end-time" class="form-label">End Time (HH:mm)</label>
+                    <input type="text" class="form-control" id="end-time" pattern="^([0-1][0-9]|2[0-3]):[0-5][0-9]$" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Days</label>
+                    <div id="custom-event-days" class="d-flex">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="custom-event-day-m" value="M">
+                            <label class="form-check-label" for="custom-event-day-m">Monday</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="custom-event-day-t" value="T">
+                            <label class="form-check-label" for="custom-event-day-t">Tuesday</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="custom-event-day-w" value="W">
+                            <label class="form-check-label" for="custom-event-day-w">Wednesday</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="custom-event-day-r" value="R">
+                            <label class="form-check-label" for="custom-event-day-r">Thursday</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="custom-event-day-f" value="F">
+                            <label class="form-check-label" for="custom-event-day-f">Friday</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add Event</button>
+            </form>
+        </div>
+    </div> -->
+    
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -164,7 +221,6 @@
             const courses = [];
             $('#schedule td.table-primary').each(function () {
                 const course = $(this).data('course');
-                console.log(course);//debug line
                 courses.push(course);
             });
 
@@ -192,6 +248,34 @@
 
             if (tags.includes('math')) {
                 filteredCourses = filteredCourses.filter(course => course.course_code.toLowerCase().includes('math'));
+            }
+
+            if (tags.includes('econ')) {
+                filteredCourses = filteredCourses.filter(course => course.course_code.toLowerCase().includes('econ'));
+            }
+
+            if (tags.includes('eng')) {
+                filteredCourses = filteredCourses.filter(course => course.course_code.toLowerCase().includes('eng'));
+            }
+
+            if (tags.includes('psyc')) {
+                filteredCourses = filteredCourses.filter(course => course.course_code.toLowerCase().includes('psyc'));
+            }
+
+            if (tags.includes('ant')) {
+                filteredCourses = filteredCourses.filter(course => course.course_code.toLowerCase().includes('ant'));
+            }
+
+            if (tags.includes('chem')) {
+                filteredCourses = filteredCourses.filter(course => course.course_code.toLowerCase().includes('chem'));
+            }
+
+            if (tags.includes('pols')) {
+                filteredCourses = filteredCourses.filter(course => course.course_code.toLowerCase().includes('pols'));
+            }
+
+            if (tags.includes('qtm')) {
+                filteredCourses = filteredCourses.filter(course => course.course_code.toLowerCase().includes('qtm'));
             }
 
             if (tags.includes('morning')) {
