@@ -141,7 +141,9 @@
                 
 
             </div>
-            <button id="finalize-button" class="btn-finalize">Finalize</button>
+                <div class="button-container">
+                     <button id="finalize-button" class="btn-finalize">Finalize</button>
+                </div>
         </div>
     </div>
     
