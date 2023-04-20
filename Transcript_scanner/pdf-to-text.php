@@ -263,6 +263,7 @@
                             <li>Log in using your Emory NetID and password.</li>
                             <img src="opus.png" alt="Step 2">
                         </ol>
+                        
                         <!-- First column for option 1 -->
                         <div class="column">
                             <h3>Option 1: Unofficial Transcript</h3>
