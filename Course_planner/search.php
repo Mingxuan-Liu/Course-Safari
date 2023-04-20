@@ -31,7 +31,7 @@ if (in_array('eng', $tags)) {
 }
 
 if (in_array('psyc', $tags)) {
-    $tag_conditions[] = "course_code LIKE 'PYSC%'";
+    $tag_conditions[] = "course_code LIKE 'PSYC%'";
 }
 
 if (in_array('ant', $tags)) {
@@ -108,6 +108,16 @@ if (in_array('elective', $tags)) {
     }
 }
 
+$takenCourses = [];
+if (in_array('untaken', $tags)) {
+    $sql_taken = "SELECT course_prefix, course_num FROM courses_taken WHERE user_id = '$userId'";
+    $result = mysqli_query($conn, $sql_taken);
+    while ($obj = mysqli_fetch_assoc($result)) {
+        $takenCourses[] = $obj;
+    }
+}
+// $_SESSION["takenCourses"] = $takenCourses;
+
 
 // Add a derived column to count the number of matched filters
 if (count($tag_conditions) > 0) {
@@ -176,9 +186,34 @@ if ($result->num_rows > 0) {
             $courses[] = $row;
         }
     }
-}
 
-$_SESSION["courses"] = $courses;
+    // $_SESSION["courses"] = $courses;
+    // $_SESSION["debug"] = 1;
+    // $_SESSION["debug"] += 1;
+
+    $untakenCourses = [];
+    $index = 0;
+    $len = count($takenCourses);
+    if (in_array('untaken', $tags)) {
+        foreach ($courses as $key => $course) {
+            $index = 0;
+            foreach ($takenCourses as $takenCourse) {
+                $index++;
+                if ($course["course_code"] == $takenCourse["course_prefix"] && substr($course["course_num"], 0, 3) == $takenCourse["course_num"]) {
+                    // unset($courses[$key]);
+                    break;
+                }
+                else if ($index == $len) {
+                    $untakenCourses[] = $course;
+                }
+            }
+        }
+        // $_SESSION["courses"] = $courses;
+
+        $courses = $untakenCourses;
+    }
+}
+// $_SESSION["untakenCourses"] = $untakenCourses;
 
 echo json_encode($courses);
 
