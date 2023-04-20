@@ -105,8 +105,8 @@
                             <!-- <i class="fas fa-lock"></i> -->
                         </div>
                         <br>
-                        <button type="submit" class="btn">Update</button>
-                        <button type="reset" class="btn">Clear</button>
+                        <button type="submit" class="btn-U2">Update</button>
+                        <button type="reset" class="btn-C2">Clear</button>
                     </n>
                 </form>
 
