@@ -93,8 +93,8 @@
                         <div>
                     </n>
                     <br>
-                    <button type="submit" class="btn">Update</button>
-                    <button type="reset" class="btn">Clear</button>
+                    <button type="submit" class="btn-U">Update</button>
+                    <button type="reset" class="btn-C">Clear</button>
                 </form>
 
             </section>
