@@ -9,7 +9,6 @@ $user_id = $_SESSION['user_id'];
 
 require_once '../db_connection.php';
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $courses = json_decode($_POST['courses'], true);
 
