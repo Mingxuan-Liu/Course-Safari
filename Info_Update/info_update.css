@@ -67,6 +67,7 @@ body {
 .main p {
   font-size: 20px;
   margin-bottom: 30px;
+  margin-top: 40px;
   color: #3aaf9f;
   position: absolute; top: 65%;left: 50%;
   transform: translateX(-50%);
@@ -125,7 +126,7 @@ select {
 
 .form-group {
   position: relative;
-  top: 40px;
+  top: 80px;
   display: flex;
   margin-bottom: 55px;
   align-items: center;
@@ -155,7 +156,7 @@ select {
   position: absolute;
 }
 
-.btn {
+.btn-U {
   background-color: #007aff;
   border-radius: 10px;
   border: none;
@@ -165,13 +166,62 @@ select {
   padding: 10px 20px;
   transition: background-color 0.3s ease;
   margin-bottom: 10px;
-  position: relative; 
-  top: 220px;
+  position: absolute; 
+  top: 270px;
+  left: 180px;
+  width:100px;
+}
+
+.btn-C {
+  background-color: #007aff;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  position: absolute; 
+  top: 270px;
+  right: 180px;
+  width:100px;
+}
+
+.btn-U2 {
+  background-color: #007aff;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  position: absolute; 
+  top: 430px;
+  left: 180px;
+  width:100px;
+}
+
+.btn-C2 {
+  background-color: #007aff;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  position: absolute; 
+  top: 430px;
+  left: 350px;
   width:100px;
 }
 
 .btn:hover {
-  background-color: #0062cc;
+  background-color: #277c71;
 }
 
 .link {
