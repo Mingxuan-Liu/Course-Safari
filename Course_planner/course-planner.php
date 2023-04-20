@@ -391,7 +391,7 @@
                     const cell = $(`#schedule td[data-day="${day}"][data-time="${time}"]`);
                     cell.data('course', course);
                     cell.text(course.course_code + course.course_num);
-                    cell.addClass('table-primary');
+                    cell.addClass('table-primary course-cell');
                     cell.css('background-color', courseColors[(course.course_code + course.course_num)]);
 
                     if (time === startTime) {
