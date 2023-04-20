@@ -126,14 +126,22 @@ h2 {
   background-color: #0a58ca;
 }
 
-.btn-finalize{
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 30px; 
+  height: 100%;
+}
+
+.btn-finalize {
   margin-top: 5%;
   border-radius: 5px;
   background-color: #3aaf9f;
   border: #3aaf9f;
   color: #fff;
   width: 30%;
-  transform: translateX(110%);
   height: 40px;
   font-size: 20px;
 }
