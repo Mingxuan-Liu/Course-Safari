@@ -210,6 +210,7 @@
             const courses = [];
             $('#schedule td.table-primary').each(function () {
                 const course = $(this).data('course');
+                console.log(course);//debug line
                 courses.push(course);
             });
 
