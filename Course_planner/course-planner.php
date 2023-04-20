@@ -30,6 +30,10 @@
                     <button id="search-button" class="btn-search">Search</button>
                 </div>
                 <div class="tags mt-2">
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="required">Required</button>
+                    <button class="btn btn-outline-secondary btn-sm" data-tag="elective">Elective</button>
+                </div>
+                <div class="tags mt-2">
                     <button class="btn btn-outline-secondary btn-sm" data-tag="cs">CS</button>
                     <button class="btn btn-outline-secondary btn-sm" data-tag="math">MATH</button>
                     <button class="btn btn-outline-secondary btn-sm" data-tag="econ">ECON</button>
@@ -193,6 +197,50 @@
 
         function filterCoursesByTags(tags) {
             let filteredCourses = allCourses;
+
+            if (tags.includes('required')) {
+                let keyword = $('#search').val();
+                let searchResults = $('#results');
+                searchResults.empty();
+
+                if (keyword.length < 2) {
+                    keyword = '';
+                }
+
+                const selectedTags = Array.from(activeTags);
+                console.log(selectedTags);
+
+                const sortBy = $('input[name="sort"]:checked').val();
+
+                $.getJSON('search.php', { keyword: keyword, sortBy: sortBy, tags: selectedTags.join(',') }, function(data) {
+                    displayCourses(data);
+                });
+
+                // searchCourses();
+                console.log("required selected");
+            }
+
+            if (tags.includes('elective')) {
+                let keyword = $('#search').val();
+                let searchResults = $('#results');
+                searchResults.empty();
+
+                if (keyword.length < 2) {
+                    keyword = '';
+                }
+
+                const selectedTags = Array.from(activeTags);
+                console.log(selectedTags);
+
+                const sortBy = $('input[name="sort"]:checked').val();
+
+                $.getJSON('search.php', { keyword: keyword, sortBy: sortBy, tags: selectedTags.join(',') }, function(data) {
+                    displayCourses(data);
+                });
+
+                // searchCourses();
+                console.log("required selected");
+            }
 
             if (tags.includes('cs')) {
                 filteredCourses = filteredCourses.filter(course => course.course_code.toLowerCase().includes('cs'));
@@ -413,6 +461,7 @@
             }
 
             const selectedTags = Array.from(activeTags);
+            console.log(selectedTags);
 
             const sortBy = $('input[name="sort"]:checked').val();
 

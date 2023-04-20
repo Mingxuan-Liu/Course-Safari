@@ -70,6 +70,44 @@ if (in_array('300-level+', $tags)) {
     $tag_conditions[] = "(course_num LIKE '3__%' OR course_num LIKE '4__%' OR course_num LIKE '5__%' OR course_num LIKE '6__%' OR course_num LIKE '7__%')";
 }
 
+$requiredCourses = [];
+if (in_array('required', $tags)) {
+    $sql_major = "SELECT DISTINCT major_name FROM courses_taken WHERE user_id = '$userId'";
+    $result = mysqli_query($conn, $sql_major);
+    $major_names = array();
+    while ($obj = mysqli_fetch_assoc($result)) {
+        $major_names[] = $obj['major_name'];
+    }
+
+    foreach($major_names as $major) {
+        $sql_required = "SELECT course_prefix, course_num FROM major_minor WHERE major_name = '$major' AND required IS TRUE";
+        $result = mysqli_query($conn, $sql_required);
+
+        while ($obj = mysqli_fetch_assoc($result)) {
+            $requiredCourses[] = $obj;
+        }
+    }
+}
+
+$electiveCourses = [];
+if (in_array('elective', $tags)) {
+    $sql_major = "SELECT DISTINCT major_name FROM courses_taken WHERE user_id = '$userId'";
+    $result = mysqli_query($conn, $sql_major);
+    $major_names = array();
+    while ($obj = mysqli_fetch_assoc($result)) {
+        $major_names[] = $obj['major_name'];
+    }
+
+    foreach($major_names as $major) {
+        $sql_elective = "SELECT course_prefix, course_num FROM major_minor WHERE major_name = '$major' AND required IS FALSE";
+        $result = mysqli_query($conn, $sql_elective);
+
+        while ($obj = mysqli_fetch_assoc($result)) {
+            $electiveCourses[] = $obj;
+        }
+    }
+}
+
 
 // Add a derived column to count the number of matched filters
 if (count($tag_conditions) > 0) {
@@ -108,10 +146,39 @@ $result = $conn->query($sql);
 $courses = array();
 
 if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $courses[] = $row;
+    if (in_array('required', $tags) && in_array('elective', $tags)) {
+        // no course is both required and elective
+    }
+    elseif (in_array('required', $tags)) {
+        while ($row = $result->fetch_assoc()) {
+            foreach ($requiredCourses as $requiredCourse) {
+                
+                if ($row["course_code"] == $requiredCourse["course_prefix"] && substr($row["course_num"], 0, 3) == $requiredCourse["course_num"]) {
+                    $courses[] = $row;
+                    break;
+                }
+            }
+        }
+    }
+    elseif (in_array('elective', $tags)){
+        while ($row = $result->fetch_assoc()) {
+            foreach ($electiveCourses as $electiveCourse) {
+                
+                if ($row["course_code"] == $electiveCourse["course_prefix"] && substr($row["course_num"], 0, 3) == $electiveCourse["course_num"]) {
+                    $courses[] = $row;
+                    break;
+                }
+            }
+        }
+    }
+    else {
+        while ($row = $result->fetch_assoc()) {
+            $courses[] = $row;
+        }
     }
 }
+
+$_SESSION["courses"] = $courses;
 
 echo json_encode($courses);
 
