@@ -133,7 +133,6 @@ h2 {
   border: #3aaf9f;
   color: #fff;
   width: 30%;
-  /* position: absolute; top: 370px;left: 50%; */
   transform: translateX(110%);
   height: 40px;
   font-size: 20px;
