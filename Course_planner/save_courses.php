@@ -9,17 +9,14 @@ $user_id = $_SESSION['user_id'];
 
 require_once '../db_connection.php';
 
-// Other parts of the code remain unchanged
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $courses = json_decode($_POST['courses'], true); // Modified line
+    $courses = json_decode($_POST['courses'], true);
 
     // Debugging lines
     echo "Courses received:\n";
     print_r($courses);
 
     $sql_delete = "DELETE FROM schedule_courses WHERE user_id = '$user_id'";
-    // Rest of the code remains unchanged
 
     if ($conn->query($sql_delete) !== TRUE) {
         die("Error deleting courses: " . $conn->error);

@@ -43,9 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="container">
     <div class="main">
       <a href="welcome.php" class="back-btn">
-        <i class="fas fa-arrow-left"></i> <!--Back-->
+        <i class="fas fa-arrow-left"></i>
       </a>
-      <!-- <h1>Login to Course Safari</h1> -->
       <div class="title">
           Login to Course Safari
       </div>
