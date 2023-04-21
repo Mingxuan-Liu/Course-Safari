@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+body {
+    background-color: #011930 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   
+    background-image: url('./user_background_2.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+  
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd;
+    padding: 40px;
+    text-align: center;
+    width: 600px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.buttons-container a {
+    margin: 1.5rem;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.header img {
+    width: 100px;
+}
+
+.main h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #3aaf9f;
+}
+
+.main h2 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #3aaf9f;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.main h3 {
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 25px;
+    color: #3aaf9f;
+    margin-bottom: 30px;
+}
+
+.main h4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #ff0000;
+}
+
+.main .title{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #3aaf9f;
+    position: relative; top: 10px;
+}
+
+.title-option{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #3aaf9f;
+    position: relative; 
+    top: -10px;
+    left: 225px;
+}
+
+.declare-name {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.drop-down {
+    margin-bottom: 20px;
+}
+
+select {
+    width: 300px;
+    font-size: 20px;
+    height: 50px;
+}
+
+.survey-item {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    padding-left: 35px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    color: black;
+    text-align: left;
+}
+
+/* Hide the browser's default checkbox */
+.survey-item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+  
+/* On mouse-over, add a grey background color */
+.survey-item:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+/* When the checkbox is checked, add a blue background */
+.survey-item input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+  
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* Show the checkmark when checked */
+.survey-item input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.survey-item .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.form-group {
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.form-control {
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.btn {
+    background-color: #3aaf9f;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+    border:#3aaf9f;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #277c71;
+    border: #277c71;
+}
+
+.link {
+    color: #999;
+    font-size: 18px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #007aff;
+}
+
+.back-btn {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    align-items: center;
+    font-size: 14px;
+    color: #000;
+}
+
+.back-btn i {
+    font-size: 19px;
+    margin-right: 10px;
+}
+
+.main {
+    position: relative;
+    padding-top: 20px;
+}
+
+.btn-big {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10%;
+    background-color: #3aaf9f;
+    color: #fff;
+    margin: 20px;
+    position: relative; top: 60px;right: 145px;
+  }
+  
+  .btn-big i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    position: absolute; top: 50px;
+  }
+  
+  .btn-big p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    position: absolute; top: 100px;
+  }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    color: #007aff;
+}
+
+.success-message i {
+    font-size: 60px;
+}
+
+.success-message h1 {
+    margin-top: 20px;
+    font-size: 30px;
+    color: #3aaf9f;
+}
+
+.success-message p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #3aaf9f;
+}
+
+.success-message .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #007aff;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.update_clear {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_uc {
+    background-color: #007aff;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+  
+  

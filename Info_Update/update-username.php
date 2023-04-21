@@ -40,7 +40,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This page allows users to update their Course Safari usernames.">
     <title>Update Username</title>
-    <link rel="stylesheet" href="./info_update.css" type="text/css">
+    <link rel="stylesheet" href="./update_name.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 </head>
 
@@ -48,73 +48,47 @@
 <!-- <img src="img/toolkit.jpg" alt="Toolkit" width="300" height="300"> -->
     <div class = "container">
         <div class="main">
-            <a href="update-info.php" class="back-btn-update">
+            <a href="update-info.php" class="back-btn">
                 <i class="fas fa-arrow-left"></i>
             </a>
     
             <?php
                 if (isset($_SESSION["update_success"])): 
             ?>
-
                 <div class="success-message">
-                    <div class="title">Username Update Successful!</div>
+                    <h2>Username Update Successful!</h2>
                     <p>Your username is now: <?php echo $_SESSION["username"]; ?></p>
-                
-                    <!-- <div class="back-to-user">
-                        <a href="../Login_register/user.php" class="back-btn">
-                            <i class="fas fa-user"></i>
-                        </a>
-                    </div> -->
                 </div>
 
             <?php 
                 else: 
             ?>
-            
+                <h1>Update Username</h1>
 
-            <div class="title">
-                Update Username
-            </div>
-            
-            <br>
-
-            <section>
-
-                <p>Current Username:
-                    <?php echo $_SESSION["username"]; ?>
-                </p>
-
-                <form action="update-username.php" , method="post">
-                    <n>
-                        <!-- <label for="newUsename">New Username: </label> -->
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="newUsername" id="newUsername" placeholder="Enter your new username" required>
-                            <i class="fas fa-user"></i>
-                        <div>
-                    </n>
-                    <br>
-                    <button type="submit" class="btn-U">Update</button>
-                    <button type="reset" class="btn-C">Clear</button>
-                </form>
-
-            </section>
-
-                <?php 
-                if (isset($_SESSION["error"])): 
-                    if ($_SESSION["error"] == "existing_1"):
+                <?php
+                    if (isset($_SESSION["error"])):
                 ?>
-                        <section>
-                            <!-- <i class="fas fa-exclamation-circle"></i> -->
-                            <div class="error">Update Failed! Username already exists</div>
-                        </section>
-                    <?php endif; ?>
+                        <p class="error">Update Failed! Username already exists!</p>
                 <?php endif; ?>
+
+                <h3>
+                    Current Username: <?php echo $_SESSION["username"]; ?>
+                </h3>
+
+                <form action="update-username.php", method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="newUsername" id="newUsername" placeholder="Enter your new username" required>
+                    <div>
+                    <div class="update_clear">
+                        <button type="submit" class="btn_uc">Update</button>
+                        <button type="reset" class="btn_uc">Clear</button>
+                    </div>
+                </form>
 
             <?php 
                 endif;
                 unset($_SESSION["update_success"]);
             ?>
-
         </div>
     </div>
 </body>

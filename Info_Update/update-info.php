@@ -18,28 +18,28 @@ require_once '../db_connection.php';
     </head>
 
     <body>
-            <div class="main">
+        <div class="main">
             <a href="../Login_register/user.php" class="back-btn"> <!--Back-->
                 <i class="fas fa-arrow-left"></i>
             </a>
-                <h1>User Home Page</h1>
+            <h1>User Home Page</h1>
 
-                <div class="buttons">
-                    <a href="update-username.php" class="btn btn-big btn-circle">
-                        <i class="fas fa-user"></i>
-                        <p>Update My Username</p>
-                    </a>
+            <div class="buttons">
+                <a href="update-username.php" class="btn btn-big btn-circle">
+                    <i class="fas fa-user"></i>
+                    <p>Update My Username</p>
+                </a>
 
-                    <a href="update-password.php" class="btn btn-big btn-circle">
-                        <i class="fas fa-graduation-cap"></i>
-                        <p>Reset My Password</p>
-                    </a>
+                <a href="update-password.php" class="btn btn-big btn-circle">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>Reset My Password</p>
+                </a>
 
-                    <a href="course_progress.php" class="btn btn-big btn-circle">
-                        <i class="fas fa-graduation-cap"></i>
-                        <p>Degree Tracker</p>
-                    </a>
-                </div>
+                <a href="course_progress.php" class="btn btn-big btn-circle">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>Degree Tracker</p>
+                </a>
             </div>
+        </div>
     </body>
 </html>
